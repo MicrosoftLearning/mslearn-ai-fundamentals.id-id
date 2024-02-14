@@ -36,7 +36,7 @@ Biarkan Studio Kecerdasan Dokumen tetap terbuka.
 Anda sekarang siap untuk menganalisis tanda terima untuk perusahaan ritel Northwind Traders fiktif.
 
 1. Pilih [****https://aka.ms/mslearn-receipt](https://aka.ms/mslearn-receipt) untuk mengunduh dokumen sampel ke komputer Anda. Buka folder . 
-1. Pilih **Form Recognizer Studio** untuk kembali ke **halaman Mulai menggunakan Studio** Kecerdasan Dokumen, dan di bawah Tanda Terima pilih **Cobalah**.
+1. Pilih **Studio** Kecerdasan Dokumen untuk kembali ke **halaman Mulai menggunakan Studio** Kecerdasan Dokumen, dan di bawah Tanda Terima pilih **Cobalah**.
 1. Di daftar drop-down Bawaan, pastikan Tanda **Terima** dipilih.
 1. Pilih **Telusuri file** dan navigasi ke folder tempat Anda menyimpan gambar. Pilih gambar tanda terima lalu **Buka**. Gambar muncul di sisi kiri layar.
 
