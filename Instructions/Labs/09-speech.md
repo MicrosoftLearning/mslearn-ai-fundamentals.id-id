@@ -29,7 +29,7 @@ Dalam latihan ini, Anda akan membuat sumber daya Ucapan AI, kecuali Anda sudah m
 
 1. Pilih [**https://aka.ms/mslearn-speech-files](https://aka.ms/mslearn-speech-files)** untuk mengunduh **speech.zip.** Buka folder . 
 
-1. Pada halaman Mulai menggunakan Ucapan, di bawah *Ucapan* temukan *Ucapan real time ke teks*. Pilih **Coba Ucapan real time ke teks**.
+1. Pada halaman Mulai menggunakan Ucapan, di bawah *Ucapan ke teks* temukan *Ucapan real time ke teks*. Pilih **Coba Ucapan real time ke teks**.
 
     ![Mulai menggunakan Ucapan](media/recognize-synthesize-speech/try-out-speech-to-text.png)
 

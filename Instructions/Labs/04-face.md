@@ -73,7 +73,7 @@ Selanjutnya, sambungkan sumber daya layanan Azure AI yang Anda provisikan di ata
 
     ![Gambar orang-orang di toko dengan tanaman mengaburkan wajah.](./media/create-face-solutions/store-camera-3.jpg)
 
-1. Unggah **store-camera-2.jpg** dan tinjau detail deteksi wajah yang dikembalikan. Perhatikan bagaimana Azure AI Face dapat mendeteksi wajah yang sebagian dikaburkan. 
+1. Unggah **store-camera-3.jpg** dan tinjau detail deteksi wajah yang dikembalikan. Perhatikan bagaimana Azure AI Face tidak mendeteksi wajah yang dikaburkan.
 
 Dalam latihan ini Anda telah menjelajahi bagaimana layanan Azure AI dapat mendeteksi wajah dalam gambar. Jika Anda punya waktu, jangan ragu untuk mencoba gambar sampel atau beberapa gambar Anda sendiri.
 

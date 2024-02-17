@@ -183,7 +183,7 @@ Setelah Anda memiliki dokumen dalam penyimpanan, Anda dapat menggunakan Azure AI
     - Jalankan kumpulan keterampilan dari keterampilan kognitif untuk menghasilkan bidang yang lebih diperkaya.
     - Memetakan bidang yang diekstraksi ke indeks.
 
-1. Di bagian **bawah halaman Gambaran Umum** untuk sumber daya Pencarian Azure AI Anda, pilih tab Pengindeks****. Tab ini memperlihatkan pengindeks** kopi yang baru dibuat**. Tunggu sebentar, lalu pilih **&orarr; Refresh** hingga **Status** menunjukkan berhasil.
+1. Kembali ke halaman sumber daya Azure AI Search Anda. Di panel kiri, di bawah **Manajemen** Pencarian, pilih  **Pengindeks**. Pilih pengindeks** kopi yang baru dibuat**. Tunggu sebentar, lalu pilih **&orarr; Refresh** hingga **Status** menunjukkan berhasil.
 
 1. Pilih nama pengindeks untuk melihat detail selengkapnya.
 
@@ -197,21 +197,40 @@ Gunakan penjelajah Pencarian untuk menulis dan menguji kueri. Search explorer ad
 
    ![Cuplikan layar tentang cara menemukan penjelajah Pencarian.](media/create-cognitive-search-solution/5-exercise-screenshot-7.png)
 
-1. Perhatikan bagaimana indeks yang dipilih adalah *indeks kopi* yang Anda buat.
+2. Perhatikan bagaimana indeks yang dipilih adalah *indeks kopi* yang Anda buat. Di bawah indeks yang dipilih, ubah tampilan* menjadi *** tampilan** JSON. 
 
     ![Cuplikan layar Penjelajah pencarian.](media/create-cognitive-search-solution/search-explorer-query.png)
 
-    Di bidang **String kueri**, masukkan`search=*&$count=true`, lalu pilih **Cari**. Kueri pencarian menampilkan semua dokumen dalam indeks pencarian, termasuk jumlah semua dokumen di bidang **@odata.count**. Indeks pencarian harus mengembalikan dokumen JSON yang berisi hasil pencarian Anda.
+**Di bidang editor** kueri JSON, salin dan tempel: 
+```json
+{
+    "search": "*",
+    "count": true
+}
+```
+3. Pilih **Telusuri**. Kueri pencarian menampilkan semua dokumen dalam indeks pencarian, termasuk jumlah semua dokumen di bidang **@odata.count**. Indeks pencarian harus mengembalikan dokumen JSON yang berisi hasil pencarian Anda.
 
-    > **Catatan** Jika muncul pesan **Untuk mencari di portal, izinkan asal portal di pengaturan CORS indeks Anda**, pilih **Izinkan portal**, lalu pilih **Cari**.
+4. Sekarang mari kita filter berdasarkan lokasi. **Di bidang editor** kueri JSON, salin dan tempel: 
+```json
+{
+    "search": "locations:'Chicago'",
+    "count": true
+}
+```
+5. Pilih **Telusuri**. Kueri mencari semua dokumen dalam indeks dan menyaring tinjauan dengan lokasi Chicago. Anda akan melihat `3` di `@odata.count` lapangan.
 
-1. Sekarang mari kita filter berdasarkan lokasi. `search=locations:'Chicago'`Di bidang **String kueri**, masukkan, lalu pilih **Cari**. Kueri mencari semua dokumen dalam indeks dan menyaring tinjauan dengan lokasi Chicago.
-
-1. Sekarang mari kita filter berdasarkan sentimen. `search=sentiment:'negative'`Di bidang **String kueri**, masukkan, lalu pilih **Cari**. Kueri mencari semua dokumen dalam indeks dan menyaring tinjauan dengan sentimen negatif.
+6. Sekarang mari kita filter berdasarkan sentimen. **Di bidang editor** kueri JSON, salin dan tempel: 
+```json
+{
+    "search": "sentiment:'negative'",
+    "count": true
+}
+```
+7. Pilih **Telusuri**. Kueri mencari semua dokumen dalam indeks dan menyaring tinjauan dengan sentimen negatif. Anda akan melihat `1` di `@odata.count` lapangan.
 
    > **Catatan** Lihat bagaimana hasil diurutkan berdasarkan `@search.score`. Ini adalah skor yang diberikan oleh mesin pencari untuk menunjukkan seberapa dekat hasil cocok dengan kueri yang diberikan.
 
-1. Salah satu masalah yang mungkin perlu kita pecahkan adalah mengapa mungkin ada ulasan tertentu. Mari kita lihat frasa kunci yang terkait dengan ulasan negatif. Menurut Anda apa yang mungkin menjadi penyebab peninjauan?
+8. Salah satu masalah yang mungkin perlu kita pecahkan adalah mengapa mungkin ada ulasan tertentu. Mari kita lihat frasa kunci yang terkait dengan ulasan negatif. Menurut Anda apa yang mungkin menjadi penyebab peninjauan?
 
 ## Tinjau penyimpanan pengetahuan
 
@@ -219,36 +238,36 @@ Mari kita lihat kekuatan penyimpanan pengetahuan saat digunakan. Saat Anda menja
 
 1. Di portal Microsoft Azure, navigasikan kembali ke akun penyimpanan Azure Anda.
 
-1. Di panel menu sebelah kiri, pilih **Kontainer**. Pilih kontainer **penyimpanan pengetahuan**.
+2. Di panel menu sebelah kiri, pilih **Kontainer**. Pilih kontainer **penyimpanan pengetahuan**.
 
     ![Cuplikan layar kontainer penyimpanan pengetahuan.](media/create-cognitive-search-solution/knowledge-store-blob-0.png)
 
-1. Pilih salah satu item, lalu klik file **objectprojection.json**.
+3. Pilih salah satu item, lalu klik file **objectprojection.json**.
 
     ![Cuplikan layar dari objectprojection.json.](media/create-cognitive-search-solution/knowledge-store-blob-1.png)
 
-1. Pilih **Edit** guna melihat JSON yang dihasilkan untuk salah satu dokumen dari penyimpanan data Azure Anda.
+4. Pilih **Edit** guna melihat JSON yang dihasilkan untuk salah satu dokumen dari penyimpanan data Azure Anda.
 
     ![Cuplikan layar tentang cara menemukan tombol edit.](media/create-cognitive-search-solution/knowledge-store-blob-2.png)
 
-1. Pilih breadcrumb blob penyimpanan di kiri atas layar untuk kembali ke *Kontainer* akun Penyimpanan.
+5. Pilih breadcrumb blob penyimpanan di kiri atas layar untuk kembali ke *Kontainer* akun Penyimpanan.
 
     ![Cuplikan layar breadcrumb blob penyimpanan.](media/create-cognitive-search-solution/knowledge-store-blob-4.png)
 
-1. Di *Kontainer*, pilih kontainer *coffee-skillset-image-projection*. Pilih salah satu item.
+6. Di *Kontainer*, pilih kontainer *coffee-skillset-image-projection*. Pilih salah satu item.
 
     ![Cuplikan layar kontainer set kemampuan.](media/create-cognitive-search-solution/knowledge-store-blob-5.png)
 
-1. Pilih salah satu file *.jpg*. Pilih **Edit** untuk melihat gambar yang disimpan dari dokumen. Perhatikan bagaimana semua gambar dari dokumen disimpan dengan cara ini.
+7. Pilih salah satu file *.jpg*. Pilih **Edit** untuk melihat gambar yang disimpan dari dokumen. Perhatikan bagaimana semua gambar dari dokumen disimpan dengan cara ini.
 
     ![Cuplikan layar dari gambar tersimpan.](media/create-cognitive-search-solution/knowledge-store-blob-3.png)
 
-1. Pilih breadcrumb blob penyimpanan di kiri atas layar untuk kembali ke *Kontainer* akun Penyimpanan.
+8. Pilih breadcrumb blob penyimpanan di kiri atas layar untuk kembali ke *Kontainer* akun Penyimpanan.
 
-1. Pilih **Browser penyimpanan** di panel sebelah kiri, lalu pilih **Tabel**. Terdapat tabel untuk setiap entitas dalam indeks. Pilih tabel *coffeeSkillsetKeyPhrases*.
+9. Pilih **Browser penyimpanan** di panel sebelah kiri, lalu pilih **Tabel**. Terdapat tabel untuk setiap entitas dalam indeks. Pilih tabel *coffeeSkillsetKeyPhrases*.
 
     Lihat frasa kunci yang dapat diambil oleh penyimpanan pengetahuan dari konten di ulasan. Banyak bidang adalah kunci, sehingga Anda dapat menautkan tabel seperti database hubungan. Bidang terakhir menunjukkan frase kunci yang diekstrak oleh kumpulan keterampilan.
 
 ## Pelajari selengkapnya
 
-Indeks pencarian sederhana ini hanya beberapa kemampuan azure AI layanan Pencarian. Untuk mempelajari selengkapnya tentang apa yang bisa Anda lakukan dengan layanan ini, lihat [halaman](/azure/search/search-what-is-azure-search) azure AI layanan Pencarian.
+Indeks pencarian sederhana ini hanya beberapa kemampuan azure AI layanan Pencarian. Untuk mempelajari selengkapnya tentang apa yang bisa Anda lakukan dengan layanan ini, lihat [halaman](https://learn.microsoft.com/azure/search) azure AI layanan Pencarian.
