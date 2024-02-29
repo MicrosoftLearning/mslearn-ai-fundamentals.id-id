@@ -26,9 +26,12 @@ Sebelum dapat menggunakan model Azure OpenAI, Anda harus memprovisikan sumber da
 2. Buat **sumber daya Azure OpenAI** dengan pengaturan berikut:
     - **Langganan**: *Langganan Azure yang telah disetujui untuk akses ke layanan Azure OpenAI.*
     - **Grup** sumber daya: *Pilih grup sumber daya yang sudah ada atau buat grup sumber daya baru dengan nama pilihan Anda.*
-    - **Wilayah**: *Pilih wilayah yang tersedia*.
-    - **Nama**: *Nama unik pilihan Anda.*
+    - **Wilayah**: US Timur\*
+    - **Nama**: *Nama unik pilihan Anda*
     - **Tingkat harga**: Standar S0
+
+    > \* Wilayah yang berbeda memiliki ketersediaan dan kuota yang berbeda untuk model. Dalam latihan ini, Anda akan menggunakan model GPT-35-Turbo untuk pembuatan teks dan model DALL-E untuk pembuatan gambar, yang keduanya di-suppoprted di US Timur. 
+
 3. Tunggu hingga penerapan selesai. Kemudian buka sumber daya Azure OpenAI yang disebarkan di portal Azure.
 
 ## Menjelajahi Azure OpenAI Studio
@@ -58,6 +61,13 @@ Untuk bereksperimen dengan pembuatan bahasa alami, Anda harus terlebih dahulu me
     - **Model**: gpt-35-turbo
     - **Versi model**: Pembaruan otomatis ke default
     - **Nama** penyebaran: *Nama unik untuk penyebaran model Anda*
+    - **Opsi tingkat lanjut**
+        - **Filter konten**: Default
+        - **Jenis** penyebaran: Standar
+        - **Batas tarif** token per menit: 5K\*
+        - **Aktifkan kuota** dinamis: Diaktifkan
+
+    > \* Batas tarif 5.000 token per menit lebih dari cukup untuk menyelesaikan latihan ini sambil meninggalkan kapasitas untuk orang lain yang menggunakan langganan yang sama.
 
 ## *Menggunakan taman bermain Obrolan* untuk bekerja dengan model
 

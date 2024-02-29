@@ -26,9 +26,22 @@ Sebelum dapat menggunakan model Azure OpenAI, Anda harus memprovisikan sumber da
 2. Buat **sumber daya Azure OpenAI** dengan pengaturan berikut:
     - **Langganan**: *Langganan Azure yang telah disetujui untuk akses ke layanan Azure OpenAI.*
     - **Grup** sumber daya: *Pilih grup sumber daya yang sudah ada atau buat grup sumber daya baru dengan nama pilihan Anda.*
-    - **Wilayah**: *Pilih wilayah yang tersedia*.
-    - **Nama**: *Nama unik pilihan Anda.*
+    - **Wilayah**: *Buat **pilihan acak** dari salah satu wilayah berikut*\*
+        - Australia Timur
+        - Kanada Timur
+        - AS Timur
+        - AS Timur 2
+        - Prancis Tengah
+        - Jepang Timur
+        - AS Tengah Bagian Utara
+        - Swedia Tengah
+        - Swiss Utara
+        - UK Selatan
+    - **Nama**: *Nama unik pilihan Anda*
     - **Tingkat harga**: Standar S0
+
+    > \* Sumber daya Azure OpenAI dibatasi oleh kuota regional. Wilayah yang tercantum mencakup kuota default untuk jenis model yang digunakan dalam latihan ini. Memilih wilayah secara acak mengurangi risiko satu wilayah mencapai batas kuotanya dalam skenario di mana Anda berbagi langganan dengan pengguna lain. Jika batas kuota tercapai nanti dalam latihan, ada kemungkinan Anda mungkin perlu membuat sumber daya lain di wilayah yang berbeda.
+
 3. Tunggu hingga penerapan selesai. Kemudian buka sumber daya Azure OpenAI yang disebarkan di portal Azure.
 
 ## Terapkan model
@@ -39,7 +52,14 @@ Sekarang Anda siap untuk menyebarkan model untuk digunakan melalui **Azure OpenA
 2. Di Azure OpenAI Studio, buat penyebaran baru dengan pengaturan berikut:
     - **Model**: gpt-35-turbo
     - **Versi model**: Pembaruan otomatis ke default
-    - **Nama** penyebaran: 35turbo
+    - **Nama** penyebaran: *Nama unik pilihan Anda*
+    - **Opsi tingkat lanjut**
+        - **Filter konten**: Default
+        - **Jenis** penyebaran: Standar
+        - **Batas tarif** token per menit: 5K\*
+        - **Aktifkan kuota** dinamis: Diaktifkan
+
+    > \* Batas tarif 5.000 token per menit lebih dari cukup untuk menyelesaikan latihan ini sambil meninggalkan kapasitas untuk orang lain yang menggunakan langganan yang sama.
 
 > **Catatan**: Setiap model Azure OpenAI dioptimalkan untuk keseimbangan kemampuan dan performa yang berbeda. Kita akan menggunakan **model GPT 3.5 Turbo** dalam latihan ini, yang sangat mampu untuk pembuatan bahasa alami dan skenario obrolan.
 
