@@ -61,7 +61,7 @@ Selanjutnya, sambungkan sumber daya layanan Azure AI yang Anda provisikan di ata
     - Di **Atribut** yang terdeteksi, teks apa pun yang ditemukan dalam gambar diatur ke dalam struktur hierarkis wilayah, garis, dan kata.
     - Pada gambar, lokasi teks ditunjukkan oleh kotak pembatas, seperti yang diperlihatkan di sini:
 
-    ![Gambar teks dalam gambar yang diuraikan](media/read-text-computer-vision/text-bounding-boxes.png)
+    ![Gambar teks dalam gambar yang diuraikan.](media/read-text-computer-vision/advert-bounding-boxes.jpg)
 
 1. Anda sekarang dapat mencoba gambar lain. Pilih **Telusuri file** dan navigasi ke folder tempat Anda menyimpan file dari GitHub. Pilih **letter.jpg**.
 
@@ -76,6 +76,6 @@ Jika Anda tidak berniat untuk melakukan lebih banyak latihan, hapus sumber daya 
 1. **Buka portal Azure** di [https://portal.azure.com](https://portal.azure.com?azure-portal=true) dan pilih grup sumber daya yang berisi sumber daya yang Anda buat.
 1. Pilih sumber daya dan pilih **Hapus** lalu **Ya** untuk mengonfirmasi. Sumber daya kemudian dihapus.
 
-## Pelajari selengkapnya
+## Pelajari Selengkapnya
 
 Untuk mempelajari selengkapnya tentang apa yang dapat Anda lakukan dengan layanan ini, lihat dokumentasi Azure AI Vision tentang [pengenalan](https://learn.microsoft.com/azure/ai-services/computer-vision/overview-ocr) karakter optik.
