@@ -13,5 +13,5 @@ Untuk menyelesaikan latihan ini, Anda memerlukan langganan Microsoft Azure. Anda
 {% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions'" %}
 | Latihan |
 | ------- | 
-{% untuk aktivitas di lab %}| [{{ activity.lab.title }}]({{ site.github.url }}{{ activity.url }}) |
+{% for activity in labs  %}| [{{ activity.lab.title }}]({{ site.github.url }}{{ activity.url }}) |
 {% endfor %}
