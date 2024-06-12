@@ -36,7 +36,7 @@ Solusi yang akan Anda buat untuk Fourth Coffee memerlukan sumber daya berikut da
     - **Langganan**: *Langganan Azure Anda*.
     - **Grup sumber daya**: *Pilih atau buat grup sumber daya dengan nama unik*.
     - **Nama layanan**: *Nama yang unik*.
-    - **Lokasi**: *Pilih wilayah yang tersedia*.
+    - **Lokasi**: *Pilih wilayah yang tersedia. Jika di AS timur, gunakan "US Timur 2"*.
     - **Tingkat harga**: Dasar
 
 1. Pilih **Tinjau + buat**, dan setelah Anda melihat respons **Validasi Sukses**, pilih **Buat**.
@@ -268,6 +268,6 @@ Mari kita lihat kekuatan penyimpanan pengetahuan saat digunakan. Saat Anda menja
 
     Lihat frasa kunci yang dapat diambil oleh penyimpanan pengetahuan dari konten di ulasan. Banyak bidang adalah kunci, sehingga Anda dapat menautkan tabel seperti database hubungan. Bidang terakhir menunjukkan frase kunci yang diekstrak oleh kumpulan keterampilan.
 
-## Pelajari selengkapnya
+## Pelajari lebih lanjut
 
 Indeks pencarian sederhana ini hanya beberapa kemampuan azure AI layanan Pencarian. Untuk mempelajari selengkapnya tentang apa yang bisa Anda lakukan dengan layanan ini, lihat [halaman](https://learn.microsoft.com/azure/search) azure AI layanan Pencarian.

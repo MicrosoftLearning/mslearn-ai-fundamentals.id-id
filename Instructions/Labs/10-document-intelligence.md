@@ -18,12 +18,12 @@ Dalam latihan ini, Anda akan melihat model bawaan di Kecerdasan Dokumen yang dil
 Anda dapat menggunakan Kecerdasan Dokumen Azure AI dengan membuat *sumber daya Kecerdasan* Dokumen atau *sumber daya layanan* Azure AI. Dalam latihan ini, Anda akan membuat *sumber daya Kecerdasan* Dokumen, jika Anda belum memilikinya.
 
 1. Di tab browser lain, buka [Document Intelligence Studio](https://formrecognizer.appliedai.azure.com/studio), masuk dengan akun Microsoft Anda.
-1. Pilih **Pengaturan** dan pilih tab **Sumber Daya**. Pilih **Buat sumber daya** baru.
+1. Pilih **Pengaturan** dan pilih tab **Sumber Daya** . Pilih **Buat sumber daya** baru.
 1. Pada kotak dialog Buat sumber daya, masukkan yang berikut ini:
     - **Langganan**: *Langganan Azure Anda*.
     - **Grup sumber daya**: *Pilih atau buat grup sumber daya dengan nama unik*.
     - **Nama** sumber daya baru: *Masukkan nama* unik.
-    - **Lokasi**: *Pilih wilayah*.
+    - **Lokasi**: *Pilih wilayah. Jika di AS timur, gunakan "US Timur 2"*.
     - **Tingkat** harga: *FO Gratis (jika tersedia, jika tidak pilih SO Standar)*.
 1. Pilih **Lanjutkan** lalu **Selesai**. Tunggu hingga sumber daya disebarkan.
 
@@ -40,7 +40,7 @@ Anda sekarang siap untuk menganalisis tanda terima untuk perusahaan ritel Northw
 1. Di daftar drop-down Bawaan, pastikan Tanda **Terima** dipilih.
 1. Pilih **Telusuri file** dan navigasi ke folder tempat Anda menyimpan gambar. Pilih gambar tanda terima lalu **Buka**. Gambar muncul di sisi kiri layar.
 
-    ![Tanda terima Northwind.](media/document-intelligence/northwind-receipt.jpg)
+    ![Cuplikan layar tanda terima northwind.](media/document-intelligence/receipt.jpg)
 
 1. Di sebelah kanan, pilih **Jalankan analisis**.
 1. Ketika analisis telah berjalan, hasilnya dikembalikan. Perhatikan bahwa layanan telah mengenali bidang data tertentu seperti nama pedagang, alamat, nomor telepon, dan tanggal dan waktu transaksi, serta item baris, subtotal, pajak, dan jumlah total. Di samping setiap bidang adalah probabilitas persentase bahwa bidang sudah benar.
@@ -54,6 +54,6 @@ Jika Anda tidak berniat untuk melakukan lebih banyak latihan, hapus sumber daya 
 1. [Buka portal Azure]( https://portal.azure.com) dan pilih grup sumber daya yang berisi sumber daya yang Anda buat.
 1. Pilih sumber daya dan pilih **Hapus** lalu **Ya** untuk mengonfirmasi. Sumber daya kemudian dihapus.
 
-## Pelajari selengkapnya
+## Pelajari lebih lanjut
 
 Latihan ini hanya menunjukkan beberapa kemampuan layanan Kecerdasan Dokumen AI. Untuk mempelajari selengkapnya tentang apa yang bisa Anda lakukan dengan layanan ini, lihat halaman [Kecerdasan](https://learn.microsoft.com/azure/ai-services/document-intelligence/overview?view=doc-intel-3.1.0) Dokumen.

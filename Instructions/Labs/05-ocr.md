@@ -18,14 +18,14 @@ Anda dapat menggunakan kemampuan OCR Azure AI Vision dengan **sumber daya multi-
 1. Klik tombol **＋Buat sumber daya**dan cari *layanan Azure AI*. Pilih **buat** paket **layanan Azure AI**. Anda akan diarahkan ke halaman untuk membuat sumber daya layanan Azure AI. Konfigurasikan dengan pengaturan berikut:
     - **Langganan**: *Langganan Azure Anda*.
     - **Grup sumber daya**: *Pilih atau buat grup sumber daya dengan nama unik*.
-    - **Wilayah**: US Timur.
+    - **Wilayah**: *Pilih wilayah geografis terdekat. Jika di AS timur, gunakan "US Timur 2"*.
     - **Nama**: *Masukkan nama unik*.
     - **Tingkat** harga: *S0 Standar.*
     - **Dengan mencentang kotak ini saya mengakui bahwa saya telah membaca dan memahami semua istilah di bawah ini**: *Dipilih*.
 
 1. Pilih **Tinjau + buat** lalu **Buat** dan tunggu penyebaran selesai.
 
-## Koneksi sumber daya layanan Azure AI Anda ke Vision Studio
+## Menyambungkan sumber daya layanan Azure AI Anda ke Vision Studio
 
 Selanjutnya, sambungkan sumber daya layanan Azure AI yang Anda provisikan di atas ke Vision Studio.
 
@@ -76,6 +76,6 @@ Jika Anda tidak berniat untuk melakukan lebih banyak latihan, hapus sumber daya 
 1. **Buka portal Azure** di [https://portal.azure.com](https://portal.azure.com?azure-portal=true) dan pilih grup sumber daya yang berisi sumber daya yang Anda buat.
 1. Pilih sumber daya dan pilih **Hapus** lalu **Ya** untuk mengonfirmasi. Sumber daya kemudian dihapus.
 
-## Pelajari Selengkapnya
+## Pelajari lebih lanjut
 
 Untuk mempelajari selengkapnya tentang apa yang dapat Anda lakukan dengan layanan ini, lihat dokumentasi Azure AI Vision tentang [pengenalan](https://learn.microsoft.com/azure/ai-services/computer-vision/overview-ocr) karakter optik.

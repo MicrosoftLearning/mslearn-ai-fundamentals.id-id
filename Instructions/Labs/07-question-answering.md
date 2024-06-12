@@ -31,7 +31,7 @@ Untuk menggunakan jawaban atas pertanyaan, Anda memerlukan **sumber daya Bahasa*
         - **Langganan**: *Langganan Azure Anda*.
         - **Grup sumber daya**: *Pilih grup sumber daya yang ada atau buat yang baru*.
     - **Detail Instans**
-        - **Wilayah**: *Pilih wilayah*      
+        - **Wilayah**: *Pilih wilayah. Jika di AS timur, gunakan "US Timur 2"*      
         - **Nama**: *Nama unik untuk sumber daya Bahasa Anda*.
         - **Tingkat harga**: S (1K Panggilan per menit)
     - **Jawaban atas pertanyaan kustom**
@@ -160,7 +160,7 @@ Jika Anda tidak berniat untuk melakukan lebih banyak latihan, hapus sumber daya 
 1. [Buka portal Azure]( https://portal.azure.com) dan pilih grup sumber daya yang berisi sumber daya yang Anda buat. 
 1. Pilih sumber daya dan pilih **Hapus** lalu **Ya** untuk mengonfirmasi. Sumber daya kemudian dihapus.
 
-## Pelajari selengkapnya
+## Pelajari lebih lanjut
 
 - Untuk mempelajari selengkapnya tentang layanan Jawaban Atas Pertanyaan, lihat [dokumentasi](https://docs.microsoft.com/azure/cognitive-services/language-service/question-answering/overview).
 - Untuk mempelajari Microsoft Bot Service lebih lanjut, lihat [Halaman Azure Bot Service](https://azure.microsoft.com/services/bot-service/).

@@ -24,7 +24,7 @@ Anda dapat menggunakan banyak fitur Bahasa Azure AI dengan **sumber daya layanan
 1. Pada halaman **Buat Bahasa**, konfigurasikan dengan pengaturan berikut:
     - **Langganan**: *Langganan Azure Anda*.
     - **Grup sumber daya**: *Pilih atau buat grup sumber daya dengan nama unik*.
-    - **Wilayah**: US Timur.
+    - **Wilayah**: *Pilih wilayah geografis terdekat. Jika di AS timur, gunakan "US Timur 2"*.
     - **Nama**: *Masukkan nama unik*.
     - **Tingkat** harga: *F0 atau S gratis jika F0 Gratis tidak tersedia*
     - **Dengan mencentang kotak ini saya mengakui bahwa saya telah membaca dan memahami semua istilah di bawah ini**: *Dipilih*.
@@ -97,7 +97,7 @@ Pilih **Kalimat 1** lagi untuk ditutup.
 
 1. Pilih **Jalankan** dan tinjau sentimen bersama dengan tingkat keyakinan. Lihat teks dan bandingkan teks dengan analisis sentimen yang dikembalikan layanan.
 
-Dalam latihan ini Anda menggunakan Language Studio untuk membuat sumber daya Bahasa baru atau menggunakan sumber daya Bahasa yang sudah ada. Anda mengaktifkan sumber daya di Pengaturan sebelum mencoba sentimen dan layanan penambangan opini. Anda kemudian menguji layanan dengan tiga teks.
+Dalam latihan ini Anda menggunakan Language Studio untuk membuat sumber daya Bahasa baru atau menggunakan sumber daya Bahasa yang sudah ada. Anda mengaktifkan sumber daya di Pengaturan sebelum mencoba layanan penambangan Sentimen dan opini. Anda kemudian menguji layanan dengan tiga teks.
 
 ## Penghapusan
 
@@ -106,6 +106,6 @@ Jika Anda tidak berniat untuk melakukan lebih banyak latihan, hapus sumber daya 
 1. **Buka portal Azure** di [https://portal.azure.com](https://portal.azure.com) dan pilih grup sumber daya yang berisi sumber daya yang Anda buat.
 1. Pilih sumber daya dan pilih **Hapus** lalu **Ya** untuk mengonfirmasi. Sumber daya kemudian dihapus.
 
-## Pelajari selengkapnya
+## Pelajari lebih lanjut
 
 Untuk mempelajari selengkapnya tentang apa yang dapat Anda lakukan dengan layanan ini, lihat [halaman layanan Bahasa](https://learn.microsoft.com/azure/ai-services/language-service/overview).

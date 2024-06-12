@@ -30,7 +30,7 @@ Sebelum dapat menggunakan model Azure OpenAI, Anda harus memprovisikan sumber da
     - **Nama**: *Nama unik pilihan Anda*
     - **Tingkat harga**: Standar S0
 
-    > \* Wilayah yang berbeda memiliki ketersediaan dan kuota yang berbeda untuk model. Dalam latihan ini, Anda akan menggunakan model GPT-35-Turbo untuk pembuatan teks dan model DALL-E untuk pembuatan gambar, yang keduanya di-suppoprted di US Timur. 
+    > \* Wilayah yang berbeda memiliki ketersediaan dan kuota yang berbeda untuk model. Dalam latihan ini, Anda akan menggunakan model GPT-35-Turbo untuk pembuatan teks dan model DALL-E untuk pembuatan gambar, yang keduanya didukung di US Timur.
 
 3. Tunggu hingga penerapan selesai. Kemudian buka sumber daya Azure OpenAI yang disebarkan di portal Azure.
 
