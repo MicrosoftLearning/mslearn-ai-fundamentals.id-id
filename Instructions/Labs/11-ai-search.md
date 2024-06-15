@@ -20,18 +20,18 @@ Di lab ini Anda akan:
 
 Solusi yang akan Anda buat untuk Fourth Coffee memerlukan sumber daya berikut dalam langganan Azure Anda:
 
-- Sumber **daya Azure AI Search** , yang akan mengelola pengindeksan dan kueri.
-- Sumber **daya layanan** Azure AI, yang menyediakan layanan AI untuk keterampilan yang dapat digunakan solusi pencarian Anda untuk memperkaya data di sumber data dengan wawasan yang dihasilkan AI.
+- Sumber daya **Pencarian Azure AI**, yang akan mengelola pengindeksan dan kueri.
+- Sumber daya **Layanan Azure AI**, yang menyediakan layanan AI untuk keterampilan yang dapat digunakan solusi pencarian Anda untuk memperkaya data di sumber data dengan wawasan yang dihasilkan AI.
 
-    > **Perhatikan** sumber daya layanan Azure AI Search dan Azure AI Anda harus berada di lokasi yang sama!
+    > **Catatan** sumber daya layanan Azure AI Search dan Azure AI Anda harus berada di lokasi yang sama!
 
 - **Akun penyimpanan** dengan kontainer blob, yang akan menyimpan dokumen mentah dan kumpulan tabel, objek, atau file lainnya.
 
-### Membuat *sumber daya Azure AI Search*
+### Membuat sumber daya * Pencarian Azure AI*
 
 1. Masuk ke [Portal Microsoft Azure](https://portal.azure.com/learn.docs.microsoft.com?azure-portal=true).
 
-1. Klik tombol **+ Buat sumber daya** , cari *Pencarian* Azure AI, dan buat **sumber daya Pencarian** Azure AI dengan pengaturan berikut:
+1. Klik tombol **+ Buat sumber daya**, cari *Azure AI Search*, dan buat sumber daya **Azure AI Search** dengan pengaturan berikut:
 
     - **Langganan**: *Langganan Azure Anda*.
     - **Grup sumber daya**: *Pilih atau buat grup sumber daya dengan nama unik*.
@@ -45,12 +45,12 @@ Solusi yang akan Anda buat untuk Fourth Coffee memerlukan sumber daya berikut da
 
 ### Buat sumber daya Layanan Azure AI
 
-Anda harus menyediakan **sumber daya layanan** Azure AI yang berada di lokasi yang sama dengan sumber daya Azure AI Search Anda. Solusi pencarian Anda akan menggunakan sumber daya ini untuk memperkaya data di datastore dengan wawasan yang dihasilkan AI.
+Anda harus menyediakan **layanan Azure AI** sumber daya yang berada di lokasi yang sama dengan sumber daya Azure AI Search Anda. Solusi pencarian Anda akan menggunakan sumber daya ini untuk memperkaya data di datastore dengan wawasan yang dihasilkan AI.
 
-1. Kembali ke halaman beranda portal Azure. Klik tombol **＋Buat sumber daya**dan cari *layanan Azure AI*. Pilih **buat** paket **layanan Azure AI**. Anda akan diarahkan ke halaman untuk membuat sumber daya layanan Azure AI. Konfigurasikan dengan pengaturan berikut:
+1. Kembali ke beranda portal Microsoft Azure. Klik tombol **＋Buat sumber daya**dan cari *layanan Azure AI*. Pilih **buat** paket **layanan Azure AI**. Anda akan diarahkan ke halaman untuk membuat sumber daya layanan Azure AI. Konfigurasikan dengan pengaturan berikut:
     - **Langganan**: *Langganan Azure Anda*.
-    - **Grup** sumber daya: *Grup sumber daya yang sama dengan sumber daya* Azure AI Search Anda.
-    - **Wilayah**: *Lokasi yang sama dengan sumber daya* Azure AI Search Anda.
+    - **Grup sumber daya**: *Grup sumber daya yang sama dengan sumber daya Azure AI Search Anda*.
+    - **Wilayah**: *Lokasi yang sama dengan sumber daya Azure AI Search Anda*.
     - **Nama**: *Nama yang unik*.
     - **Tingkat harga**: Standar S0
     - **Dengan mencentang kotak ini, saya menyatakan bahwa saya telah membaca dan memahami semua persyaratan di bawah**: Dipilih
@@ -65,7 +65,7 @@ Anda harus menyediakan **sumber daya layanan** Azure AI yang berada di lokasi ya
 
 1. Cari *akun penyimpanan*, dan buat sumber daya **Akun penyimpanan** dengan pengaturan berikut:
     - **Langganan**: *Langganan Azure Anda*.
-    - **Grup** sumber daya: *Grup sumber daya yang sama dengan sumber daya* layanan Azure AI Search dan Azure AI Anda.
+    - **Grup sumber daya**: *Grup sumber daya yang sama dengan sumber daya layanan Azure AI Search dan Azure AI Anda*.
     - **Nama akun penyimpanan**: *Nama yang unik*.
     - **Lokasi**: *Pilih lokasi yang tersedia*.
     - **Performa**: Standar
@@ -74,7 +74,7 @@ Anda harus menyediakan **sumber daya layanan** Azure AI yang berada di lokasi ya
 1. Klik **Tinjau** lalu klik **Buat**. Tunggu hingga penyebaran selesai, lalu buka sumber daya yang disebarkan.
 
 1. Di akun Azure Storage yang Anda buat, di panel menu sebelah kiri, pilih **Konfigurasi** (di bawah **Pengaturan**).
-1. Ubah pengaturan untuk *Izinkan akses* anonim Blob ke **Diaktifkan** lalu pilih **Simpan**.
+1. Ubah pengaturan untuk *Izinkan akses anonim Blob* menjadi **Diaktifkan** lalu pilih **Simpan**.
 
 ## Mengunggah Dokumen ke Azure Storage
 
@@ -89,7 +89,7 @@ Anda harus menyediakan **sumber daya layanan** Azure AI yang berada di lokasi ya
     - **Tingkat akses publik**: Kontainer (akses baca anonim untuk kontainer dan blob)
     - **Tingkat Lanjut**: *tidak ada perubahan*.
 
-1. Di tab browser baru, unduh [ulasan](https://aka.ms/mslearn-coffee-reviews) kopi zip dari `https://aka.ms/mslearn-coffee-reviews`, dan ekstrak file ke *folder ulasan* .
+1. Di tab browser baru, unduh [ulasan kopi zip](https://aka.ms/mslearn-coffee-reviews) dari `https://aka.ms/mslearn-coffee-reviews`, dan ekstrak file ke folder *ulasan*.
 
 1. Di portal Microsoft Azure, pilih kontainer *coffee-reviews* Anda. Di kontainer, pilih **Unggah**.
 
@@ -107,12 +107,12 @@ Anda harus menyediakan **sumber daya layanan** Azure AI yang berada di lokasi ya
 
 Setelah Anda memiliki dokumen dalam penyimpanan, Anda dapat menggunakan Azure AI Search untuk mengekstrak wawasan dari dokumen. Portal Microsoft Azure menyediakan *Wizard Impor data*. Dengan wizard ini, Anda dapat secara otomatis membuat indeks dan pengindeks untuk sumber data yang didukung. Anda akan menggunakan wizard untuk membuat indeks, dan mengimpor dokumen pencarian Anda dari penyimpanan ke indeks Pencarian Azure AI.
 
-1. Di portal Azure, telusuri ke sumber daya Azure AI Search Anda. Pada halaman **Gambaran Umum**, pilih **Impor data**.
+1. Di portal Microsoft Azure, telusuri ke sumber daya Pencarian Azure AI Anda. Pada halaman **Gambaran Umum**, pilih **Impor data**.
 
     ![Cuplikan layar yang menampilkan wizard data impor.](media/create-cognitive-search-solution/azure-search-wizard-1.png)
 
 1. Pada halaman **Hubungkan ke data Anda**, dalam daftar **Sumber Data**, pilih **Azure Blob Storage**. Lengkapi detail penyimpanan data dengan nilai berikut:
-    - **Sumber** Data: Azure Blob Storage
+    - **Sumber Data**: Azure Blob Storage
     - **Nama sumber data**: coffee-customer-data
     - **Data yang akan diekstrak**: Konten dan metadata
     - **Mode penguraian**: Default
@@ -124,7 +124,7 @@ Setelah Anda memiliki dokumen dalam penyimpanan, Anda dapat menggunakan Azure AI
 
 1. Pilih **Berikutnya: Tambahkan keterampilan kognitif (Opsional)**.
 
-1. Di bagian **Lampirkan Cognitive Services** , pilih sumber daya layanan Azure AI Anda.  
+1. Di bagian **Lampirkan Cognitive Services**, pilih sumber daya layanan Azure AI Anda.  
 
 1. Di bagian **Tambahkan pengayaan**:
     - Ubah **Nama Set Kemampuan** menjadi **coffee-skillset**.
@@ -157,10 +157,10 @@ Setelah Anda memiliki dokumen dalam penyimpanan, Anda dapat menggunakan Azure AI
     > ![Cuplikan layar yang menampilkan peringatan layar koneksi akun Azure Storage dengan 'Pilih koneksi yang ada' dipilih.](media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)
     >
     > 1. Pilih **Pilih koneksi yang ada**. Pilih akun penyimpanan yang Anda buat sebelumnya.
-    > 1. **Klik + Kontainer** untuk membuat kontainer baru yang disebut **penyimpanan pengetahuan** dengan tingkat privasi yang diatur ke **Privat**, dan pilih **Buat**.
+    > 1. Klik **+ Kontainer** untuk membuat kontainer baru yang disebut **penyimpanan pengetahuan** dengan tingkat privasi yang diatur ke **Privat**, dan pilih **Buat**.
     > 1. Pilih kontainer **penyimpanan pengetahuan**, lalu klik **Pilih** di bagian bawah layar.
 
-1. Pilih **Proyeksi blob Azure: Dokumen**. Pengaturan untuk *Nama kontainer* dengan tampilan kontainer *penyimpanan pengetahuan* yang terisi secara otomatis. Jangan ubah nama kontainer.
+1. Pilih **proyeksi blob Azure: Dokumen**. Pengaturan untuk *Nama kontainer* dengan tampilan kontainer *penyimpanan pengetahuan* yang terisi secara otomatis. Jangan ubah nama kontainer.
 
 1. Pilih **Berikutnya: Sesuaikan indeks target**. Ubah **Nama indeks** menjadi **coffee-index**.
 
@@ -183,7 +183,7 @@ Setelah Anda memiliki dokumen dalam penyimpanan, Anda dapat menggunakan Azure AI
     - Jalankan kumpulan keterampilan dari keterampilan kognitif untuk menghasilkan bidang yang lebih diperkaya.
     - Memetakan bidang yang diekstraksi ke indeks.
 
-1. Kembali ke halaman sumber daya Azure AI Search Anda. Di panel kiri, di bawah **Manajemen** Pencarian, pilih  **Pengindeks**. Pilih pengindeks** kopi yang baru dibuat**. Tunggu sebentar, lalu pilih **&orarr; Refresh** hingga **Status** menunjukkan berhasil.
+1. Kembali ke halaman sumber daya Azure AI Search Anda. Di panel kiri, di bawah **Manajemen Pencarian**, pilih **Pengindeks**. Pilih **pengindeks kopi** yang baru dibuat. Tunggu sebentar, lalu pilih **&orarr; Refresh** hingga **Status** menunjukkan berhasil.
 
 1. Pilih nama pengindeks untuk melihat detail selengkapnya.
 
@@ -197,11 +197,11 @@ Gunakan penjelajah Pencarian untuk menulis dan menguji kueri. Search explorer ad
 
    ![Cuplikan layar tentang cara menemukan penjelajah Pencarian.](media/create-cognitive-search-solution/5-exercise-screenshot-7.png)
 
-2. Perhatikan bagaimana indeks yang dipilih adalah *indeks kopi* yang Anda buat. Di bawah indeks yang dipilih, ubah tampilan* menjadi *** tampilan** JSON. 
+2. Perhatikan bagaimana indeks yang dipilih adalah *indeks kopi* yang Anda buat. Di bawah indeks yang dipilih, ubah *tampilan* menjadi **tampilan JSON**. 
 
     ![Cuplikan layar Penjelajah pencarian.](media/create-cognitive-search-solution/search-explorer-query.png)
 
-**Di bidang editor** kueri JSON, salin dan tempel: 
+Di bidang **editor kueri JSON**, salin dan tempel: 
 ```json
 {
     "search": "*",
@@ -210,23 +210,23 @@ Gunakan penjelajah Pencarian untuk menulis dan menguji kueri. Search explorer ad
 ```
 3. Pilih **Telusuri**. Kueri pencarian menampilkan semua dokumen dalam indeks pencarian, termasuk jumlah semua dokumen di bidang **@odata.count**. Indeks pencarian harus mengembalikan dokumen JSON yang berisi hasil pencarian Anda.
 
-4. Sekarang mari kita filter berdasarkan lokasi. **Di bidang editor** kueri JSON, salin dan tempel: 
+4. Sekarang mari kita filter berdasarkan lokasi. Di bidang **editor kueri JSON**, salin dan tempel: 
 ```json
 {
     "search": "locations:'Chicago'",
     "count": true
 }
 ```
-5. Pilih **Telusuri**. Kueri mencari semua dokumen dalam indeks dan menyaring tinjauan dengan lokasi Chicago. Anda akan melihat `3` di `@odata.count` lapangan.
+5. Pilih **Telusuri**. Kueri mencari semua dokumen dalam indeks dan menyaring tinjauan dengan lokasi Chicago. Anda akan melihat `3` di `@odata.count` bidang.
 
-6. Sekarang mari kita filter berdasarkan sentimen. **Di bidang editor** kueri JSON, salin dan tempel: 
+6. Sekarang mari kita filter berdasarkan sentimen. Di bidang **editor kueri JSON**, salin dan tempel: 
 ```json
 {
     "search": "sentiment:'negative'",
     "count": true
 }
 ```
-7. Pilih **Telusuri**. Kueri mencari semua dokumen dalam indeks dan menyaring tinjauan dengan sentimen negatif. Anda akan melihat `1` di `@odata.count` lapangan.
+7. Pilih **Telusuri**. Kueri mencari semua dokumen dalam indeks dan menyaring tinjauan dengan sentimen negatif. Anda akan melihat `1` di `@odata.count` bidang.
 
    > **Catatan** Lihat bagaimana hasil diurutkan berdasarkan `@search.score`. Ini adalah skor yang diberikan oleh mesin pencari untuk menunjukkan seberapa dekat hasil cocok dengan kueri yang diberikan.
 
@@ -270,4 +270,4 @@ Mari kita lihat kekuatan penyimpanan pengetahuan saat digunakan. Saat Anda menja
 
 ## Pelajari lebih lanjut
 
-Indeks pencarian sederhana ini hanya beberapa kemampuan azure AI layanan Pencarian. Untuk mempelajari selengkapnya tentang apa yang bisa Anda lakukan dengan layanan ini, lihat [halaman](https://learn.microsoft.com/azure/search) azure AI layanan Pencarian.
+Indeks pencarian sederhana ini hanya beberapa kemampuan layanan Pencarian Azure AI. Untuk mempelajari selengkapnya tentang apa yang dapat Anda lakukan dengan layanan ini, lihat [halaman layanan Pencarian Azure AI](https://learn.microsoft.com/azure/search).

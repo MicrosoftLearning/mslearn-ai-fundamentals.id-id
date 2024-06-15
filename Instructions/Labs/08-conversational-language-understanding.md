@@ -5,27 +5,27 @@ lab:
 
 # Menggunakan Pemahaman Bahasa Percakapan dengan Language Studio
 
-Semakin banyak, kami mengharapkan komputer dapat menggunakan AI untuk memahami perintah bahasa alami, baik yang diucapkan atau ditik. Misalnya, Anda mungkin ingin sistem otomatisasi rumah mengontrol perangkat di rumah Anda dengan menggunakan perintah suara seperti "nyalakan lampu" atau "nyalakan kipas." Perangkat yang didukung AI dapat memahami perintah ini dan mengambil tindakan yang sesuai.
+Lambat laun, kami mengharapkan komputer dapat menggunakan AI untuk memahami perintah bahasa alami, baik yang diucapkan atau diketik. Misalnya, Anda mungkin ingin sistem otomatisasi rumah mengontrol perangkat di rumah Anda dengan menggunakan perintah suara seperti "nyalakan lampu" atau "nyalakan kipas." Perangkat yang didukung AI dapat memahami perintah ini dan mengambil tindakan yang sesuai.
 
-Dalam latihan ini, Anda akan menggunakan Language Studio untuk membuat dan menguji proyek yang mengirim instruksi ke perangkat seperti lampu atau kipas. Anda akan menggunakan kemampuan layanan Luis Bahasa Percakapan untuk mengonfigurasi proyek Anda. 
+Dalam latihan ini, Anda akan menggunakan Language Studio untuk membuat dan menguji proyek yang mengirim instruksi ke perangkat seperti lampu atau kipas. Anda akan menggunakan kemampuan layanan Pemahaman Bahasa Percakapan untuk mengonfigurasi proyek Anda. 
 
 ## Membuat sumber daya *Bahasa*
 
-Anda dapat menggunakan banyak fitur Bahasa Azure AI dengan **sumber daya layanan** Bahasa** atau **Azure AI. Ada beberapa instans di mana hanya sumber daya Bahasa yang dapat digunakan. Untuk latihan di bawah ini, kami akan menggunakan **sumber daya Bahasa** . Jika belum melakukannya, buat sumber daya **Bahasa** di langganan Azure Anda.
+Anda dapat menggunakan banyak fitur Azure AI Bahasa dengan sumber daya **Bahasa** atau **Layanan Azure AI**. Ada beberapa instans yang hanya sumber daya Bahasa yang dapat digunakan. Untuk latihan di bawah ini, kami akan menggunakan sumber daya **Bahasa**. Jika belum melakukannya, buat sumber daya **Bahasa** di langganan Azure Anda.
 
-1. Di tab browser lain, buka portal Azure di [https://portal.azure.com](https://portal.azure.com?azure-portal=true), masuk dengan akun Microsoft yang terkait dengan langganan Azure Anda.
+1. Di tab browser yang lain, buka portal Azure di [https://portal.azure.com](https://portal.azure.com?azure-portal=true), lalu masuk dengan akun Microsoft yang terkait dengan langganan Azure Anda.
 
-1. **Klik &#65291; Buat tombol sumber daya** dan cari *Layanan bahasa*. Pilih **buat** **paket layanan** Bahasa. Anda akan dibawa ke halaman ke *Pilih fitur tambahan**. Pertahankan pilihan default dan klik **Lanjutkan untuk membuat sumber daya** Anda. 
+1. Klik **&#65291;Buat tombol sumber daya** dan cari *Layanan bahasa*. Pilih **buat** paket **Layanan bahasa**. Anda akan dibawa ke halaman ke *Pilih fitur tambahan**. Pertahankan pilihan default dan klik **Lanjutkan untuk membuat sumber daya Anda**. 
 
-1. Pada halaman **Buat Bahasa**, konfigurasikan dengan pengaturan berikut:
+1. Di halaman **Buat Bahasa**, konfigurasikan dengan pengaturan berikut:
     - **Langganan**: *Langganan Azure Anda*.
     - **Grup sumber daya**: *Pilih atau buat grup sumber daya dengan nama unik*.
     - **Wilayah**: *Pilih wilayah geografis terdekat. Jika di AS timur, gunakan "US Timur 2"*.
     - **Nama**: *Masukkan nama unik*.
-    - **Tingkat** harga: *F0 atau S gratis jika F0 Gratis tidak tersedia*
-    - **Dengan mencentang kotak ini saya mengakui bahwa saya telah membaca dan memahami semua istilah di bawah ini**: *Dipilih*.
+    - **Tingkat harga**: *F0 atau S gratis jika F0 Gratis tidak tersedia*
+    - **Dengan mencentang kotak ini, saya menyatakan bahwa saya telah membaca dan memahami semua persyaratan di bawah ini**: *Dipilih*.
 
-1. Pilih **Tinjau + buat** lalu **Buat** dan tunggu penyebaran selesai.
+1. Pilih **Tinjau + buat** lalu **Buat** dan tunggu hingga penyebaran selesai.
 
 
 ### Membuat Aplikasi Pemahaman Bahasa Percakapan
@@ -35,39 +35,39 @@ Untuk menerapkan pemahaman bahasa alami dengan Pemahaman Bahasa Percakapan, Anda
 1. Di tab browser baru, buka portal Language Studio di [https://language.azure.com](https://language.azure.com?azure-portal=true) dan masuk menggunakan akun Microsoft yang terkait dengan langganan Azure Anda.
 
 1. Jika diminta untuk memilih sumber daya Bahasa, pilih pengaturan berikut:
-    - **Direktori** Azure: *Direktori Azure yang berisi langganan* Anda.
-    - **Langganan** Azure: *Langganan* Azure Anda.
+    - **Azure directory**: *Azure directory yang berisi langganan Anda*.
+    - **Langganan Azure**: *Langganan Azure Anda*.
     - **Sumber daya bahasa**: *Sumber daya Bahasa yang Anda buat sebelumnya.*
 
    Jika Anda ***tidak*** diminta untuk memilih sumber daya bahasa, hal tersebut mungkin karena Anda memiliki beberapa sumber daya Bahasa dalam langganan Anda; dalam hal ini:
-    1. Pada bilah di bagian atas jika halaman, pilih **Pengaturan (&#9881;)**.
+    1. Pada bilah di bagian atas halaman, pilih **Pengaturan (&#9881;)**.
     2. Pada halaman **Pengaturan**, lihat tab **Sumber Daya**.
     3. Pilih sumber daya bahasa yang baru saja Anda buat, dan pilih **Beralih sumber daya**.
-    4. Di bagian atas halaman, pilih **Studio** Bahasa untuk kembali ke beranda Language Studio.
+    4. Di bagian atas halaman, pilih **Language Studio** untuk kembali ke beranda Language Studio.
 
 1. Di bagian atas portal, di menu **Buat baru**, pilih **Pemahaman bahasa percakapan**.
 
-1. Dalam kotak **dialog Buat proyek** , pada halaman **Masukkan informasi** dasar, masukkan detail berikut dan pilih **Berikutnya**:
+1. Dalam kotak dialog **Buat proyek**, di halaman **Masukkan informasi dasar**, masukkan detail berikut dan pilih **Berikutnya**:
     - **Nama**: *Membuat nama unik*
-    - **Ungkapan bahasa** utama: *Bahasa Inggris*
+    - **Bahasa utama ujaran**: *Inggris*
     - **Aktifkan beberapa bahasa dalam proyek:***Jangan pilih*
     - **Deskripsi**: `Simple home automation`
 
-    > **Tips**: Catat nama* proyek Anda*, Anda akan menggunakannya nanti.
+    > **Tips**: Catat *nama proyek*Anda, Anda akan menggunakannya nanti.
 
-1. Pada halaman **Tinjau dan selesai** , pilih **Buat**.
+1. Pada halaman **Tinjau dan selesai**, pilih **Buat**.
 
 ### Membuat niat, ucapan, dan entitas
 
 *Tujuan* adalah tindakan yang ingin Anda lakukan - misalnya, Anda mungkin ingin menyalakan lampu, atau mematikan kipas. Dalam hal ini, Anda akan menentukan dua tujuan: satu untuk mengaktifkan perangkat, dan satu lagi untuk mematikan perangkat. Untuk setiap niat, Anda akan menentukan contoh *ungkapan* yang menunjukkan jenis bahasa yang digunakan untuk mengindikasikan maksud.
 
-1. Di panel **Definisi** skema, pastikan bahwa **Niat** dipilih lalu pilih **Tambahkan**, dan tambahkan niat dengan nama `switch_on` (dalam huruf kecil) dan pilih **Tambahkan niat**.
+1. Di panel **Definisi skema**, pastikan bahwa **Niat** dipilih lalu pilih **Tambahkan**, lalu tambahkan niat dengan nama `switch_on` (dengan huruf kecil) dan pilih **Tambahkan niat**.
 
-    ![Pilih tambahkan di bawah Niat pada panel Skema Build.](media/conversational-language-understanding/build-schema.png)
+    ![Pilih tambahkan di bawah Niat pada panel Bangun Skema.](media/conversational-language-understanding/build-schema.png)
 
     ![Tambahkan tujuan pengaktifan lalu pilih Tambahkan tujuan.](media/conversational-language-understanding/add-intent.png)
 
-1. Pilih niat **switch_on**. Panel akan membawa Anda ke halaman **Pelabelan data**. Di menu dropdown **Tujuan**, pilih **switch_on**. Di samping **niat switch_on** , ketik ucapan `turn the light on` dan tekan **Enter** untuk mengirimkan ucapan ini ke daftar.
+1. Pilih niat **switch_on**. Panel akan membawa Anda ke halaman **Pelabelan data**. Di menu dropdown **Tujuan**, pilih **switch_on**. Di samping niat **switch_on**, ketik ujaran `turn the light on` dan tekan **Enter** untuk mengirimkan ujaran ini ke daftar.
 
     ![Tambahkan ucapan ke set pelatihan dengan mengetik "nyalakan lampu" di bagian Ucapan.](media/conversational-language-understanding/add-utterance-on.png)
 
@@ -78,7 +78,7 @@ Untuk menerapkan pemahaman bahasa alami dengan Pemahaman Bahasa Percakapan, Anda
     - `switch on the light`
     - `turn the fan on`
 
-1. Pada panel **Beri label entitas untuk pelatihan** di sisi kanan layar, pilih **Label**, lalu pilih **Tambahkan entitas**. Ketik `device` (dalam huruf kecil), pilih **Daftar** dan pilih **Tambahkan entitas**.
+1. Pada panel **Beri label entitas untuk pelatihan** di sisi kanan layar, pilih **Label**, lalu pilih **Tambahkan entitas**. Ketik `device` (dengan huruf kecil), pilih **Daftar** dan pilih **Tambahkan entitas**.
 
     ![Tambahkan entitas dengan memilih Tag pada entitas Pemberian tag untuk panel pelatihan, lalu pilih Tambahkan entitas.](media/conversational-language-understanding/add-entity.png)
 
@@ -90,7 +90,7 @@ Untuk menerapkan pemahaman bahasa alami dengan Pemahaman Bahasa Percakapan, Anda
 
 1. Lakukan hal yang sama untuk semua ucapan. Beri label ucapan *kipas* atau *lampu* lainnya dengan entitas **perangkat**. Setelah selesai, verifikasi bahwa Anda memiliki ucapan berikut dan pastikan untuk memilih **Simpan perubahan**:
 
-    | **tujuan** | **ucapan** | **Entitas** |
+    | **tujuan** | **ucapan** | **entitas** |
     | --------------- | ------------------ | ------------------ |
     | switch_on   | Nyalakan kipas angin      | Perangkat - *pilih kipas* |
     | switch_on   | Nyalakan lampu    | Perangkat - *pilih lampu* |
@@ -101,11 +101,11 @@ Untuk menerapkan pemahaman bahasa alami dengan Pemahaman Bahasa Percakapan, Anda
 
     ![Setelah selesai, pilih Simpan perubahan.](media/conversational-language-understanding/save-changes.png) 
 
-1. Di panel di sebelah kiri, pilih **Definisi** skema dan verifikasi bahwa niat switch_on** Anda **tercantum. Lalu pilih **Tambahkan** dan tambahkan niat baru dengan nama `switch_off` (dalam huruf kecil).
+1. Di panel di sebelah kiri, pilih **Definisi skema** dan verifikasi bahwa niat **switch_on** Anda tercantum. Lalu pilih **Tambahkan** dan tambahkan niat baru dengan nama `switch_off` (dengan huruf kecil).
 
     ![Kembali ke layar Bangun Skema dan tambahkan tujuan switch_off.](media/conversational-language-understanding/add-switch-off.png) 
 
-1. **Pilih niat switch_off**. Panel akan membawa Anda ke halaman **Pelabelan data**. Di menu dropdown **Tujuan**, pilih **switch_off**. Di samping **niat switch_off** , tambahkan ucapan `turn the light off`.
+1. Pilih niat **switch_off**. Panel akan membawa Anda ke halaman **Pelabelan data**. Di menu dropdown **Tujuan**, pilih **switch_off**. Di samping niat **switch_off**, tambahkan ujaran `turn the light off`.
 
 1. Tambahkan empat contoh ucapan lainnya ke niat **switch_off**.
     - `switch off the fan`
@@ -116,7 +116,7 @@ Untuk menerapkan pemahaman bahasa alami dengan Pemahaman Bahasa Percakapan, Anda
 
 1. Beri label kata-kata *lampu* atau *kipas* dengan entitas **perangkat**. Setelah selesai, verifikasi bahwa Anda memiliki ucapan berikut dan pastikan untuk memilih **Simpan perubahan**:  
 
-    | **tujuan** | **ucapan** | **Entitas** | 
+    | **tujuan** | **ucapan** | **entitas** | 
     | --------------- | ------------------ | ------------------ |
     | switch_off   | Matikan kipas    | Perangkat - *pilih kipas* | 
     | switch_off   | Matikan lampu  | Perangkat - *pilih lampu* |
@@ -148,9 +148,9 @@ Untuk menggunakan model terlatih Anda dalam aplikasi klien, Anda harus menerapka
     - **Tetapkan model terlatih ke nama penyebaran Anda**: *Pilih nama model terlatih*.
     - Pilih **Sebarkan**
 
-    > **Tips**: Perhatikan nama* penyebaran Anda*, Anda akan menggunakannya nanti. 
+    > **Tips**: Catat *nama penyebaran* Anda, Anda akan menggunakannya nanti. 
 
-1. Saat model disebarkan, pilih **Penyebaran** pengujian di sisi kiri halaman, lalu pilih model yang Anda sebarkan di bawah **Nama** penyebaran.
+1. Saat model disebarkan, pilih **Menguji penyebaran** di sisi kiri halaman, lalu pilih model yang Anda sebarkan di bawah **Nama penyebaran**.
 
 1. Masukkan teks berikut, lalu pilih **Jalankan pengujian**:
 
@@ -165,15 +165,15 @@ Untuk menggunakan model terlatih Anda dalam aplikasi klien, Anda harus menerapka
     - `put the light on`
     - `put the fan off`
 
-Anda sekarang telah berhasil mengonfigurasi proyek bahasa percakapan, dan entitas, niat, dan ucapan yang ditentukan. Anda telah melihat cara melatih dan menyebarkan model di Language Studio. Dan Anda telah mencobanya dengan kedua ucapan yang Anda tentukan, dan beberapa yang tidak Anda tentukan secara eksplisit tetapi model dapat menentukan.
+Anda sekarang telah berhasil mengonfigurasi proyek bahasa percakapan, dan menentukan entitas, niat, dan ujaran. Anda telah melihat cara melatih dan menyebarkan model di Language Studio. Dan Anda telah mencobanya dengan kedua ujaran yang Anda tentukan, dan beberapa yang tidak Anda tentukan secara eksplisit tetapi model dapat mengetahui.
 
-> **CATATAN**: Pemahaman bahasa percakapan menyediakan kecerdasan untuk menafsirkan niat input; itu tidak melakukan tindakan apa pun seperti menyalakan lampu atau kipas. Pengembang perlu membuat aplikasi yang menggunakan model Luis Percakapan untuk menentukan niat pengguna, lalu mengotomatiskan tindakan yang sesuai.
+> **CATATAN**: Pemahaman bahasa percakapan memberikan kecerdasan untuk menafsirkan niat input tetapi tidak melakukan tindakan apa pun seperti menyalakan lampu atau kipas angin. Pengembang perlu membuat aplikasi yang menggunakan model Pemahaman Bahasa Percakapan untuk menentukan niat pengguna, lalu mengotomatiskan tindakan yang sesuai.
 
 ## Penghapusan
 
-Jika Anda tidak berniat untuk melakukan lebih banyak latihan, hapus sumber daya apa pun yang tidak lagi Anda butuhkan. Ini menghindari akumulasi biaya yang tidak perlu.
+Jika Anda tidak berniat untuk melakukan latihan lagi, hapus sumber daya yang tidak lagi Anda butuhkan. Hal ini menghindari akumulasi biaya yang tidak perlu.
 
-1.Buka [portal Azure]( https://portal.azure.com) dan pilih grup sumber daya yang berisi sumber daya yang Anda buat. 1.Pilih sumber daya dan pilih **Hapus** lalu **Ya** untuk mengonfirmasi. Sumber daya kemudian dihapus.
+1.Buka [portal Azure]( https://portal.azure.com) dan pilih grup sumber daya yang berisi sumber daya yang Anda buat. 1.Pilih sumber daya dan pilih **Hapus** lalu **Ya** untuk mengonfirmasi. Sumber daya tersebut akan dihapus.
 
 ## Pelajari lebih lanjut
 
