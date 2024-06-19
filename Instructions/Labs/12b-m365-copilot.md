@@ -40,7 +40,7 @@ Untuk memulai eksplorasi AI generatif Anda, mari kita gunakan Copilot untuk Word
     How do I setup a new business in New York?
     ```
 
-1. Tinjau respons dan tindak lanjuti dengan pertanyaan tambahan sesuai kebutuhan. Saat Anda puas dengan respons, gunakan ikon **Salin** (&#128461;) di bawah respons untuk menyalinnya ke clipboard. Tempelkan ke dokumen Word, pilih semua teks lalu pilih ikon Copilot untuk memvisualisasikan teks sebagai tabel.
+1. Tinjau respons dan tindak lanjuti dengan pertanyaan tambahan sesuai kebutuhan. Saat Anda puas dengan respons, gunakan ikon **Salin** (&#128461;) di bawah respons untuk menyalinnya ke clipboard. Tempel hal tersebut ke dalam dokumen Word, pilih semua teks, lalu pilih ikon Copilot (di bagian bawah teks yang dipilih) untuk memvisualisasikan teks sebagai tabel.
 
     ![Cuplikan layar meminta Copilot untuk memvisualisasikan dalam format tabel.](./media/generative-ai/copilot-rewrite-as-table.png)
 
@@ -75,44 +75,36 @@ Nah, setelah Anda melakukan pencarian awal, mari kita minta Copilot membantu And
 
     ![Cuplikan layar dokumen Word dengan rencana bisnis yang dihasilkan Copilot.](./media/generative-ai/copilot-draft-business-plan-response.png)
 
-1. Jika proyeksi keuangan dalam rencana bisnis tidak diformat sebagai tabel, pilih proyeksi dan gunakan Copilot untuk memvisualisasikan proyeksi itu sebagai tabel.
+1. Jika proyeksi keuangan dalam rencana bisnis tidak diformat sebagai tabel, pilih proyeksi dan gunakan Copilot untuk memvisualisasikan proyeksi sebagai tabel.
 1. Pilih tabel proyeksi keuangan dan salin ke clipboard.
-1. Simpan dokumen Word.
+1. Simpan dokumen Word, lalu tutup dokumen.
 
 ## Memvisualisasikan proyeksi keuangan di Copilot untuk Excel
 
 Setelah memiliki rencana bisnis, mari kita ambil beberapa data tentang proyeksi keuangan dan minta Copilot di Excel untuk memvisualisasikan data tersebut untuk kita sehingga kita dapat menyertakannya dalam email atau presentasi kepada investor.
 
-1. Di PC Anda, dengan aplikasi Microsoft 365 terinstal, buka **Excel** dan buat buku kerja kosong baru. Segera simpan buku kerja sebagai **Financial Projetions.xlsx** ke OneDrive, atau Copilot tidak akan berfungsi.
+1. Buka **Excel** dan buat buku kerja kosong baru. Segera simpan buku kerja sebagai **Financial Projections.xlsx** ke OneDrive, atau Copilot tidak akan berfungsi.
 1. Tempelkan tabel proyeksi penjualan dari **Business Idea.docx** ke dalam spreadsheet Excel dan **format sebagai tabel**. Untuk melakukan ini:
     1. Pilih **sel** dalam data.
     1. Pilih **Beranda** dan pilih **Format sebagai Tabel** di bawah Gaya. 
     1. Pilih gaya untuk tabel.
     1. Di kotak dialog **Buat Tabel**, konfirmasi atau atur rentang sel Anda.
     1. Tandai jika tabel Anda memiliki header, dan pilih **OK**.
-1. Dengan proyeksi penjualan yang diformat sebagai tabel, buka panel Copilot dari pita Excel dan masukkan perintah berikut:
+1. Setelah proyeksi penjualan Anda diformat sebagai tabel, buka panel Copilot dari tab **Beranda** pada pita Excel dan masukkan perintah berikut:
 
     ```
     Suggest ways to visualize these financial projections.
     ```
     
-1. Copilot akan menyarankan 1 atau 2 cara untuk memvisualisasikan data dan menawarkan untuk menambahkan bagan pivot ke lembar baru.
+1. Copilot akan menyarankan cara untuk memvisualisasikan data dan menawarkan untuk menambahkan bagan pivot ke lembar baru.
 
     ![Cuplikan layar Copilot di Excel memvisualisasikan proyeksi keuangan.](./media/generative-ai/copilot-excel-visualize-projections.png)
-
-1. Namun, Anda mungkin ingin melihat lebih banyak data dalam bagan untuk menunjukkan perubahan tahun ke tahun, jadi masukkan perintah berikut untuk menambahkannya:
-
-    ```
-    Visualize these financial projections in a line chart to show year-over-year revenue and profits.
-    ```
-
-    ![Cuplikan layar Copilot di Excel memvisualisasikan proyeksi keuangan.](./media/generative-ai/copilot-excel-visualize-more.png)
 
 1. Tambahkan bagan pivot ke lembar baru dan buka. Pilih bagan, lalu pilih **Desain** untuk menerapkan gaya, mengubah tipe bagan, dan tindakan lainnya. Di akhir, Anda harus mendapatkan hasil yang mirip dengan ini:
 
     ![Cuplikan layar Copilot di Excel menambahkan PivotChart.](./media/generative-ai/copilot-excel-chart-design.png)
 
-1. Simpan file ke OneDrive dan tutup Excel.
+1. Simpan buku kerja dan tutup Excel.
 
 Anda baru saja menggunakan data yang dibuat dari Copilot di Word untuk divisualisasikan di Excel. Dalam latihan berikutnya, Anda akan melanjutkan menggunakan Copilot di Outlook untuk menulis dan mengirim email tentang pekerjaan yang telah Anda lakukan.
 
@@ -120,14 +112,20 @@ Anda baru saja menggunakan data yang dibuat dari Copilot di Word untuk divisuali
 
 Anda telah membuat beberapa materi pemasaran untuk membantu Anda memulai bisnis Anda. Sekarang saatnya untuk menjangkau investor untuk mencari pendanaan perusahaan rintisan.
 
-1. Di PC Anda dengan aplikasi Microsoft 365 terinstal, buka **Outlook**. Jika Anda belum menyiapkan Outlook dengan akun Microsoft 365 Anda, lihat [Menyiapkan dan menggunakan Outlook - Dukungan Microsoft](https://support.microsoft.com/office/set-up-and-use-outlook-4636f361-d5e3-4a87-9cd4-382858de55fa).
-1. Aktifkan pengalaman **Outlook baru**. Untuk mendapatkan fitur Copilot terbaru di Outlook, Anda harus menggunakan pengalaman "Outlook Baru". Untuk melihat versi yang Anda gunakan, lihat [Versi Outlook apa yang saya miliki? - Dukungan Microsoft](https://support.microsoft.com/office/what-version-of-outlook-do-i-have-b3a9568c-edb5-42b9-9825-d48d82b2257c).
+1. Buka **Outlook**. Jika Anda belum menyiapkan Outlook dengan akun Microsoft 365, lakukanlah.
+
+    > **Tips**: Lihat [Menyiapkan dan menggunakan Outlook - Dukungan Microsoft](https://support.microsoft.com/office/set-up-and-use-outlook-4636f361-d5e3-4a87-9cd4-382858de55fa) untuk bantuan terkait hal ini.
+
+1. Pada toolbar, beralih ke pengalaman **Outlook baru** jika pengalaman belum aktif.
+
+    > **Catatan**: Untuk mendapatkan fitur Copilot terbaru di Outlook, Anda harus menggunakan pengalaman "Outlook Baru". Untuk melihat versi yang Anda gunakan, lihat [Versi Outlook apa yang saya miliki? - Dukungan Microsoft](https://support.microsoft.com/office/what-version-of-outlook-do-i-have-b3a9568c-edb5-42b9-9825-d48d82b2257c).
+
 1. Buat email baru, dan isi kotak **Kepada** dengan alamat email Anda sendiri.
 1. Anda dapat mulai menyusun email dari panel Copilot atau langsung dari dalam isi email:
 
     ![Cuplikan layar Outlook dan opsi untuk menyusun email dengan Copilot.](./media/generative-ai/copilot-draft-email-outlook.png)
     
-1. Masukkan perintah berikut dan sesuaikan nadanya menjadi "Formal" serta panjangnya menjadi "Sedang":
+1. Masukkan perintah berikut dan sesuaikan opsi untuk mengatur nada ke "Formal" dan panjang ke "Sedang":
 
     ```
     Request a meeting with an investment bank to discuss funding for a commercial cleaning business.
@@ -160,11 +158,7 @@ Dengan bantuan Copilot, Anda telah membuat draf rencana bisnis untuk ide bisnis 
 
     ![Cuplikan layar presentasi PowerPoint yang dibuat oleh Copilot dari dokumen Word.](./media/generative-ai/copilot-powerpoint-create-image.png)
 
-1. Pilih slide kedua terakhir dalam presentasi. Kemudian, di panel Copilot, mintalah untuk menambahkan slide baru menggunakan perintah ini:
-
-    ```
-    Add a slide that describes the benefits of an eco-friendly approach to cleaning. 
-    ```
+1. Pilih slide kedua terakhir dalam presentasi. Kemudian, di panel Copilot, gunakan perintah **Tambahkan slide tentang...** untuk membuat slide baru tentang `the benefits of an eco-friendly approach to cleaning.`
 
     ![Cuplikan layar presentasi PowerPoint membuat slide baru.](./media/generative-ai/copilot-powerpoint-add-new-slide.png)
 

@@ -124,7 +124,7 @@ Setelah Anda memiliki dokumen dalam penyimpanan, Anda dapat menggunakan Azure AI
 
 1. Pilih **Berikutnya: Tambahkan keterampilan kognitif (Opsional)**.
 
-1. Di bagian **Lampirkan Cognitive Services**, pilih sumber daya layanan Azure AI Anda.  
+1. Di bagian **Lampirkan Layanan AI**, pilih sumber daya layanan Azure AI Anda.  
 
 1. Di bagian **Tambahkan pengayaan**:
     - Ubah **Nama Set Kemampuan** menjadi **coffee-skillset**.
@@ -152,11 +152,12 @@ Setelah Anda memiliki dokumen dalam penyimpanan, Anda dapat menggunakan Azure AI
     - Detail gambar
     - Referensi gambar
 
-    > **Catatan** Jika muncul peringatan yang meminta **String Koneksi Akun Penyimpanan**.
+    > **Catatan** Peringatan yang meminta **String Koneksi Akun Penyimpanan** muncul.
     >
     > ![Cuplikan layar yang menampilkan peringatan layar koneksi akun Azure Storage dengan 'Pilih koneksi yang ada' dipilih.](media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)
     >
-    > 1. Pilih **Pilih koneksi yang ada**. Pilih akun penyimpanan yang Anda buat sebelumnya.
+
+1. Pilih **Pilih koneksi yang ada**. Pilih akun penyimpanan yang Anda buat sebelumnya.
     > 1. Klik **+ Kontainer** untuk membuat kontainer baru yang disebut **penyimpanan pengetahuan** dengan tingkat privasi yang diatur ke **Privat**, dan pilih **Buat**.
     > 1. Pilih kontainer **penyimpanan pengetahuan**, lalu klik **Pilih** di bagian bawah layar.
 
@@ -166,7 +167,7 @@ Setelah Anda memiliki dokumen dalam penyimpanan, Anda dapat menggunakan Azure AI
 
 1. Pastikan **Kunci** diatur ke **metadata_storage_path**. Biarkan **Nama pemberi saran** kosong dan **Mode pencarian** terisi otomatis.
 
-1. Tinjau pengaturan default bidang indeks. Pilih **dapat difilter** untuk semua bidang yang telah dipilih secara default.
+1. Tinjau pengaturan default bidang indeks. Pilih **dapat difilter** untuk semua bidang yang telah dipilih secara default. Nama bidang yang perlu ditandai *dapat difilter* meliputi: konten, lokasi, frasa kunci, sentimen, merged_content, teks, layoutText, imageTags, imageCaption.
 
     ![Cuplikan layar yang menampilkan panel indeks kustomisasi dengan nama indeks yang dimasukkan dan 'Dapat Difilter' dipilih untuk bidang indeks default.](media/create-cognitive-search-solution/6a-azure-cognitive-search-customize-index.png)
 
@@ -238,11 +239,11 @@ Mari kita lihat kekuatan penyimpanan pengetahuan saat digunakan. Saat Anda menja
 
 1. Di portal Microsoft Azure, navigasikan kembali ke akun penyimpanan Azure Anda.
 
-2. Di panel menu sebelah kiri, pilih **Kontainer**. Pilih kontainer **penyimpanan pengetahuan**.
+2. Di panel menu sebelah kiri, pilih **Kontainer**. Pilih kontainer **penyimpanan pengetahuan**. 
 
     ![Cuplikan layar kontainer penyimpanan pengetahuan.](media/create-cognitive-search-solution/knowledge-store-blob-0.png)
 
-3. Pilih salah satu item, lalu klik file **objectprojection.json**.
+3. Anda akan melihat daftar folder. Ada satu folder untuk semua metadata untuk setiap dokumen ulasan. **Pilih salah satu folder**. Dalam folder, klik file **objectprojection.json**.
 
     ![Cuplikan layar dari objectprojection.json.](media/create-cognitive-search-solution/knowledge-store-blob-1.png)
 

@@ -50,7 +50,35 @@ Sebelum menggunakan studio, Anda perlu mengaitkan sumber daya layanan Azure AI d
 
 6. Pilih ikon **Pengaturan** di kanan atas layar lagi. Kali ini Anda akan melihat bahwa sumber daya yang baru dibuat telah ditambahkan ke daftar.  
 
-7. Pada halaman Pengaturan Studio Keamanan Konten, pilih sumber daya layanan Azure AI yang baru saja Anda buat dan klik **Gunakan sumber daya** di bagian bawah layar. Anda akan dibawa kembali ke halaman beranda studio. Sekarang Anda dapat mulai menggunakan studio dengan sumber daya yang baru dibuat.
+>**Catatan**: Jika menggunakan langganan Cloud Slice, Anda dapat melompati langkah #7-12 dan menuju ke langkah #13. Jika tidak, lanjutkan ke langkah #7.
+
+7. Pilih **Tampilkan semua properti di portal Azure** di bagian bawah layar *Pengaturan*. 
+
+![Cuplikan layar tautan tampilkan semua properti di portal Azure.](./media/content-safety/view-all-properties.png)
+
+8. Di portal Azure, pilih sumber daya *Keamanan Konten* yang baru saja Anda buat. Kemudian, pada panel sebelah kiri, pilih **Kontrol Akses (IAM)**. Kemudian, pada panel yang terbuka, pilih **Tambahkan** di samping tanda tambah, dan pilih **Tambahkan penetapan peran**. 
+
+![Cuplikan layar tempat untuk memilih tambahkan penetapan peran di panel Kontrol Akses.](./media/content-safety/access-control-step-one.png)
+
+9. Cari **Pengguna Cognitive Services** dalam daftar peran, dan pilih pengguna tersebut. Kemudian pilih **Berikutnya**. 
+
+10. Gunakan pengaturan berikut untuk menetapkan peran tersebut ke diri Anda: 
+    - **Tetapkan akses ke**: pilih *pengguna, grup, atau prinsipal layanan*
+    - **Anggota**: klik *pilih anggota*
+        - Pada panel *Pilih anggota* yang terbuka, temukan nama Anda. Klik ikon plus di sebelah nama Anda. Lalu klik **Pilih**.
+    - **Deskripsi**: *biarkan kosong*
+
+11. Pilih **Tinjau dan Tetapkan**, lalu pilih **Tinjau dan Tetapkan** lagi untuk menambahkan penetapan peran.    
+
+12. Kembali ke Content Safety Studio pada [https://contentsafety.cognitive.azure.com](https://contentsafety.cognitive.azure.com). Kemudian, pilih ikon **Pengaturan** di bagian kanan atas layar. 
+
+![Cuplikan layar ikon pengaturan di kanan atas layar, di samping bel, tanda tanya, dan ikon senyum.](./media/content-safety/settings-toggle.png)
+ 
+13. Pilih sumber daya layanan Azure AI yang baru saja Anda buat. Pastikan pada *Penetapan peran saat ini* Anda melihat *Pengguna Cognitive Services*, dan *Pemilik*.
+
+![Cuplikan layar penetapan peran saat ini.](./media/content-safety/access-control-check-step.png)
+
+14. Klik **Gunakan sumber daya** di bagian bawah layar. Anda akan dibawa kembali ke halaman beranda studio. Sekarang Anda dapat mulai menggunakan studio dengan sumber daya yang baru dibuat.
 
 ## Mencoba moderasi teks di Studio Keamanan Konten
 
