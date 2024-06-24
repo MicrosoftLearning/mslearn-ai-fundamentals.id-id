@@ -40,7 +40,7 @@ Untuk memulai eksplorasi AI generatif Anda, mari kita gunakan Copilot untuk Word
     How do I setup a new business in New York?
     ```
 
-1. Tinjau respons dan tindak lanjuti dengan pertanyaan tambahan sesuai kebutuhan. Saat Anda puas dengan respons, gunakan ikon **Salin** (&#128461;) di bawah respons untuk menyalinnya ke clipboard. Tempel hal tersebut ke dalam dokumen Word, pilih semua teks, lalu pilih ikon Copilot (di bagian bawah teks yang dipilih) untuk memvisualisasikan teks sebagai tabel.
+1. Tinjau respons dan tindak lanjuti dengan pertanyaan tambahan sesuai kebutuhan. Saat Anda puas dengan respons, gunakan ikon **Salin** (&#128461;) di bawah respons untuk menyalinnya ke clipboard. Tempelkan ke dalam dokumen Word, pilih semua teks, lalu pilih ikon Copilot (di bagian bawah teks yang dipilih) untuk memvisualisasikan teks sebagai tabel.
 
     ![Cuplikan layar meminta Copilot untuk memvisualisasikan dalam format tabel.](./media/generative-ai/copilot-rewrite-as-table.png)
 
@@ -112,7 +112,7 @@ Anda baru saja menggunakan data yang dibuat dari Copilot di Word untuk divisuali
 
 Anda telah membuat beberapa materi pemasaran untuk membantu Anda memulai bisnis Anda. Sekarang saatnya untuk menjangkau investor untuk mencari pendanaan perusahaan rintisan.
 
-1. Buka **Outlook**. Jika Anda belum menyiapkan Outlook dengan akun Microsoft 365, lakukanlah.
+1. Buka **Outlook**. Jika Anda belum menyiapkan Outlook dengan akun Microsoft 365, lakukan penyiapannya sekarang.
 
     > **Tips**: Lihat [Menyiapkan dan menggunakan Outlook - Dukungan Microsoft](https://support.microsoft.com/office/set-up-and-use-outlook-4636f361-d5e3-4a87-9cd4-382858de55fa) untuk bantuan terkait hal ini.
 
