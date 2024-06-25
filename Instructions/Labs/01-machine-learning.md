@@ -1,26 +1,28 @@
 ---
 lab:
-  title: Menjelajahi Pembelajaran Mesin Otomatis di Azure Pembelajaran Mesin
+  title: Jelajahi Pembelajaran Mesin Otomatis di Azure Machine Learning
 ---
 
-# Menjelajahi Pembelajaran Mesin Otomatis di Azure Pembelajaran Mesin
+# Jelajahi Pembelajaran Mesin Otomatis di Azure Machine Learning
 
-Dalam latihan ini, Anda akan menggunakan fitur pembelajaran mesin otomatis di Azure Pembelajaran Mesin untuk melatih dan mengevaluasi model pembelajaran mesin. Anda kemudian akan menyebarkan dan menguji model terlatih.
+Dalam latihan ini, Anda akan menggunakan fitur pembelajaran mesin otomatis di Azure Machine Learning untuk melatih dan mengevaluasi model pembelajaran mesin. Kemudian, Anda akan menyebarkan dan menguji model terlatih.
 
-Latihan ini akan memakan waktu sekitar **30** menit untuk diselesaikan.
+Latihan ini seharusnya memakan waktu sekitar **30** menit untuk menyelesaikannya.
+
+>**Penting** Saat ini, Anda dapat membuat dan menyebarkan model sebagai layanan web di Azure Machine Learning Studio. Namun, pengujian model tidak dapat dilakukan di Studio. Oleh karena itu, semua langkah dapat diselesaikan, kecuali bagian terakhir sebelum pembersihan. Kami akan memberikan pembaruan setiap kali ada perubahan.
 
 ## Membuat ruang kerja Pembelajaran Mesin Microsoft Azure
 
-Untuk menggunakan Azure Pembelajaran Mesin, Anda perlu memprovisikan ruang kerja Azure Pembelajaran Mesin di langganan Azure Anda. Kemudian Anda akan dapat menggunakan studio Azure Pembelajaran Mesin untuk bekerja dengan sumber daya di ruang kerja Anda.
+Untuk menggunakan Azure Machine Learning, Anda perlu menyediakan ruang kerja Azure Machine Learning di langganan Azure Anda. Kemudian, Anda akan dapat menggunakan studio Azure Machine Learning untuk bekerja dengan sumber daya di ruang kerja Anda.
 
-> **Tips**: Jika Anda sudah memiliki ruang kerja Azure Pembelajaran Mesin, Anda dapat menggunakannya dan melompat ke tugas berikutnya.
+> **Tips**: Jika Anda sudah memiliki ruang kerja Azure Machine Learning, Anda dapat menggunakannya dan melompat ke tugas berikutnya.
 
-1. Masuk ke [portal Azure](https://portal.azure.com) saat `https://portal.azure.com` menggunakan kredensial Microsoft Anda.
+1. Masuk ke [portal Azure](https://portal.azure.com) di `https://portal.azure.com` menggunakan kredensial Microsoft Anda.
 
-1. Pilih **+ Buat sumber daya**, cari *Pembelajaran Mesin*, dan buat sumber daya Azure Pembelajaran Mesin** baru **dengan pengaturan berikut:
+1. Pilih **+ Buat sumber daya**, cari *Azure Machine Learning*, dan buat sumber daya **Azure Machine Learning** baru dengan pengaturan berikut:
     - **Langganan**: *Langganan Azure Anda*.
     - **Grup sumber daya**: *Buat atau pilih grup sumber daya*.
-    - **Nama**: *Masukkan nama unik untuk ruang* kerja Anda.
+    - **Nama**: *Masukkan nama yang unik untuk ruang kerja Anda*.
     - **Wilayah**: *Pilih wilayah geografis terdekat*.
     - **Akun penyimpanan**: *Perhatikan akun penyimpanan default baru yang akan dibuat untuk ruang kerja Anda*.
     - **Key vault**: *Perhatikan key vault baru bawaan yang akan dibuat untuk ruang kerja Anda*.
@@ -31,36 +33,36 @@ Untuk menggunakan Azure Pembelajaran Mesin, Anda perlu memprovisikan ruang kerja
 
 1. Pilih **Luncurkan studio** (atau buka tab browser baru dan arahkan ke [https://ml.azure.com](https://ml.azure.com?azure-portal=true), dan masuk ke studio Azure Machine Learning menggunakan akun Microsoft Anda). Tutup pesan apa pun yang ditampilkan.
 
-1. Di studio Azure Machine Learning, Anda akan melihat ruang kerja yang baru dibuat. Jika tidak, pilih **Semua ruang** kerja di menu sebelah kiri lalu pilih ruang kerja yang baru saja Anda buat.
+1. Di studio Azure Machine Learning, Anda akan melihat ruang kerja yang baru dibuat. Jika tidak, pilih **Semua ruang kerja** di menu sebelah kiri lalu pilih ruang kerja yang baru saja Anda buat.
 
 ## Menggunakan pembelajaran mesin otomatis untuk melatih model
 
-Pembelajaran mesin otomatis memungkinkan Anda mencoba beberapa algoritma dan parameter untuk melatih beberapa model, dan mengidentifikasi yang terbaik untuk data Anda. Dalam latihan ini, Anda akan menggunakan himpunan data detail penyewaan sepeda historis untuk melatih model yang memprediksi jumlah penyewaan sepeda yang harus diharapkan pada hari tertentu, berdasarkan fitur musiman dan meteorologis.
+Pembelajaran mesin otomatis memungkinkan Anda mencoba beberapa algoritma dan parameter untuk melatih beberapa model serta mengidentifikasi model yang terbaik untuk data Anda. Dalam latihan ini, Anda akan menggunakan himpunan data detail persewaan sepeda historis untuk melatih model yang memprediksi jumlah persewaan sepeda yang diharapkan pada hari tertentu, berdasarkan fitur musiman dan meteorologi.
 
-> **Kutipan**: *Data yang digunakan dalam latihan ini berasal dari [Capital Bikeshare](https://www.capitalbikeshare.com/system-data) dan digunakan sesuai dengan perjanjian[* lisensi data ](https://www.capitalbikeshare.com/data-license-agreement)yang diterbitkan.
+> **Kutipan**: *Data yang digunakan dalam latihan ini berasal dari [Capital Bikeshare](https://www.capitalbikeshare.com/system-data) dan digunakan sesuai dengan [perjanjian lisensi](https://www.capitalbikeshare.com/data-license-agreement)* data yang diterbitkan.
 
-1. Di [studio](https://ml.azure.com?azure-portal=true) Azure Pembelajaran Mesin, lihat **halaman ML** Otomatis (di bawah **Penulisan**).
+1. Di [studio Azure Machine Learning](https://ml.azure.com?azure-portal=true), lihat halaman **ML Otomatis** (di bawah **Penulisan**).
 
-1. Buat pekerjaan ML Otomatis baru dengan pengaturan berikut, menggunakan **Berikutnya** sesuai kebutuhan untuk maju melalui antarmuka pengguna:
+1. Buat pekerjaan ML Otomatis baru dengan pengaturan berikut, dengan menggunakan **Berikutnya** sesuai kebutuhan untuk maju melalui antarmuka pengguna:
 
-    **Pengaturan** dasar:
+    **Pengaturan dasar**:
 
-    - **Nama** pekerjaan: mslearn-bike-automl
+    - **Nama pekerjaan**: mslearn-bike-automl
     - **Nama eksperimen baru**:mslearn-bike-rental
     - **Deskripsi**: Pembelajaran mesin otomatis untuk prediksi penyewaan sepeda
-    - **** Tag: *tidak ada*
+    - **Tag**: *tidak ada*
 
-   **Jenis tugas & data**:
+   **Tipe tugas & data**:
 
-    - **Pilih jenis** tugas: Regresi
-    - **Pilih himpunan** data: Buat himpunan data baru dengan pengaturan berikut:
+    - **Pilih jenis tugas**: Regresi
+    - **Pilih himpunan data**: Buat himpunan data baru dengan pengaturan berikut:
         - **Jenis data**:
             - **Nama**: bike-rentals
             - **Deskripsi**: Data penyewaan sepeda historis
             - **Jenis**: Tabular
         - **Sumber data**:
             - Pilih **Dari file web**
-        - **URL** Web:
+        - **URL Web**:
             - **URL Web**: `https://aka.ms/bike-rentals`
             - **Lewati validasi data**: *jangan pilih*
         - **Pengaturan**:
@@ -74,80 +76,82 @@ Pembelajaran mesin otomatis memungkinkan Anda mencoba beberapa algoritma dan par
             - Sertakan semua kolom selain **Jalur**
             - Meninjau jenis yang terdeteksi secara otomatis
 
-        Pilih **Buat**. Setelah himpunan data dibuat, pilih himpunan **data penyewaan** sepeda untuk terus mengirimkan pekerjaan ML Otomatis.
+        Pilih **Buat**. Setelah himpunan data dibuat, pilih himpunan data **bike-rentals** untuk terus mengirimkan pekerjaan ML Otomatis.
 
     **Pengaturan tugas**:
 
-    - **Jenis** tugas: Regresi
+    - **Jenis tugas**: Regresi
     - **Himpunan data**: bike-rentals
-    - **Kolom target**: Penyewaan (bilangan bulat)
+    - **Kolom target**: Persewaan (bilangan bulat)
     - **Setelan konfigurasi tambahan:**
-        - **Metrik** utama: Kesalahan kuadrat rata-rata akar yang dinormalisasi
-        - **Menjelaskan model** terbaik: *Tidak dipilih*
+        - **Metrik utama**: Akar rata-rata kesalahan kuadrat yang dinormalkan
+        - **Jelaskan model terbaik**: *Tidak dipilih*
         - **Gunakan semua model yang didukung**: <u>Tidak</u>dipilih. *Anda akan membatasi pekerjaan untuk mencoba hanya beberapa algoritma tertentu.*
         - **Model yang diizinkan**: *Pilih hanya **RandomForest** dan **LightGBM** — biasanya Anda ingin mencoba sebanyak mungkin, tetapi setiap model yang ditambahkan akan menambah waktu yang dibutuhkan untuk menjalankan pekerjaan.*
-    - **** Batas: *Perluas bagian ini*
-        - **Uji coba maks**: 3
-        - **Uji coba** serentak maks: 3
-        - **Simpul maks**: 3
-        - **Ambang** skor metrik: 0,085 (*sehingga jika model mencapai skor metrik kesalahan kuadrat rata-rata akar yang dinormalisasi sebesar 0,085 atau kurang, pekerjaan berakhir.*)
-        - **Waktu habis**: 15
+    - **Batas**: *Luaskan bagian ini*
+        - **Percobaan maks**: 3
+        - **Percobaan serentak maks**: 3
+        - **Node maks**: 3
+        - **Ambang skor metrik**: 0.085 (*sehingga jika model mencapai skor metrik akar rata-rata kesalahan kuadrat yang dinormalkan sebesar 0,085 atau kurang, pekerjaan akan berakhir.*)
+        - **Batas waktu**: 15
         - **Batas waktu perulangan**: 15
-        - **Aktifkan penghentian** dini: *Dipilih*
+        - **Aktifkan penghentian dini**: *Dipilih*
     - **Validasi dan pengujian**:
-        - **Jenis** validasi: Pemisahan validasi pelatihan
-        - **Persentase data** validasi: 10
-        - **Himpunan** data pengujian: Tidak ada
+        - **Jenis validasi**: Pembagian validasi kereta
+        - **Persentase data validasi**: 10
+        - **Menguji himpunan data**: Tidak ada
 
     **Komputasi:**
 
-    - **Pilih jenis komputasi**: Tanpa Server
+    - **Pilih jenis komputasi**: Tanpa server
     - **Jenis mesin virtual**: CPU
     - **Tingkatan mesin virtual**: Khusus
-    - **Ukuran komputer virtual**: Standard_DS3_V2\*
+    - **Ukuran mesin virtual**: Standard_DS3_V2\*
     - **Jumlah instans**: 1
 
-    \**Jika langganan Anda membatasi ukuran VM yang tersedia untuk Anda, pilih ukuran yang tersedia.*
+    \* *Jika langganan Anda membatasi ukuran VM yang tersedia untuk Anda, pilih ukuran mana pun yang tersedia.*
 
-1. Kirim pekerjaan pelatihan. Ini dimulai secara otomatis.
+1. Kirim pekerjaan pelatihan. Proses ini dimulai secara otomatis.
 
 1. Tunggu pekerjaan selesai. Mungkin perlu waktu — sekarang mungkin saat yang tepat untuk istirahat sejenak!
 
 ## Meninjau model terbaik
 
-Ketika pekerjaan pembelajaran mesin otomatis telah selesai, Anda dapat meninjau model terbaik yang dilatihnya.
+Ketika pekerjaan pembelajaran mesin otomatis telah selesai, Anda dapat meninjau model terbaik yang dilatih.
 
 1. Di tab **Ringkasan** tugas pembelajaran mesin otomatis, perhatikan ringkasan model terbaik.
     ![Cuplikan layar ringkasan model terbaik dari tugas pembelajaran mesin otomatis dengan kotak di sekitar nama algoritma.](./media/use-automated-machine-learning/complete-run.png)
 
-    > **Catatan** Anda mungkin melihat pesan di bawah status "Peringatan: Pengguna yang ditentukan keluar skor tercapai...". Ini adalah pesan yang diharapkan. Lanjutkan ke langkah berikutnya.
+    > **Catatan** Anda mungkin melihat pesan di bawah status "Peringatan: Skor keluar yang ditentukan pengguna tercapai...". Ini adalah pesan yang diharapkan. Lanjutkan ke langkah berikutnya.
   
 1. Pilih teks di bawah **Nama algoritma** untuk model terbaik guna melihat detailnya.
 
 1. Pilih tab **Metrik** dan pilih bagan **residuals** dan **predicted_true** jika belum dipilih. 
 
-    Tinjau grafik yang menunjukkan performa model. Bagan **residu** menunjukkan *residu* (perbedaan antara nilai yang diprediksi dan aktual) sebagai histogram. Bagan **predicted_true** membandingkan nilai yang diprediksi dengan nilai benar. 
+    Tinjau grafik yang menunjukkan performa model. Bagan **residual** menunjukkan *residual* (perbedaan antara nilai yang diprediksi dan nilai sebenarnya) dalam histogram. Bagan **predicted_true** membandingkan nilai yang diprediksi dengan nilai true. 
 
 ## Terapkan dan uji model
 
-1. Pada tab **Model** untuk model terbaik yang dilatih oleh pekerjaan pembelajaran mesin otomatis Anda, pilih **Sebarkan** dan gunakan **opsi Layanan** web untuk menyebarkan model dengan pengaturan berikut:
+1. Pada tab **Model** untuk model terbaik yang dilatih oleh pekerjaan pembelajaran mesin otomatis Anda, pilih **Sebarkan** dan gunakan opsi **Layanan web** untuk menyebarkan model dengan pengaturan berikut:
     - **Nama**: predict-rentals
     - **Deskripsi**: Memprediksi penyewaan sepeda
     - **Jenis komputasi**: Azure Container Instance
     - **Aktifkan autentikasi**: *Dipilih*
 
-1. Tunggu penyebaran dimulai - ini mungkin memakan waktu beberapa detik. Status **** Sebarkan untuk **titik akhir predict-rentals** akan ditunjukkan di bagian utama halaman sebagai *Berjalan*.
-1. Tunggu **hingga status** Sebarkan* berubah menjadi *Berhasil. Proses ini mungkin memakan waktu 5-10 menit.
+1. Tunggu penyebaran dimulai - ini mungkin memakan waktu beberapa detik. **Status penyebaran** untuk titik akhir**predict-rentals** akan ditunjukkan di bagian utama halaman sebagai *Berjalan*.
+1. Tunggu hingga **Status penyebaran** berubah menjadi *Berhasil*. Proses ini dapat memakan waktu 5-10 menit.
 
 ## Menguji layanan yang disebarkan
 
+>**Penting** Azure Machine Learning Studio saat ini tidak mendukung jenis pembuatan himpunan data yang diperlukan untuk menggunakan pengujian penyebaran. Kami akan memberi tahu Anda jika sudah ada resolusi. 
+
 Sekarang Anda dapat menguji layanan yang disebarkan.
 
-1. Di studio Azure Pembelajaran Mesin, di menu sebelah kiri, pilih **Titik** akhir dan buka **titik akhir real time predict-rentals**.
+1. Di studio Azure Machine Learning, di menu sebelah kiri, pilih **Titik akhir** dan buka titik akhir real time **predict-rentals**.
 
-1. Pada halaman **titik akhir real-time predict-rentals** , lihat tab **Uji** .
+1. Pada halaman titik akhir real time **predict-rentals** tampilkan tab **Pengujian**.
 
-1. Di panel **Input data untuk menguji titik** akhir, ganti templat JSON dengan data input berikut:
+1. Di panel **Input data ke titik akhir pengujian**, ganti templat JSON dengan data input berikut:
 
     ```JSON
     {
@@ -175,7 +179,7 @@ Sekarang Anda dapat menguji layanan yang disebarkan.
 
 1. Klik tombol **Uji**.
 
-1. Tinjau hasil pengujian, yang mencakup jumlah penyewaan yang diprediksi berdasarkan fitur input - mirip dengan ini:
+1. Tinjau hasil pengujian, yang mencakup perkiraan jumlah persewaan berdasarkan fitur input - mirip dengan ini:
 
     ```JSON
     {
@@ -195,7 +199,7 @@ Layanan web yang Anda buat dihost dalam *Azure Container Instance*. Jika tidak b
 
 1. Di [studio Azure Machine Learning](https://ml.azure.com?azure-portal=true), di tab **Titik Akhir**, pilih titik akhir **predict-rentals**. Kemudian pilih **Hapus** dan konfirmasikan bahwa Anda ingin menghapus titik akhir.
 
-    Menghapus komputasi Anda memastikan langganan Anda tidak akan dikenakan biaya untuk sumber daya komputasi. Namun, Anda akan dikenakan biaya kecil untuk penyimpanan data selama ruang kerja Azure Machine Learning ada di langganan Anda. Jika telah selesai menjelajahi Azure Machine Learning, Anda dapat menghapus ruang kerja Azure Machine Learning dan sumber daya terkait.
+    Menghapus komputasi memastikan langganan Anda tidak akan ditagih untuk sumber daya komputasi. Namun, Anda akan dikenakan biaya kecil untuk penyimpanan data selama ruang kerja Azure Machine Learning ada di langganan Anda. Jika telah selesai menjelajahi Azure Machine Learning, Anda dapat menghapus ruang kerja Azure Machine Learning dan sumber daya terkait.
 
 Untuk menghapus ruang kerja Anda:
 
