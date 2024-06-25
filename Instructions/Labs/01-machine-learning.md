@@ -9,8 +9,6 @@ Dalam latihan ini, Anda akan menggunakan fitur pembelajaran mesin otomatis di Az
 
 Latihan ini seharusnya memakan waktu sekitar **30** menit untuk menyelesaikannya.
 
->**Penting** Saat ini, Anda dapat membuat dan menyebarkan model sebagai layanan web di Azure Machine Learning Studio. Namun, pengujian model tidak dapat dilakukan di Studio. Oleh karena itu, semua langkah dapat diselesaikan, kecuali bagian terakhir sebelum pembersihan. Kami akan memberikan pembaruan setiap kali ada perubahan.
-
 ## Membuat ruang kerja Pembelajaran Mesin Microsoft Azure
 
 Untuk menggunakan Azure Machine Learning, Anda perlu menyediakan ruang kerja Azure Machine Learning di langganan Azure Anda. Kemudian, Anda akan dapat menggunakan studio Azure Machine Learning untuk bekerja dengan sumber daya di ruang kerja Anda.
@@ -47,8 +45,8 @@ Pembelajaran mesin otomatis memungkinkan Anda mencoba beberapa algoritma dan par
 
     **Pengaturan dasar**:
 
-    - **Nama pekerjaan**: mslearn-bike-automl
-    - **Nama eksperimen baru**:mslearn-bike-rental
+    - **Nama pekerjaan**: `mslearn-bike-automl`
+    - **Nama eksperimen baru**: `mslearn-bike-rental`
     - **Deskripsi**: Pembelajaran mesin otomatis untuk prediksi penyewaan sepeda
     - **Tag**: *tidak ada*
 
@@ -57,24 +55,16 @@ Pembelajaran mesin otomatis memungkinkan Anda mencoba beberapa algoritma dan par
     - **Pilih jenis tugas**: Regresi
     - **Pilih himpunan data**: Buat himpunan data baru dengan pengaturan berikut:
         - **Jenis data**:
-            - **Nama**: bike-rentals
-            - **Deskripsi**: Data penyewaan sepeda historis
-            - **Jenis**: Tabular
+            - **Nama**: `bike-rentals`
+            - **Deskripsi**: `Historic bike rental data`
+            - **Jenis**: Tabel (mltable)
         - **Sumber data**:
-            - Pilih **Dari file web**
-        - **URL Web**:
-            - **URL Web**: `https://aka.ms/bike-rentals`
-            - **Lewati validasi data**: *jangan pilih*
-        - **Pengaturan**:
-            - **Format file**: Terbatas
-            - **Pemisah**: Koma
-            - **Pengodean**: UTF-8
-            - **Header kolom**: Hanya file pertama yang memiliki header
-            - **Lompati baris**: Tidak ada
-            - **Himpunan data berisi data multibaris**: *jangan pilih*
-        - **Skema**:
-            - Sertakan semua kolom selain **Jalur**
-            - Meninjau jenis yang terdeteksi secara otomatis
+            - Pilih **Dari file lokal**
+        - **Jenis penyimpanan tujuan**:
+            - **Jenis datastore**: Azure Blob Storage
+            - **Nama**: workspaceblobstore
+        - **Pilihan MLtable**:
+            - **Unggah folder**: *Unduh folder yang berisi dua file yang perlu Anda unggah dari* `https://aka.ms/bike-rentals`
 
         Pilih **Buat**. Setelah himpunan data dibuat, pilih himpunan data **bike-rentals** untuk terus mengirimkan pekerjaan ML Otomatis.
 
@@ -82,19 +72,20 @@ Pembelajaran mesin otomatis memungkinkan Anda mencoba beberapa algoritma dan par
 
     - **Jenis tugas**: Regresi
     - **Himpunan data**: bike-rentals
-    - **Kolom target**: Persewaan (bilangan bulat)
+    - **Kolom target**: penyewaan (bilangan bulat)
     - **Setelan konfigurasi tambahan:**
-        - **Metrik utama**: Akar rata-rata kesalahan kuadrat yang dinormalkan
+        - **Metrik utama**: NormalizedRootMeanSquaredError
         - **Jelaskan model terbaik**: *Tidak dipilih*
+        - **Aktifkan tumpukan ansambel**: *Tidak dipilih*
         - **Gunakan semua model yang didukung**: <u>Tidak</u>dipilih. *Anda akan membatasi pekerjaan untuk mencoba hanya beberapa algoritma tertentu.*
         - **Model yang diizinkan**: *Pilih hanya **RandomForest** dan **LightGBM** — biasanya Anda ingin mencoba sebanyak mungkin, tetapi setiap model yang ditambahkan akan menambah waktu yang dibutuhkan untuk menjalankan pekerjaan.*
     - **Batas**: *Luaskan bagian ini*
-        - **Percobaan maks**: 3
-        - **Percobaan serentak maks**: 3
-        - **Node maks**: 3
-        - **Ambang skor metrik**: 0.085 (*sehingga jika model mencapai skor metrik akar rata-rata kesalahan kuadrat yang dinormalkan sebesar 0,085 atau kurang, pekerjaan akan berakhir.*)
-        - **Batas waktu**: 15
-        - **Batas waktu perulangan**: 15
+        - **Uji coba maksimum**: `3`
+        - **Uji coba serentak maksimum**: `3`
+        - **Node maksimum**: `3`
+        - **Ambang skor metrik**: `0.085` (*sehingga jika model mencapai skor metrik kesalahan kuadrat rata-rata akar yang dinormalisasi sebesar 0,085 atau kurang, pekerjaan berakhir.*)
+        - **Batas Waktu Eksperimen :**: `15`
+        - **Batas waktu Iterasi**: `15`
         - **Aktifkan penghentian dini**: *Dipilih*
     - **Validasi dan pengujian**:
         - **Jenis validasi**: Pembagian validasi kereta
@@ -126,24 +117,25 @@ Ketika pekerjaan pembelajaran mesin otomatis telah selesai, Anda dapat meninjau 
   
 1. Pilih teks di bawah **Nama algoritma** untuk model terbaik guna melihat detailnya.
 
-1. Pilih tab **Metrik** dan pilih bagan **residuals** dan **predicted_true** jika belum dipilih. 
+1. Pilih tab **Metrik** dan pilih bagan **residuals** dan **predicted_true** jika belum dipilih.
 
-    Tinjau grafik yang menunjukkan performa model. Bagan **residual** menunjukkan *residual* (perbedaan antara nilai yang diprediksi dan nilai sebenarnya) dalam histogram. Bagan **predicted_true** membandingkan nilai yang diprediksi dengan nilai true. 
+    Tinjau grafik yang menunjukkan performa model. Bagan **residual** menunjukkan *residual* (perbedaan antara nilai yang diprediksi dan nilai sebenarnya) dalam histogram. Bagan **predicted_true** membandingkan nilai yang diprediksi dengan nilai true.
 
 ## Terapkan dan uji model
 
-1. Pada tab **Model** untuk model terbaik yang dilatih oleh pekerjaan pembelajaran mesin otomatis Anda, pilih **Sebarkan** dan gunakan opsi **Layanan web** untuk menyebarkan model dengan pengaturan berikut:
-    - **Nama**: predict-rentals
-    - **Deskripsi**: Memprediksi penyewaan sepeda
-    - **Jenis komputasi**: Azure Container Instance
-    - **Aktifkan autentikasi**: *Dipilih*
+1. Pada tab **Model** untuk model terbaik yang dilatih oleh pekerjaan pembelajaran mesin otomatis Anda, pilih **Sebarkan** dan gunakan opsi **Titik akhir real-time** untuk menyebarkan model dengan pengaturan berikut:
+    - **Komputer virtual**: Standard_DS3_v2
+    - **Jumlah instans**: 3
+    - **Titik akhir**: Baru
+    - **Nama titik akhir**: *Biarkan default atau pastikan unik secara global*
+    - **Nama penyebaran**: *Biarkan default*
+    - **Inferensi pengumpulan data**: *Nonaktifkan*
+    - **Model Paket**: *Nonaktifkan*
 
 1. Tunggu penyebaran dimulai - ini mungkin memakan waktu beberapa detik. **Status penyebaran** untuk titik akhir**predict-rentals** akan ditunjukkan di bagian utama halaman sebagai *Berjalan*.
 1. Tunggu hingga **Status penyebaran** berubah menjadi *Berhasil*. Proses ini dapat memakan waktu 5-10 menit.
 
 ## Menguji layanan yang disebarkan
-
->**Penting** Azure Machine Learning Studio saat ini tidak mendukung jenis pembuatan himpunan data yang diperlukan untuk menggunakan pengujian penyebaran. Kami akan memberi tahu Anda jika sudah ada resolusi. 
 
 Sekarang Anda dapat menguji layanan yang disebarkan.
 
