@@ -64,7 +64,7 @@ Pembelajaran mesin otomatis memungkinkan Anda mencoba beberapa algoritma dan par
             - **Jenis datastore**: Azure Blob Storage
             - **Nama**: workspaceblobstore
         - **Pilihan MLtable**:
-            - **Unggah folder**: *Unduh folder yang berisi dua file yang perlu Anda unggah dari* `https://aka.ms/bike-rentals`
+            - **Unggah folder**: *Unduh dan unzip folder yang berisi dua file yang perlu Anda unggah* `https://aka.ms/bike-rentals`
 
         Pilih **Buat**. Setelah himpunan data dibuat, pilih himpunan data **bike-rentals** untuk terus mengirimkan pekerjaan ML Otomatis.
 
@@ -145,29 +145,31 @@ Sekarang Anda dapat menguji layanan yang disebarkan.
 
 1. Di panel **Input data ke titik akhir pengujian**, ganti templat JSON dengan data input berikut:
 
-    ```JSON
+    ```json
     {
-      "Inputs": { 
-        "data": [
-          {
-            "day": 1,
-            "mnth": 1,   
-            "year": 2022,
-            "season": 2,
-            "holiday": 0,
-            "weekday": 1,
-            "workingday": 1,
-            "weathersit": 2, 
-            "temp": 0.3, 
-            "atemp": 0.3,
-            "hum": 0.3,
-            "windspeed": 0.3 
-          }
-        ]    
-      },   
-      "GlobalParameters": 1.0
+      "input_data": {
+        "columns": [
+            {
+                "day": 1,
+                "mnth": 1,   
+                "year": 2022,
+                "season": 2,
+                "holiday": 0,
+                "weekday": 1,
+                "workingday": 1,
+                "weathersit": 2, 
+                "temp": 0.3, 
+                "atemp": 0.3,
+                "hum": 0.3,
+                "windspeed": 0.3 
+            }
+        ],
+        "index": [],
+        "data": []
+      }
     }
     ```
+
 
 1. Klik tombol **Uji**.
 
