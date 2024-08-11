@@ -13,7 +13,7 @@ Dalam latihan ini, Anda akan mencoba kemampuan Azure AI Speech menggunakan Azure
 
 Anda dapat menggunakan layanan Ucapan dengan membuat sumber daya **Ucapan** atau sumber daya **layanan Azure AI**.
 
-Dalam latihan ini, Anda akan membuat sumber daya Ucapan AI, kecuali Anda sudah memiliki sumber daya yang dapat Anda gunakan.
+Dalam latihan ini, Anda akan membuat sumber daya AI Speech, kecuali Anda sudah memiliki sumber daya yang dapat Anda gunakan.
 
 1. Di tab browser lain, buka [Azure AI Speech Studio](https://speech.microsoft.com/), masuk dengan akun Microsoft Anda.
 
@@ -29,7 +29,7 @@ Dalam latihan ini, Anda akan membuat sumber daya Ucapan AI, kecuali Anda sudah m
 
 1. Pilih [**https://aka.ms/mslearn-speech-files**](https://aka.ms/mslearn-speech-files) untuk mengunduh **speech.zip**. Buka folder . 
 
-1. Pada halaman Mulai menggunakan Ucapan, di bawah *Ucapan ke teks* temukan ucapan *Real-time ke teks*. Pilih **Coba Ucapan real time ke teks**.
+1. Pada halaman Mulai menggunakan Ucapan, di bawah *Ucapan ke teks* temukan *Ucapan ke teks real-time*. Pilih **Coba Ucapan ke teks real time**.
 
     ![Mulai menggunakan Ucapan](media/recognize-synthesize-speech/try-out-speech-to-text.png)
 
@@ -42,7 +42,7 @@ Dalam latihan ini, Anda akan membuat sumber daya Ucapan AI, kecuali Anda sudah m
 
     > **Catatan** Jika Anda mendapatkan pesan kesalahan, tunggu beberapa menit sebelum mencoba lagi. Dibutuhkan sedikit waktu agar sumber daya Ucapan tersedia untuk digunakan pertama kali.
 
-Dalam latihan ini Anda membuat sumber daya Ucapan AI di Speech Studio. Anda kemudian menggunakan layanan ucapan ke teks real time untuk mentranskripsikan rekaman audio. Anda dapat melihat transkripsi teks yang dihasilkan saat file audio diputar.
+Dalam latihan ini Anda membuat sumber daya AI Speech di Speech Studio. Anda kemudian menggunakan layanan ucapan ke teks real time untuk mentranskripsikan rekaman audio. Anda dapat melihat transkripsi teks yang dihasilkan saat file audio diputar.
 
 ## Penghapusan
 
