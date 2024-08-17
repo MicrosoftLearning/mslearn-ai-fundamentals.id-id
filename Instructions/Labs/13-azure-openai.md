@@ -59,7 +59,7 @@ Untuk bereksperimen dengan pembuatan bahasa alami, Anda harus terlebih dahulu me
 
 1. Buat penyebaran baru dengan pengaturan berikut:
     - **Model**: gpt-35-turbo
-    - **Versi model**: Pembaruan otomatis ke default
+    - **Versi model**: Pembaruan otomatis bernilai default
     - **Nama penyebaran**: *Nama unik untuk penyebaran model Anda*
     - **Opsi tingkat lanjut**
         - **Filter konten**: Default
@@ -69,34 +69,34 @@ Untuk bereksperimen dengan pembuatan bahasa alami, Anda harus terlebih dahulu me
 
     > \*Batas tarif 5.000 token per menit sudah lebih dari cukup untuk menyelesaikan latihan ini dan masih menyisakan kapasitas untuk orang lain yang menggunakan langganan yang sama.
 
-## Gunakan *Obrolan* playground untuk bekerja dengan model
+## Gunakan playground *Obrolan* untuk bekerja dengan model
 
-Setelah menyebarkan model, Anda dapat menggunakannya di *Obrolan* playground untuk menghasilkan output bahasa alami dari perintah yang Anda kirimkan di antarmuka obrolan.
+Setelah menyebarkan model, Anda dapat menggunakannya di playground *Obrolan* untuk menghasilkan output bahasa alami dari perintah yang Anda kirimkan di antarmuka obrolan.
 
 1. Di [Azure OpenAI Studio](https://oai.azure.com/), navigasikan ke taman bermain **Obrolan** di panel kiri.
 
-    *Obrolan* playground menyediakan antarmuka chatbot tempat Anda dapat berinteraksi dengan model yang disebarkan, seperti yang ditunjukkan di sini:
+    Playground *Obrolan* menyediakan antarmuka chatbot tempat Anda dapat berinteraksi dengan model yang disebarkan, seperti yang ditunjukkan di sini:
 
     ![Cuplikan layar playground Obrolan di Azure OpenAI Studio.](./media/generative-ai/chat-playground.png)
 
 1. Di panel **Konfigurasi**, pastikan bahwa penyebaran model Anda dipilih.
-1. Di panel **penyiapan Asisten**, pilih templat pesan sistem **Default**, dan lihat pesan sistem yang dibuat templat ini. Pesan sistem mendefinisikan bagaimana model akan bertingkah laku dalam sesi obrolan Anda.
+1. Di panel **penyiapan Asisten**, pilih templat pesan sistem **Default**, dan lihat pesan sistem yang dibuat templat ini. Pesan sistem mendefinisikan bagaimana model akan berperilaku dalam sesi obrolan Anda.
 1. Di bagian **Sesi obrolan**, masukkan pesan pengguna berikut.
 
     ```
    What is generative AI?
     ```
 
-1. Amati output yang dikembalikan oleh model, yang harus memberikan definisi AI generatif.
+1. Amati output yang dikembalikan oleh model, yang seharusnya akan memberikan definisi AI generatif.
 1. Masukkan pesan pengguna berikut sebagai pertanyaan tindak lanjut:
 
     ```
    What are three benefits it provides?
     ```
 
-1. Tinjau output, mencatat bahwa sesi obrolan telah melacak input dan respons sebelumnya untuk memberikan konteks (sehingga menafsirkan "itu" dengan benar sebagaimana merujuk pada "AI generatif") dan bahwa sesi tersebut memberikan respons yang sesuai berdasarkan apa yang diminta (harus mengembalikan tiga manfaat AI generatif).
+1. Tinjau output, perhatikan bahwa sesi obrolan telah melacak input dan respons sebelumnya untuk memberikan konteks (sehingga menafsirkan "itu" dengan benar sebagaimana merujuk pada "AI generatif") dan bahwa sesi tersebut memberikan respons yang sesuai berdasarkan apa yang diminta (harus mengembalikan tiga manfaat AI generatif).
 
-## Gunakan *DALL-E* playground untuk menghasilkan gambar
+## Gunakan playground *DALL-E* untuk menghasilkan gambar
 
 Selain model pembuatan bahasa, Azure OpenAI Service mendukung model DALL-E 2 untuk pembuatan gambar.
 
@@ -113,7 +113,7 @@ Selain model pembuatan bahasa, Azure OpenAI Service mendukung model DALL-E 2 unt
 
     ![Cuplikan layar playground DALL-E di Azure OpenAI Studio.](./media/generative-ai/dall-e-playground.png)
 
-1. Hasilkan gambar kedua dengan memodifikasi perintah ke:
+1. Hasilkan gambar kedua dengan memodifikasi perintah menjadi:
 
     ```
     A robot eating spaghetti in the style of Rembrandt
