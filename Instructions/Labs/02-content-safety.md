@@ -17,7 +17,7 @@ Studio Keamanan Konten memungkinkan Anda menjelajahi bagaimana konten teks dan g
 
 1. Buka [Studio Keamanan Konten](https://contentsafety.cognitive.azure.com?azure-portal=true). Jika Anda tidak masuk, Anda harus masuk. Pilih **Masuk** di kanan atas layar. Gunakan email dan kata sandi yang terkait dengan langganan Azure Anda untuk masuk. 
 
-1. Studio Keamanan Konten disiapkan seperti banyak studio lain untuk layanan Azure AI. Pada menu di bagian atas layar, klik ikon di sebelah kiri *Azure AI*. Anda akan melihat daftar drop-down studio lain yang dirancang untuk pengembangan dengan layanan Azure AI. Anda dapat mengeklik ikon lagi untuk menyembunyikan daftar.
+2. Studio Keamanan Konten disiapkan seperti banyak studio lain untuk layanan Azure AI. Pada menu di bagian atas layar, klik ikon di sebelah kiri *Azure AI*. Anda akan melihat daftar drop-down studio lain yang dirancang untuk pengembangan dengan layanan Azure AI. Anda dapat mengeklik ikon lagi untuk menyembunyikan daftar.
 
 ![Cuplikan layar menu Studio Keamanan Konten dengan pilihan pengalih terbuka untuk beralih ke studio lain.](./media/content-safety/studio-toggle-icon.png)  
 
@@ -50,44 +50,32 @@ Sebelum menggunakan studio, Anda perlu mengaitkan sumber daya layanan Azure AI d
 
 6. Pilih ikon **Pengaturan** di kanan atas layar lagi. Kali ini Anda akan melihat bahwa sumber daya yang baru dibuat telah ditambahkan ke daftar.  
 
->**Catatan**: Jika menggunakan langganan Cloud Slice, Anda dapat melompati langkah #7-12 dan menuju ke langkah #13. Jika tidak, lanjutkan ke langkah #7.
+<details>  
+    <summary><b>Pemecahan masalah</b>: Izin untuk pelajar mandiri</summary>
+    <p><b>Jika Anda menggunakan lingkungan lab yang disediakan oleh instruktur, Anda dapat melewatkan langkah-langkah ini.</b> Sebaliknya, lanjutkan dengan langkah-langkah berikut.</p>
+    <ul>
+        <li>Pilih <b>Tampilkan semua properti di portal Azure</b> di bagian bawah layar *Pengaturan*.</li>
+        <li>Di portal Azure, pilih sumber daya <em>Keamanan Konten</em> yang baru saja Anda buat. Kemudian, pada panel sebelah kiri, pilih <b>Kontrol Akses (IAM)</b>. Kemudian, pada panel yang terbuka, pilih <b>Tambahkan</b> di samping tanda tambah, dan pilih <b>Tambahkan penetapan peran</b>.</li>
+        <li>Cari <b>Pengguna Cognitive Services</b> dalam daftar peran, dan pilih pengguna tersebut. Kemudian pilih <b>Berikutnya</b>. </li>
+        <li>Di bagian <b>Tetapkan akses ke</b>, pilih <b>Pengguna, grup, atau perwakilan layanan</b>, <b>+ Pilih anggota</b>, pilih nama Anda. Biarkan deskripsi kosong.</li>
+        <li>Pilih <b>Selanjutnya</b>. Di halaman <b>Jenis penugasan</b>, pilih <b>Jenis penugasan: Aktif</b>. Pilih <b>Durasi penugasan: Permanen</b>. Pilih <b>Selanjutnya</b>.</li>
+        <li>Pilih <b>Tinjau dan Tetapkan</b>, lalu <b>Tinjau dan Tetapkan</b> untuk menambahkan penetapan peran.</li>
+        <li>Kembali ke Content Safety Studio pada https://contentsafety.cognitive.azure.com. Kemudian, pilih ikon <b>Pengaturan</b> di bagian kanan atas layar. Pilih sumber daya Keamanan Konten yang baru saja Anda buat. Periksa untuk memastikan <em>Penetapan peran saat ini</em> menyertakan <b>Pengguna Layanan Kognitif</b>. Anda dapat menunggu sejenak dan menyegarkan halaman untuk melihat penetapan peran muncul.</li>
+    </ul>
+</details>
 
-7. Pilih **Tampilkan semua properti di portal Azure** di bagian bawah layar *Pengaturan*. 
+7. Jika Anda belum melakukannya, pilih sumber daya Keamanan Konten yang Anda buat. 
 
-![Cuplikan layar tautan tampilkan semua properti di portal Azure.](./media/content-safety/view-all-properties.png)
-
-8. Di portal Azure, pilih sumber daya *Keamanan Konten* yang baru saja Anda buat. Kemudian, pada panel sebelah kiri, pilih **Kontrol Akses (IAM)**. Kemudian, pada panel yang terbuka, pilih **Tambahkan** di samping tanda tambah, dan pilih **Tambahkan penetapan peran**. 
-
-![Cuplikan layar tempat untuk memilih tambahkan penetapan peran di panel Kontrol Akses.](./media/content-safety/access-control-step-one.png)
-
-9. Cari **Pengguna Cognitive Services** dalam daftar peran, dan pilih pengguna tersebut. Kemudian pilih **Berikutnya**. 
-
-10. Gunakan pengaturan berikut untuk menetapkan peran tersebut ke diri Anda: 
-    - **Tetapkan akses ke**: pilih *pengguna, grup, atau prinsipal layanan*
-    - **Anggota**: klik *pilih anggota*
-        - Pada panel *Pilih anggota* yang terbuka, temukan nama Anda. Klik ikon plus di sebelah nama Anda. Lalu klik **Pilih**.
-    - **Deskripsi**: *biarkan kosong*
-
-11. Pilih **Tinjau dan Tetapkan**, lalu pilih **Tinjau dan Tetapkan** lagi untuk menambahkan penetapan peran.    
-
-12. Kembali ke Content Safety Studio pada [https://contentsafety.cognitive.azure.com](https://contentsafety.cognitive.azure.com). Kemudian, pilih ikon **Pengaturan** di bagian kanan atas layar. 
-
-![Cuplikan layar ikon pengaturan di kanan atas layar, di samping bel, tanda tanya, dan ikon senyum.](./media/content-safety/settings-toggle.png)
- 
-13. Pilih sumber daya layanan Azure AI yang baru saja Anda buat. Pastikan pada *Penetapan peran saat ini* Anda melihat *Pengguna Cognitive Services*, dan *Pemilik*.
-
-![Cuplikan layar penetapan peran saat ini.](./media/content-safety/access-control-check-step.png)
-
-14. Klik **Gunakan sumber daya** di bagian bawah layar. Anda akan dibawa kembali ke halaman beranda studio. Sekarang Anda dapat mulai menggunakan studio dengan sumber daya yang baru dibuat.
+8. Klik **Gunakan sumber daya** di bagian bawah layar. Anda akan dibawa kembali ke halaman beranda studio. Sekarang Anda dapat mulai menggunakan studio dengan sumber daya yang baru dibuat.
 
 ## Mencoba moderasi teks di Studio Keamanan Konten
 
 1. Pada beranda Studio Keamanan Konten, di bawah *Jalankan pengujian moderasi*, navigasikan ke kotak **Moderasikan** konten teks dan klik **Cobalah**.
-1. Di bawah jalankan pengujian sederhana, klik **Konten Aman**. Perhatikan bahwa teks ditampilkan dalam kotak di bawah ini. 
-1. Klik **Jalankan pengujian**. Menjalankan pengujian memanggil model pembelajaran mendalam Layanan Keamanan Konten. Model pembelajaran mendalam telah dilatih untuk mengenali konten yang tidak aman.
-1. Di panel *Hasil*, periksa hasilnya. Ada empat tingkat keparahan dari aman ke tinggi, dan empat jenis konten berbahaya. Apakah layanan AI Keamanan Konten menganggap sampel ini dapat diterima atau tidak? Yang penting untuk dicatat adalah bahwa hasilnya berada dalam interval keyakinan. Model yang terlatih dengan baik, seperti salah satu model siap pakai Azure AI, dapat mengembalikan hasil yang memiliki probabilitas tinggi kecocokan dengan apa yang akan diberi label oleh manusia. Setiap kali Anda menjalankan pengujian, Anda memanggil model lagi. 
-1. Sekarang coba sampel lain. Pilih teks di bawah Konten kekerasan dengan salah eja. Periksa apakah konten ditampilkan dalam kotak di bawah ini.
-1. Klik **Jalankan pengujian** dan periksa hasilnya di panel Hasil lagi. 
+2. Di bawah jalankan pengujian sederhana, klik **Konten Aman**. Perhatikan bahwa teks ditampilkan dalam kotak di bawah ini. 
+3. Klik **Jalankan pengujian**. Menjalankan pengujian memanggil model pembelajaran mendalam Layanan Keamanan Konten. Model pembelajaran mendalam telah dilatih untuk mengenali konten yang tidak aman.
+4. Di panel *Hasil*, periksa hasilnya. Ada empat tingkat keparahan dari aman ke tinggi, dan empat jenis konten berbahaya. Apakah layanan AI Keamanan Konten menganggap sampel ini dapat diterima atau tidak? Yang penting untuk dicatat adalah bahwa hasilnya berada dalam interval keyakinan. Model yang terlatih dengan baik, seperti salah satu model siap pakai Azure AI, dapat mengembalikan hasil yang memiliki probabilitas tinggi kecocokan dengan apa yang akan diberi label oleh manusia. Setiap kali Anda menjalankan pengujian, Anda memanggil model lagi. 
+5. Sekarang coba sampel lain. Pilih teks di bawah Konten kekerasan dengan salah eja. Periksa apakah konten ditampilkan dalam kotak di bawah ini.
+6. Klik **Jalankan pengujian** dan periksa hasilnya di panel Hasil lagi. 
 
 Anda dapat menjalankan pengujian pada semua sampel yang disediakan, lalu memeriksa hasilnya.
 
@@ -96,7 +84,7 @@ Anda dapat menjalankan pengujian pada semua sampel yang disediakan, lalu memerik
 Kemampuan yang Anda uji ini dapat diprogram ke dalam semua jenis aplikasi. Kunci dan titik akhir yang digunakan untuk pengembangan aplikasi dapat ditemukan baik di Studio Keamanan Konten maupun Portal Microsoft Azure. 
 
 1. Di Studio Keamanan Konten, navigasi kembali ke halaman **Pengaturan**, dengan memilih tab *Sumber Daya*. Cari sumber daya yang Anda gunakan. Gulir ke samping untuk melihat titik akhir dan kunci untuk sumber daya Anda. 
-1. Di Portal Microsoft Azure, Anda akan melihat bahwa ini adalah titik akhir yang *sama* dan kunci yang *berbeda* untuk sumber daya Anda. Untuk memeriksanya, buka [portal Azure](https://portal.azure.com?auzre-portal=true). Cari *Konten Aman* di bilah pencarian teratas. Temukan sumber daya Anda dan klik sumber daya tersebut. Di menu sebelah kiri, lihat di bawah * Resource Management* untuk *Kunci dan Titik Akhir*. Pilih **Kunci dan Titik Akhir** untuk melihat titik akhir dan kunci untuk sumber daya Anda. 
+2. Di Portal Microsoft Azure, Anda akan melihat bahwa ini adalah titik akhir yang *sama* dan kunci yang *berbeda* untuk sumber daya Anda. Untuk memeriksanya, buka [portal Azure](https://portal.azure.com?auzre-portal=true). Cari *Konten Aman* di bilah pencarian teratas. Temukan sumber daya Anda dan klik sumber daya tersebut. Di menu sebelah kiri, lihat di bawah * Resource Management* untuk *Kunci dan Titik Akhir*. Pilih **Kunci dan Titik Akhir** untuk melihat titik akhir dan kunci untuk sumber daya Anda. 
 
 Setelah selesai, Anda dapat menghapus sumber daya Keamanan Konten dari Portal Microsoft Azure. Menghapus sumber daya adalah cara untuk mengurangi biaya yang bertambah ketika sumber daya ada dalam langganan. Untuk melakukan ini, navigasikan ke halaman **Gambaran umum** sumber daya Keamanan Konten Anda. Pilih **Hapus** di bagian atas layar.
 

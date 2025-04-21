@@ -3,7 +3,7 @@ lab:
   title: Menjelajahi AI generatif di portal Azure AI Foundry
 ---
 
-# Menjelajahi AI generatif di Portal Azure AI Foundry
+# Menjelajahi AI generatif di portal Azure AI Foundry
 
 AI Generatif menjelaskan kategori kemampuan dalam AI yang membuat konten. Orang biasanya berinteraksi dengan AI generatif yang telah dibangun ke dalam aplikasi obrolan. Dalam latihan ini, Anda mencoba AI generatif di portal Azure AI Foundry, platform Microsoft untuk membuat aplikasi cerdas. 
 
@@ -21,7 +21,7 @@ AI Generatif menjelaskan kategori kemampuan dalam AI yang membuat konten. Orang 
  
     ![Cuplikan layar panel buat proyek dengan nama yang dihasilkan secara otomatis untuk hub dan proyek.](./media/azure-ai-foundry-create-project.png)
 
-    > **Penting**: Anda akan memerlukan sumber daya layanan Azure AI yang disediakan di lokasi tertentu untuk menyelesaikan lab lainnya.
+> **Penting**: Anda akan memerlukan sumber daya layanan Azure AI yang disediakan di lokasi tertentu untuk menyelesaikan lab lainnya.
 
 1. Di panel *Buat proyek * yang sama, pilih** Sesuaikan** dan pilih salah satu **Lokasi** berikut: AS Timur, Prancis Tengah, Korea Tengah, Eropa Barat, atau AS Barat untuk menyelesaikan lab lainnya. Lalu pilih **buat**. 
 

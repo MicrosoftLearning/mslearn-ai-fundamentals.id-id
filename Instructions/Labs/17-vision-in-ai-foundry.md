@@ -79,13 +79,15 @@ Fitur berikutnya yang akan Anda coba adalah fungsi *Ekstrak Tag*. Ekstrak tag di
 
 1. Kembali ke halaman *Visi + Dokumen* Azure AI Foundry, lalu pilih tab **Gambar**, dan pilih petak **Ekstraksi tag umum**.
 
-1. Buka folder yang berisi gambar yang Anda unduh dan temukan file bernama **store-image-2.jpg**, yang terlihat seperti ini:
+2. Pada **Pilih model yang ingin Anda coba**, biarkan **Produk bawaan vs. model gap** tetap dipilih. Pada **Pilih bahasa Anda**, pilih **Inggris** atau bahasa pilihan Anda.
+
+3. Buka folder yang berisi gambar yang Anda unduh dan temukan file bernama **store-image-2.jpg**, yang terlihat seperti ini:
 
     ![Gambar orang dengan keranjang belanja di supermarket](./media/analyze-images-vision/store-camera-2.jpg)
 
-1. Unggah file **store-camera-2.jpg**.
+4. Unggah file **store-camera-2.jpg**.
 
-1. Tinjau daftar tag yang diekstrak dari gambar dan skor kepercayaan untuk tiap tag di panel atribut terdeteksi. Skor keyakinan di sini merupakan probabilitas bahwa teks untuk atribut yang terdeteksi menggambarkan apa yang sebenarnya ada dalam gambar. Perhatikan dalam daftar tag bahwa tag tersebut tidak hanya mencakup objek, tetapi juga tindakan, seperti *berbelanja*, *berjualan*, dan *berdiri*.
+5. Tinjau daftar tag yang diekstrak dari gambar dan skor kepercayaan untuk tiap tag di panel atribut terdeteksi. Skor keyakinan di sini merupakan probabilitas bahwa teks untuk atribut yang terdeteksi menggambarkan apa yang sebenarnya ada dalam gambar. Perhatikan dalam daftar tag bahwa tag tersebut tidak hanya mencakup objek, tetapi juga tindakan, seperti *berbelanja*, *berjualan*, dan *berdiri*.
 
     ![Cuplikan layar panel deteksi atribut di Vision Studio dengan teks dan skor keyakinan ditampilkan di sebelah gambar asli.](./media/analyze-images-vision/detect-attributes.png)
 
@@ -94,6 +96,8 @@ Fitur berikutnya yang akan Anda coba adalah fungsi *Ekstrak Tag*. Ekstrak tag di
 Dalam tugas ini, Anda menggunakan fitur **Deteksi objek** dari Analisis Gambar. Deteksi objek mendeteksi dan mengekstrak kotak pembatas berdasarkan ribuan objek dan makhluk hidup yang dapat dikenali.
 
 1. Kembali ke halaman *Visi + Dokumen* Azure AI Foundry, lalu pilih tab **Gambar**, dan pilih **petak Deteksi objek umum**.
+
+1. Pada **Pilih model yang ingin Anda coba**, biarkan **Produk bawaan vs. model gap** tetap dipilih.
 
 1. Buka folder yang berisi gambar yang Anda unduh dan temukan file bernama **store-camera-3.jpg**, yang terlihat seperti ini:
 
