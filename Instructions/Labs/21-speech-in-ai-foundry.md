@@ -45,9 +45,9 @@ Dalam latihan ini, Anda akan menggunakan Azure AI Speech di portal Azure AI Foun
 
 ## Jelajahi ucapan ke teks di Azure AI Foundry's Speech Playground
 
-Mari kita coba *ucapan ke teks* di Azure AI Foundry's Speech Playground. 
+Mari coba *ucapan ke teks real time* di Playground Azure AI Foundry Speech. 
 
-1. Pada halaman *Ucapan*, gulir ke bawah dan pilih **Transkripsi real-time** di bawah *Coba Kemampuan Ucapan*. Anda akan dibawa ke *Speech Playground*. 
+1. Pada halaman *Ucapan*, gulir ke bawah dan pilih **Ucapan ke teks real-time** di bawah *Coba Kemampuan ucapan*. Anda akan dibawa ke *Speech Playground*. 
 
 1. Pilih [**https://aka.ms/mslearn-speech-files**](https://aka.ms/mslearn-speech-files) untuk mengunduh **speech.zip**. Buka folder . 
 
@@ -59,7 +59,7 @@ Mari kita coba *ucapan ke teks* di Azure AI Foundry's Speech Playground.
 
 1. Tinjau output, yang seharusnya berhasil mengenali dan mentranskripsikan audio ke dalam teks.
 
-Dalam latihan ini Anda mencoba layanan Azure AI Speech di Azure AI Foundry's Speech Playground. Anda kemudian menggunakan transkripsi Real-time untuk mentranskripsikan rekaman audio. Anda dapat melihat transkripsi teks yang dihasilkan saat file audio diputar.
+Dalam latihan ini Anda mencoba layanan Azure AI Speech di Azure AI Foundry's Speech Playground. Anda kemudian menggunakan layanan ucapan ke teks real time untuk mentranskripsikan rekaman audio. Anda dapat melihat transkripsi teks yang dihasilkan saat file audio diputar.
 
 ## Penghapusan
 
