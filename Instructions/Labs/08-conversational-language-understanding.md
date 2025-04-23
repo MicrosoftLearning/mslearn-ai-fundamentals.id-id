@@ -11,19 +11,19 @@ Dalam latihan ini, Anda akan menggunakan Language Studio untuk membuat dan mengu
 
 ## Membuat sumber daya *Bahasa*
 
-Anda dapat menggunakan banyak fitur Azure AI Bahasa dengan sumber daya **Bahasa** atau **Layanan Azure AI**. Ada beberapa instans yang hanya sumber daya Bahasa yang dapat digunakan. Untuk latihan di bawah ini, kami akan menggunakan sumber daya **Bahasa**. Jika belum melakukannya, buat sumber daya **Bahasa** di langganan Azure Anda.
+Anda dapat menggunakan banyak fitur Azure AI Bahasa dengan sumber daya **Bahasa** atau **Layanan Azure AI**. Ada beberapa contoh yang khusus untuk penggunaan sumber daya Bahasa. Untuk latihan di bawah ini, kami akan menggunakan sumber daya **Bahasa**. Jika belum melakukannya, buat sumber daya **Bahasa** di langganan Azure Anda.
 
 1. Di tab browser yang lain, buka portal Azure di [https://portal.azure.com](https://portal.azure.com?azure-portal=true), lalu masuk dengan akun Microsoft yang terkait dengan langganan Azure Anda.
 
-1. Klik **&#65291;Buat tombol sumber daya** dan cari *Layanan bahasa*. Pilih **buat** paket **Layanan bahasa**. Anda akan dibawa ke halaman ke *Pilih fitur tambahan**. Pertahankan pilihan default dan klik **Lanjutkan untuk membuat sumber daya Anda**. 
+1. Klik **&#65291;Buat tombol sumber daya** dan cari *Layanan Bahasa*. Pilih **buat** paket **Layanan bahasa**. Anda akan dibawa ke halaman ke *Pilih fitur tambahan**. Pertahankan pilihan default dan klik **Lanjutkan untuk membuat sumber daya Anda**. 
 
-1. Di halaman **Buat Bahasa**, konfigurasikan dengan pengaturan berikut:
+1. Pada halaman **Buat Bahasa**, konfigurasikan hal tersebut dengan pengaturan berikut:
     - **Langganan**: *Langganan Azure Anda*.
     - **Grup sumber daya**: *Pilih atau buat grup sumber daya dengan nama unik*.
-    - **Wilayah**: *Pilih wilayah geografis terdekat. Jika di AS timur, gunakan "US Timur 2"*.
+    - **Wilayah**: *Pilih wilayah geografis terdekat. Jika berada di AS timur, gunakan "US Timur 2"*.
     - **Nama**: *Masukkan nama unik*.
     - **Tingkat harga**: *F0 atau S gratis jika F0 Gratis tidak tersedia*
-    - **Dengan mencentang kotak ini, saya menyatakan bahwa saya telah membaca dan memahami semua persyaratan di bawah ini**: *Dipilih*.
+    - **Dengan mencentang kotak ini, saya menyatakan bahwa saya telah membaca dan memahami semua ketentuan di bawah ini**: *Dipilih*.
 
 1. Pilih **Tinjau + buat** lalu **Buat** dan tunggu hingga penyebaran selesai.
 
@@ -171,7 +171,7 @@ Anda sekarang telah berhasil mengonfigurasi proyek bahasa percakapan, dan menent
 
 ## Penghapusan
 
-Jika Anda tidak berniat untuk melakukan latihan lagi, hapus sumber daya yang tidak lagi Anda butuhkan. Hal ini menghindari akumulasi biaya yang tidak perlu.
+Jika Anda tidak berniat untuk melakukan latihan lagi, hapus sumber daya yang tidak lagi dibutuhkan. Hal ini menghindari akumulasi biaya yang tidak perlu.
 
 1.Buka [portal Azure]( https://portal.azure.com) dan pilih grup sumber daya yang berisi sumber daya yang Anda buat. 1.Pilih sumber daya dan pilih **Hapus** lalu **Ya** untuk mengonfirmasi. Sumber daya tersebut akan dihapus.
 

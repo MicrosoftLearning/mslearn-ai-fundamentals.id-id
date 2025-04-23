@@ -7,7 +7,7 @@ lab:
 
 Dalam latihan ini, Anda akan menggunakan fitur pembelajaran mesin otomatis di Azure Machine Learning untuk melatih dan mengevaluasi model pembelajaran mesin. Kemudian, Anda akan menyebarkan dan menguji model terlatih.
 
-Latihan ini seharusnya memakan waktu sekitar **30** menit untuk menyelesaikannya.
+Latihan ini seharusnya memakan waktu sekitar **35** menit untuk menyelesaikannya.
 
 ## Membuat ruang kerja Pembelajaran Mesin Microsoft Azure
 
@@ -21,7 +21,7 @@ Untuk menggunakan Azure Machine Learning, Anda perlu menyediakan ruang kerja Azu
     - **Langganan**: *Langganan Azure Anda*.
     - **Grup sumber daya**: *Buat atau pilih grup sumber daya*.
     - **Nama**: *Masukkan nama yang unik untuk ruang kerja Anda*.
-    - **Wilayah**: *Pilih wilayah geografis terdekat*.
+    - **Wilayah**: AS Timur
     - **Akun penyimpanan**: *Perhatikan akun penyimpanan default baru yang akan dibuat untuk ruang kerja Anda*.
     - **Key vault**: *Perhatikan key vault baru bawaan yang akan dibuat untuk ruang kerja Anda*.
     - **Application insights**: *Perhatikan sumber daya application insights baru bawaan yang akan dibuat untuk ruang kerja Anda*.
@@ -29,7 +29,9 @@ Untuk menggunakan Azure Machine Learning, Anda perlu menyediakan ruang kerja Azu
 
 1. Pilih **Tinjau + buat**, lalu pilih **Buat**. Tunggu hingga ruang kerja Anda dibuat (dapat memakan waktu beberapa menit), lalu buka sumber daya yang disebarkan.
 
-1. Pilih **Luncurkan studio** (atau buka tab browser baru dan arahkan ke [https://ml.azure.com](https://ml.azure.com?azure-portal=true), dan masuk ke studio Azure Machine Learning menggunakan akun Microsoft Anda). Tutup pesan apa pun yang ditampilkan.
+#### Luncurkan studio 
+
+1. Dalam sumber daya ruang kerja Azure Machine Learning, Pilih **Luncurkan studio** (atau buka tab browser baru dan navigasikan ke [https://ml.azure.com](https://ml.azure.com?azure-portal=true), dan sign in ke studio Azure Machine Learning dengan menggunakan akun Microsoft Anda). Tutup pesan apa pun yang ditampilkan.
 
 1. Di studio Azure Machine Learning, Anda akan melihat ruang kerja yang baru dibuat. Jika tidak, pilih **Semua ruang kerja** di menu sebelah kiri lalu pilih ruang kerja yang baru saja Anda buat.
 
@@ -45,7 +47,7 @@ Pembelajaran mesin otomatis memungkinkan Anda mencoba beberapa algoritma dan par
 
     **Pengaturan dasar**:
 
-    - **Nama pekerjaan**: `mslearn-bike-automl`
+    - **Nama Pekerjaan** Bidang nama pekerjaan harus sudah diisi sebelumnya dengan nama unik. Simpan apa adanya.
     - **Nama eksperimen baru**: `mslearn-bike-rental`
     - **Deskripsi**: Pembelajaran mesin otomatis untuk prediksi penyewaan sepeda
     - **Tag**: *tidak ada*
@@ -84,7 +86,7 @@ Pembelajaran mesin otomatis memungkinkan Anda mencoba beberapa algoritma dan par
         - **Uji coba serentak maksimum**: `3`
         - **Node maksimum**: `3`
         - **Ambang skor metrik**: `0.085` (*sehingga jika model mencapai skor metrik kesalahan kuadrat rata-rata akar yang dinormalisasi sebesar 0,085 atau kurang, pekerjaan berakhir.*)
-        - **Batas Waktu Eksperimen :**: `15`
+        - **Batas waktu eksperimen :**: `15`
         - **Batas waktu Iterasi**: `15`
         - **Aktifkan penghentian dini**: *Dipilih*
     - **Validasi dan pengujian**:
@@ -112,8 +114,6 @@ Ketika pekerjaan pembelajaran mesin otomatis telah selesai, Anda dapat meninjau 
 
 1. Di tab **Ringkasan** tugas pembelajaran mesin otomatis, perhatikan ringkasan model terbaik.
     ![Cuplikan layar ringkasan model terbaik dari tugas pembelajaran mesin otomatis dengan kotak di sekitar nama algoritma.](./media/use-automated-machine-learning/complete-run.png)
-
-    > **Catatan** Anda mungkin melihat pesan di bawah status "Peringatan: Skor keluar yang ditentukan pengguna tercapai...". Ini adalah pesan yang diharapkan. Lanjutkan ke langkah berikutnya.
   
 1. Pilih teks di bawah **Nama algoritma** untuk model terbaik guna melihat detailnya.
 
@@ -132,6 +132,8 @@ Ketika pekerjaan pembelajaran mesin otomatis telah selesai, Anda dapat meninjau 
     - **Inferensi pengumpulan data**: *Nonaktifkan*
     - **Model Paket**: *Nonaktifkan*
 
+    > **Catatan** Jika Anda menerima pesan bahwa tidak ada cukup kuota untuk memilih mesin virtual *Standard_DS3_v2*, pilih mesin virtual yang berbeda.
+
 1. Tunggu penyebaran dimulai - ini mungkin memakan waktu beberapa detik. **Status penyebaran** untuk titik akhir**predict-rentals** akan ditunjukkan di bagian utama halaman sebagai *Berjalan*.
 1. Tunggu hingga **Status penyebaran** berubah menjadi *Berhasil*. Proses ini dapat memakan waktu 5-10 menit.
 
@@ -146,41 +148,37 @@ Sekarang Anda dapat menguji layanan yang disebarkan.
 1. Di panel **Input data ke titik akhir pengujian**, ganti templat JSON dengan data input berikut:
 
     ```json
-    {
-      "input_data": {
-        "columns": [
-            {
-                "day": 1,
-                "mnth": 1,   
-                "year": 2022,
-                "season": 2,
-                "holiday": 0,
-                "weekday": 1,
-                "workingday": 1,
-                "weathersit": 2, 
-                "temp": 0.3, 
-                "atemp": 0.3,
-                "hum": 0.3,
-                "windspeed": 0.3 
-            }
-        ],
-        "index": [],
-        "data": []
-      }
+      {
+     "input_data": {
+       "columns": [
+         "day",
+         "mnth",
+         "year",
+         "season",
+         "holiday",
+         "weekday",
+         "workingday",
+         "weathersit",
+         "temp",
+         "atemp",
+         "hum",
+         "windspeed"
+       ],
+       "index": [0],
+       "data": [[1,1,2022,2,0,1,1,2,0.3,0.3,0.3,0.3]]
+     }
     }
-    ```
 
+    ```
 
 1. Klik tombol **Uji**.
 
 1. Tinjau hasil pengujian, yang mencakup perkiraan jumlah persewaan berdasarkan fitur input - mirip dengan ini:
 
     ```JSON
-    {
-      "Results": [
-        444.27799000000000
-      ]
-    }
+    [
+      352.3564674945718
+    ]
     ```
 
     Panel pengujian mengambil data input dan menggunakan model yang Anda latih untuk menampilkan perkiraan jumlah persewaan.

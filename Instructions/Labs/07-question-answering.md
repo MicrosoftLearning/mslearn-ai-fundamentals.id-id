@@ -3,11 +3,9 @@ lab:
   title: Menggunakan Jawaban atas Pertanyaan dengan Language Studio
 ---
 
-# Menggunakan model Jawaban Atas Pertanyaan dengan Language Studio
+# Menggunakan Jawaban atas Pertanyaan dengan Studio Bahasa
 
-Dalam latihan ini Anda akan menggunakan Language Studio untuk membuat dan melatih pangkalan pengetahuan tentang pertanyaan dan jawaban yang akan digunakan oleh bot layanan pelanggan. Konten untuk pangkalan pengetahuan akan berasal dari halaman FAQ yang ada dari situs web Margie's Travel, agen perjalanan fiktif. Anda kemudian akan menggunakan Language Studio untuk melihat cara kerjanya saat digunakan oleh pelanggan.
-
-Saat menerapkan bot, langkah pertama adalah membuat pangkalan pengetahuan pasangan pertanyaan dan jawaban. Ini digunakan bersama dengan kemampuan pemrosesan bahasa alami bawaan sehingga bot dapat menafsirkan pertanyaan dan menemukan jawaban yang paling tepat untuk pengguna.
+Dalam latihan ini Anda akan menggunakan Studio Bahasa untuk membuat dan melatih basis pengetahuan tentang pertanyaan dan jawaban  Konten untuk pangkalan pengetahuan akan berasal dari halaman FAQ yang ada dari situs web Margie's Travel, agen perjalanan fiktif. Anda kemudian akan menggunakan Language Studio untuk melihat cara kerjanya saat digunakan oleh pelanggan.
 
 Azure AI Bahasa mencakup kemampuan *jawaban atas pertanyaan*, yang akan Anda gunakan untuk membuat pangkalan pengetahuan. Pangkalan pengetahuan dapat dibuat baik dengan memasukkan pasangan pertanyaan dan jawaban secara manual, atau dari dokumen atau halaman web yang ada. Margie's Travel ingin menggunakan dokumen FAQ yang ada.
 
@@ -48,12 +46,12 @@ Untuk menggunakan jawaban atas pertanyaan, Anda memerlukan sumber daya **Bahasa*
 
 1. Di tab browser baru, buka portal Language Studio di [https://language.azure.com](https://language.azure.com?azure-portal=true) dan masuk menggunakan akun Microsoft yang terkait dengan langganan Azure Anda.
 1. Jika diminta untuk memilih sumber daya Bahasa, pilih pengaturan berikut:
-    - **Direktori Azure**: *Direktori Azure yang berisi langganan Anda*.
+    - **Azure directory**: *Azure directory yang berisi langganan Anda*.
     - **Langganan Azure**: *Langganan Azure Anda*.
-    - **Sumber daya bahasa**: *Sumber daya Bahasa yang Anda buat sebelumnya*.
+    - **Sumber daya bahasa**: *Sumber daya Bahasa yang Anda buat sebelumnya.*
 
     Jika Anda ***tidak*** diminta untuk memilih sumber daya bahasa, hal tersebut mungkin karena Anda memiliki beberapa sumber daya Bahasa dalam langganan Anda; dalam hal ini:
-    1. Pada bilah di bagian atas halaman, pilih **Pengaturan(&#9881;)**.      
+    1. Pada bilah di bagian atas halaman, pilih **Pengaturan (&#9881;)**.      
     1. Pada halaman **Pengaturan**, lihat tab **Sumber Daya**.
     1. Pilih sumber daya bahasa yang baru saja Anda buat, dan pilih **Beralih sumber daya**.
     1. Di bagian atas halaman, pilih **Language Studio** untuk kembali ke beranda Language Studio.
@@ -104,58 +102,18 @@ Sekarang setelah Anda memiliki pangkalan pengetahuan, Anda dapat mengujinya.
 1. Coba pertanyaan lain, seperti `How can I cancel a reservation?`
 1. Setelah selesai menguji pangkalan pengetahuan, pilih **Uji** untuk menutup panel pengujian.
 
-## Membuat bot untuk Pangkalan Pengetahuan
+## Menyebarkan proyek Anda
 
-Pangkalan Pengetahuan menyediakan layanan back-end yang dapat digunakan aplikasi klien untuk menjawab pertanyaan melalui semacam antarmuka pengguna. Umumnya, aplikasi klien ini berupa bot. Agar Pangkalan Pengetahuan tersedia untuk bot, Anda harus menerbitkannya sebagai layanan yang dapat diakses melalui HTTP. Kemudian, Anda dapat menggunakan Azure Bot Service untuk membuat dan meng-host bot yang menggunakan Pangkalan Pengetahuan untuk menjawab pertanyaan pengguna.
+Anda dapat menyebarkan basis pengetahuan sebagai aplikasi klien untuk menjawab pertanyaan.
 
 1. Di panel kiri, pilih **Sebarkan pangkalan pengetahuan**.
 1. Di bagian atas halaman, pilih **Sebarkan**. Kotak dialog akan menanyakan apakah Anda ingin menyebarkan proyek. Pilih **Sebarkan.**
 
  ![Menyebarkan pangkalan pengetahuan.](media/create-a-bot/deploy-knowledge-base.png)
 
-1. Setelah layanan disebarkan, pilih **Buat bot**. Tindakan ini akan membuka portal Azure di tab browser baru sehingga Anda dapat membuat Bot Aplikasi Web di langganan Azure Anda.
-1. Di portal Microsoft Azure, buat **Bot Aplikasi Web**. (Anda mungkin melihat pesan peringatan untuk memeriksa apakah sumber templat dapat dipercaya. Anda tidak perlu mengambil tindakan apa pun untuk pesan tersebut.) Lanjutkan dengan memperbarui pengaturan berikut:
-
-    - **Detail Proyek**
-        - **Langganan**: *Langganan Azure Anda*
-        - **Grup sumber daya**: *Grup sumber daya yang berisi sumber daya Bahasa Anda*
-    - **Detail instans**
-        - **Lokasi grup sumber daya**: *Lokasi yang sama dengan layanan Bahasa Anda*.
-    - **Azure Bot**
-        - **Handel bot**: *Nama unik untuk bot Anda* (*telah diisi sebelumnya*)
-    - **Pilih tingkat harga Anda**
-        - **Tingkat harga**: Gratis (F0) (Anda mungkin perlu memilih *Ubah paket*)
-    - **ID Aplikasi Microsoft**
-        - **Jenis pembuatan**: *Pilih **Buat identitas terkelola yang ditetapkan pengguna baru*** 
-
-5. Pilih **Berikutnya** untuk terus memperbarui pengaturan. 
-    - **App Service**
-        - **Nama aplikasi**: *Sama seperti **Handle bot** dengan **.azurewebsites.net** yang ditambahkan secara otomatis*
-        - **Bahasa SDK**: *Pilih C# atau Node.js*
-    - **Paket App Service**
-        - **Jenis Pembuatan**: *Pilih **Buat paket layanan aplikasi baru***
-    - **Pengaturan Aplikasi**
-        - **Kunci Sumber Daya Bahasa**: *Anda harus menyalin kunci sumber daya Bahasa Anda dan menempelkannya di sini*:
-            - Buka tab browser lain dan navigasikan ke portal Microsoft Azure di [https://portal.azure.com](https://portal.azure.com?azure-portal=true).
-            - Telusuri ke sumber daya layanan Bahasa Anda.
-            - Pada halaman **Kunci dan Titik Akhir**, salin salah satu kunci
-            - Tempelkan di sini.
-        - **Nama proyek bahasa**: MargiesTravel
-        - **Nama host titik akhir layanan bahasa**: *Telah diisi sebelumnya dengan titik akhir layanan bahasa Anda*
-    - **Detail layanan bahasa**
-        - **ID Langganan**: *Diisi sebelumnya dengan ID langganan Anda*
-        - **Nama Grup Sumber Daya**: *Telah diisi sebelumnya dengan nama grup sumber daya Anda*
-        - **Nama Akun**: *Diisi sebelumnya dengan nama sumber daya Anda*
-
-1. Pilih **Buat**. Kemudian tunggu hingga bot Anda dibuat (ikon pemberitahuan di kanan atas, yang terlihat seperti bel, akan dianimasikan saat Anda menunggu). Kemudian dalam pemberitahuan bahwa penyebaran telah selesai, pilih **Buka sumber daya** (atau sebagai alternatif, di beranda, klik **Grup sumber daya**, buka grup sumber daya tempat Anda membuat bot, dan pilih sumber daya **bot Azure**.)
-1. Di panel sebelah kiri bot Anda cari **Pengaturan**, pilih **Uji di Web Chat **, dan tunggu hingga bot menampilkan pesan **Halo, Selamat Datang**(mungkin perlu beberapa detik untuk menginisialisasi).
-1. Gunakan antarmuka obrolan uji untuk memastikan bahwa bot Anda menjawab pertanyaan dari Pangkalan Pengetahuan Anda seperti yang diharapkan. Misalnya, coba kirimkan `I need to cancel my hotel`.
-
-Melakukan eksperimen dengan bot. Anda mungkin akan mendapati bahwa pertanyaan dapat dijawab dari FAQ dengan cukup akurat, tetapi kemampuan dalam menafsirkan pertanyaan yang belum dilatih masih terbatas. Anda selalu dapat menggunakan Language Studio untuk mengedit pangkalan pengetahuan untuk menyempurnakannya dan menerbitkannya kembali.
-
 ## Penghapusan
 
-Jika Anda tidak berniat untuk melakukan latihan lagi, hapus sumber daya yang tidak lagi Anda butuhkan. Hal ini menghindari akumulasi biaya yang tidak perlu.
+Jika Anda tidak berniat untuk melakukan latihan lagi, hapus sumber daya yang tidak lagi dibutuhkan. Hal ini menghindari akumulasi biaya yang tidak perlu.
 
 1. Buka [portal Azure]( https://portal.azure.com) dan pilih grup sumber daya yang berisi sumber daya yang Anda buat. 
 1. Pilih sumber daya dan pilih **Hapus** lalu **Ya** untuk mengonfirmasi. Sumber daya tersebut akan dihapus.
@@ -163,4 +121,3 @@ Jika Anda tidak berniat untuk melakukan latihan lagi, hapus sumber daya yang tid
 ## Pelajari lebih lanjut
 
 - Untuk mempelajari selengkapnya tentang layanan Jawaban Atas Pertanyaan, lihat [dokumentasi](https://docs.microsoft.com/azure/cognitive-services/language-service/question-answering/overview).
-- Untuk mempelajari Microsoft Bot Service lebih lanjut, lihat [Halaman Azure Bot Service](https://azure.microsoft.com/services/bot-service/).
