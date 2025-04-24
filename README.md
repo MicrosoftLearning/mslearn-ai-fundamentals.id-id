@@ -1,11 +1,3 @@
-#README
-
-We've turned off the ability to report issues directly on this repo and do not monitor PRs.
-
-Provide feedback here: https://aka.ms/provide-feedback
-
-Or, if you are a trainer with a microsoft.com email address, please create a ticket in AzDO.
-
 # Latihan Dasar-Dasar AI Microsoft Azure
 
 Repositori ini berisi instruksi dan aset untuk latihan langsung di Microsoft Official Courseware untuk mendukung [Microsoft Certified: Sertifikasi](https://learn.microsoft.com/credentials/certifications/azure-ai-fundamentals/) Dasar-dasar Azure AI. Latihan ini dirancang untuk melengkapi modul pelatihan terkait di [Microsoft Learn](https://learn.microsoft.com/training), dan <u>bagian</u> dari latihan ini terdiri dari praktik langsung di [AI-900 resmi: Kursus pelatihan Dasar-dasar Microsoft Azure AI](https://learn.microsoft.com/en-us/training/courses/ai-900t00) yang dipandu oleh instruktur.

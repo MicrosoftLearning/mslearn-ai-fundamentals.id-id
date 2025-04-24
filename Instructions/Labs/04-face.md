@@ -18,28 +18,28 @@ Anda dapat menggunakan layanan Azure AI Face dengan sumber daya multi-layanan **
 1. Klik tombol **＋Buat sumber daya**dan cari *layanan Azure AI*. Pilih **buat** paket **layanan Azure AI**. Anda akan diarahkan ke halaman untuk membuat sumber daya layanan Azure AI. Konfigurasikan dengan pengaturan berikut:
     - **Langganan**: *Langganan Azure Anda*.
     - **Grup sumber daya**: *Pilih atau buat grup sumber daya dengan nama unik*.
-    - **Wilayah**: *Pilih wilayah geografis terdekat. Jika di AS timur, gunakan "US Timur 2"*.
+    - **Wilayah**: *Pilih wilayah geografis terdekat. Jika berada di AS timur, gunakan "US Timur 2"*.
     - **Nama**: *Masukkan nama unik*.
-    - **Tingkat harga**: *S0 Standar.*
-    - **Dengan mencentang kotak ini, saya menyatakan bahwa saya telah membaca dan memahami semua persyaratan di bawah ini**: *Dipilih*.
+    - **Tingkat harga**: *Standar S0.*
+    - **Dengan mencentang kotak ini, saya menyatakan bahwa saya telah membaca dan memahami semua ketentuan di bawah ini**: *Dipilih*.
 
-1. Pilih **Tinjau + buat** lalu **Buat** dan tunggu hingga penyebaran selesai.
+1. Pilih **Tinjau + buat**, lalu **Buat** dan tunggu hingga penyebaran selesai.
 
 ## Sambungkan sumber daya layanan Azure AI Anda ke Vision Studio
 
 Selanjutnya, sambungkan sumber daya layanan Azure AI yang Anda provisikan di atas ke Vision Studio.
 
-1. Di tab browser yang lain, navigasikan ke **Vision Studio** di https://portal.vision.cognitive.azure.com[](https://portal.vision.cognitive.azure.com?azure-portal=true).
+1. Di tab browser yang lain, navigasikan ke **Vision Studio** di [https://portal.vision.cognitive.azure.com](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
 1. Masuk dengan akun Anda dan pastikan Anda menggunakan direktori yang sama dengan direktori tempat Anda membuat sumber daya layanan Azure AI Anda.
 
-1. Di beranda Vision Studio, pilih **Tampilkan semua sumber daya** di bawah judul **Mulai menggunakan Vision**.
+1. Di beranda Vision Studio, pilih **Tampilkan semua sumber daya** pada judul **Mulai menggunakan Visual**.
 
-    ![Tautan Lihat semua sumber daya disorot di bawah Mulai menggunakan Vision di Vision Studio.](./media/analyze-images-vision/vision-resources.png)
+    ![Tautan Tampilkan semua sumber daya disorot pada Mulai menggunakan Visual di Vision Studio.](./media/analyze-images-vision/vision-resources.png)
 
-1. Pada halaman **Pilih sumber daya yang akan digunakan**, arahkan kursor mouse Anda ke atas sumber daya yang Anda buat di atas dalam daftar, lalu centang kotak di sebelah kiri nama sumber daya, lalu pilih **Pilih sebagai sumber daya default**.
+1. Pada halaman **Pilih sumber daya yang akan digunakan**, arahkan kursor mouse pada sumber daya yang Anda buat di atas dalam daftar, lalu centang kotak di sebelah kiri nama sumber daya, lalu pilih **Pilih sebagai sumber daya default**.
 
-    > **Catatan** : Jika sumber daya Anda tidak tercantum, Anda mungkin perlu **Merefresh** halaman.
+    > **Catatan**: Jika sumber daya Anda tidak tercantum, Anda mungkin perlu **Me-refresh** halaman.
 
     ![Dialog Pilih sumber daya yang akan digunakan ditampilkan dengan sumber daya Cognitive Services cog-ms-learn-vision-SUFFIX yang disorot dan dicentang. Tombol Pilih sebagai sumber daya default disorot.](./media/analyze-images-vision/default-resource.png)
 
@@ -79,10 +79,10 @@ Dalam latihan ini, Anda telah menjelajahi cara layanan Azure AI dapat mendeteksi
 
 ## Penghapusan
 
-Jika Anda tidak berniat untuk melakukan lebih banyak latihan, hapus sumber daya apa pun yang tidak lagi Anda butuhkan. Hal ini menghindari akumulasi biaya yang tidak perlu.
+Jika Anda tidak berniat untuk melakukan latihan lagi, hapus sumber daya yang tidak lagi dibutuhkan. Ini untuk menghindari akumulasi biaya yang tidak perlu.
 
 1. Buka **portal Azure** di [https://portal.azure.com](https://portal.azure.com?azure-portal=true) dan pilih grup sumber daya yang berisi sumber daya yang Anda buat.
-1. Pilih sumber daya dan pilih **Hapus** lalu **Ya** untuk mengonfirmasi. Sumber daya tersebut akan dihapus.
+1. Pilih sumber daya dan pilih **Hapus**, lalu **Ya** untuk mengonfirmasi. Sumber daya tersebut akan dihapus.
 
 ## Pelajari lebih lanjut
 
