@@ -1,8 +1,3 @@
----
-lab:
-  title: Menjelajahi Keamanan Konten Azure AI Foundry
----
-
 # Menjelajahi Keamanan Konten Azure AI Foundry
 
 Layanan Azure AI membantu pengguna membuat aplikasi AI dengan API dan model yang siap pakai dan dapat disesuaikan sebelumnya. Dalam latihan ini Anda akan melihat salah satu layanan, Keamanan Konten Azure AI, yang memungkinkan Anda memoderasi konten teks dan gambar. Di portal Azure AI Foundry, platform Microsoft untuk membuat aplikasi cerdas, Anda akan menggunakan Azure AI Content Safety untuk mengategorikan teks dan menetapkan skor tingkat keparahannya. 
