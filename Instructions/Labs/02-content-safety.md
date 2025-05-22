@@ -33,13 +33,13 @@ Untuk menggabungkan layanan Azure AI ke dalam aplikasi, pengembang memerlukan ku
 
 ## Lihat layanan Azure AI beraksi
 
-1. Di tab browser, navigasikan ke [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+Mari kita mulai dengan membuat proyek Azure AI Foundry.
 
-1. Masuk dengan akun Anda. 
+1. Di browser web, buka [portal Azure AI Foundry](https://ai.azure.com) di `https://ai.azure.com` dan masuk menggunakan kredensial Azure Anda. Tutup semua tips atau panel mulai cepat yang terbuka saat pertama kali Anda masuk, dan jika perlu, gunakan logo **Azure AI Foundry** di kiri atas untuk menavigasi ke beranda, yang tampilannya mirip dengan gambar berikut (tutup panel **Bantuan** jika terbuka):
 
-1. Di bawah *Bekerja di luar proyek*, pilih petak **Lihat Layanan AI**.
+    ![Tnagkapan layar beranda Azure AI Foundry dengan agen terpilih.](./media/azure-ai-foundry-home-page.png)
  
-    ![Cuplikan layar menu sebelah kiri pada layar proyek dengan Layanan AI dipilih.](./media/view-ai-foundry-outside-project.png)  
+1. Di jendela browser baru, buka [halaman eksplorasi Layanan Azure AI](https://ai.azure.com/explore/aiservices).
 
 1. Pada halaman *Layanan AI*, pilih petak *Visi + Dokumen* untuk mencoba kemampuan Azure AI Vision dan Dokumen.
 
@@ -64,12 +64,4 @@ Untuk menggabungkan layanan Azure AI ke dalam aplikasi, pengembang memerlukan ku
 ## Penghapusan 
 
 Setelah selesai, Anda dapat menghapus sumber daya layanan Azure AI dari Azure Portal. Menghapus sumber daya adalah cara untuk mengurangi biaya yang bertambah ketika sumber daya ada dalam langganan. Untuk melakukan ini, buka halaman **Gambaran Umum** pada sumber daya layanan Azure AI Anda. Pilih **Hapus** di bagian atas layar.
-
-
-
-
-
-
-
-
 
