@@ -11,20 +11,15 @@ Dalam latihan ini, Anda akan menggunakan Azure AI Speech di portal Azure AI Foun
 
 ## Membuat proyek di portal Azure AI Foundry
 
-Mari kita mulai dengan membuat proyek Azure AI Foundry.
+1. Di browser web, buka [portal Azure AI Foundry](https://ai.azure.com) di `https://ai.azure.com` dan masuk menggunakan kredensial Azure Anda. Tutup tips atau panel mulai cepat yang dibuka saat pertama kali Anda masuk. 
 
-1. Di browser web, buka [portal Azure AI Foundry](https://ai.azure.com) di `https://ai.azure.com` dan masuk menggunakan kredensial Azure Anda. Tutup semua tips atau panel mulai cepat yang terbuka saat pertama kali Anda masuk, dan jika perlu, gunakan logo **Azure AI Foundry** di kiri atas untuk menavigasi ke beranda, yang tampilannya mirip dengan gambar berikut (tutup panel **Bantuan** jika terbuka):
+1. Di browser, navigasikan ke `https://ai.azure.com/managementCenter/allResources`dan pilih **Create**. Lalu pilih opsi untuk membuat *sumber daya hub AI baru*.
 
-    ![Tangkapan layar beranda Azure AI Foundry dengan agen terpilih.](./media/azure-ai-foundry-home-page.png)
+1. Di wizard,*Buat proyek*dan masukkan nama yang valid untuk proyek Anda.
 
-1. Di beranda, pilih **+ Buat agen**.
-
-1. Di wizard **Buat agen**, masukkan nama yang valid untuk proyek Anda. 
-
-1. Klik **Opsi Tingkat Lanjut** dan tentukan pengaturan berikut:
-    - **Sumber daya Azure AI Foundry**: *Pertahankan nama default*
-    - **Langganan**: *Langganan Azure Anda*
-    - **Grup sumber daya**: *Buat atau pilih grup sumber daya*
+1. Perluas *opsi Tingkat Lanjut* untuk menentukan pengaturan proyek Anda sebagai berikut:
+    - **Subscription**: Langganan Azure Anda
+    - **Grup sumber daya**: Buat atau pilih grup sumber daya
     - **Wilayah**: Pilih salah satu wilayah berikut:
         * AS Timur
         * Prancis Tengah
@@ -32,13 +27,9 @@ Mari kita mulai dengan membuat proyek Azure AI Foundry.
         * Eropa Barat
         * US Barat
 
-1. Pilih **Buat** dan tinjau konfigurasi Anda. Tunggu hingga proses penyiapan selesai.
+    Tunggu sampai proyek dan hub Anda selesai dibuat.
 
-    >**Catatan**: Jika Anda mendapat kesalahan izin, pilih tombol **Perbaiki** untuk menambahkan izin yang sesuai untuk melanjutkan.
-
-1. Saat proyek Anda dibuat, Anda akan dibawa secara default ke playground Agen di portal Azure AI Foundry, yang akan terlihat mirip dengan gambar berikut:
-
-    ![Tangkapan layar detail proyek Azure AI di portal Azure AI Foundry.](./media/ai-foundry-project-2.png)
+1. Saat proyek dibuat, Anda akan dibawa ke *halaman Gambaran Umum* tentang detail proyek.
  
 1. Di menu sebelah kiri pada layar, pilih **Playgrounds**.
 
