@@ -11,20 +11,15 @@ Misalnya, retailer fiktif *Northwind Traders* memutuskan untuk menerapkan "toko 
 
 ## Membuat proyek di portal Azure AI Foundry
 
-Mari kita mulai dengan membuat proyek Azure AI Foundry.
+1. Di browser web, buka [portal Azure AI Foundry](https://ai.azure.com) di `https://ai.azure.com` dan masuk menggunakan kredensial Azure Anda. Tutup tips atau panel mulai cepat yang dibuka saat pertama kali Anda masuk. 
 
-1. Di browser web, buka [portal Azure AI Foundry](https://ai.azure.com) di `https://ai.azure.com` dan masuk menggunakan kredensial Azure Anda. Tutup semua tips atau panel mulai cepat yang terbuka saat pertama kali Anda masuk, dan jika perlu, gunakan logo **Azure AI Foundry** di kiri atas untuk menavigasi ke beranda, yang tampilannya mirip dengan gambar berikut (tutup panel **Bantuan** jika terbuka):
+1. Di browser, navigasikan ke `https://ai.azure.com/managementCenter/allResources`dan pilih **Create**. Lalu pilih opsi untuk membuat *sumber daya hub AI* baru.
 
-    ![Tangkapan layar beranda Azure AI Foundry dengan agen terpilih.](./media/azure-ai-foundry-home-page.png)
+1. Di wizard *Buat proyek* masukkan nama yang valid untuk proyek Anda dan jika disarankan hub yang sudah ada pilih opsi untuk membuat yang *baru*. 
 
-1. Di beranda, pilih **+ Buat agen**.
-
-1. Di wizard **Buat agen**, masukkan nama yang valid untuk proyek Anda. 
-
-1. Klik **Opsi Tingkat Lanjut** dan tentukan pengaturan berikut:
-    - **Sumber daya Azure AI Foundry**: *Pertahankan nama default*
-    - **Langganan**: *Langganan Azure Anda*
-    - **Grup sumber daya**: *Buat atau pilih grup sumber daya*
+1. Perluas *opsi Tingkat Lanjut* untuk menentukan pengaturan proyek Anda sebagai berikut:
+    - **Subscription**: Langganan Azure Anda
+    - **Grup sumber daya**: Buat atau pilih grup sumber daya
     - **Wilayah**: Pilih salah satu wilayah berikut:
         * AS Timur
         * Prancis Tengah
@@ -32,17 +27,13 @@ Mari kita mulai dengan membuat proyek Azure AI Foundry.
         * Eropa Barat
         * US Barat
 
-1. Pilih **Buat** dan tinjau konfigurasi Anda. Tunggu hingga proses penyiapan selesai.
+    Tunggu sampai proyek dan hub Anda selesai dibuat.
 
-    >**Catatan**: Jika Anda mendapat kesalahan izin, pilih tombol **Perbaiki** untuk menambahkan izin yang sesuai untuk melanjutkan.
-
-1. Saat proyek Anda dibuat, Anda akan dibawa secara default ke playground Agen di portal Azure AI Foundry, yang akan terlihat mirip dengan gambar berikut:
-
-    ![Tangkapan layar detail proyek Azure AI di portal Azure AI Foundry.](./media/ai-foundry-project-2.png)
- 
-1. Di jendela browser baru, buka [halaman eksplorasi Layanan Azure AI](https://ai.azure.com/explore/aiservices).
+1. Saat proyek dibuat, Anda akan dibawa ke *halaman Gambaran Umum* tentang detail proyek. Pilih **layanan AI** di menu sebelah kiri (Anda mungkin perlu memperluas menu dengan mengeklik ikon atas untuk membaca kontennya). 
 
 1. Pada halaman *Layanan AI*, pilih petak *Visi + Dokumen* untuk mencoba kemampuan Azure AI Vision dan Dokumen.
+
+    ![Tangkapan layar peta Visi dan petak Dokumen di Azure AI Foundry.](./media/vision-document-tile.png)
 
 ## Membuat keterangan untuk gambar
 
@@ -51,6 +42,8 @@ Mari kita gunakan fungsionalitas keterangan gambar Azure AI Vision untuk mengana
 1. Pada halaman *Visi + Dokumen* , gulir ke bawah dan pilih **Gambar** di bawah *Tampilkan semua kemampuan visi lainnya*. Lalu pilih petak **Keterangan gambar**.
 
     ![Cuplikan layar petak keterangan gambar di bagian gambar halaman Visi dan Dokumen.](./media/vision-image-captioning-tile.png)
+
+1. Pada halaman **Tambahkan keterangan ke gambar** pilih *sumber daya layanan Azure AI* yang Anda buat. 
 
 1. Pada halaman **Tambahkan keterangan ke gambar**, tinjau sumber daya yang Anda sambungkan yang tercantum di bawah subjudul **Cobalah** . Anda tidak harus membuat perubahan. (*Catatan*: jika Anda tidak menyesuaikan lokasi sumber daya yang valid sebelumnya selama pembuatan sumber daya, Anda mungkin diminta untuk membuat sumber daya layanan Azure AI baru yang berada di wilayah yang valid. Anda harus membuat sumber daya baru untuk melanjutkan lab.)  
 

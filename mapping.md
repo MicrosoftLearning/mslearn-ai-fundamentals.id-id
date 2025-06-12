@@ -12,10 +12,11 @@ Subset lab AI-900 digunakan dalam kursus ini dipetakan per modul sebagai berikut
 
 | Lab Pelatih AI-900 # | Topik | Petunjuk |
 | --- | --- | --- |
-| Gambaran Umum AI AI-900 | Jelajahi Layanan Azure AI | [Petunjuk Lab](https://go.microsoft.com/fwlink/?linkid=2250253) |
-| Visi Komputer AI-900 | Menganalisis Gambar di Azure AI Foundry | [Petunjuk Lab](https://go.microsoft.com/fwlink/?linkid=2250145) |
-| Pemrosesan Bahasa Alami AI-900 | Menganalisis Teks dengan Azure AI Foundry | [Petunjuk Lab](https://go.microsoft.com/fwlink/?linkid=2250314) |
-| Kecerdasan Dokumen AI-900 | Mengekstrak data formulir di Azure AI Foundry | [Petunjuk Lab](https://go.microsoft.com/fwlink/?linkid=2250315) |
-| AI Generatif AI-900 | Menjelajahi AI generatif di Azure AI Foundry | [Petunjuk Lab](https://go.microsoft.com/fwlink/?linkid=2249955) |
+| AI Generatif AI-900 | Menjelajahi AI generatif di portal Azure AI Foundry | [Petunjuk Lab](https://go.microsoft.com/fwlink/?linkid=2249955) |
+| Pemrosesan Bahasa Alami AI-900 | Menganalisis Teks dengan portal Azure AI Foundry | [Petunjuk Lab](https://go.microsoft.com/fwlink/?linkid=2250314) |
+| Ucapan AI-900 | Menjelajahi ucapan di portal Azure AI Foundry | [Petunjuk Lab](https://go.microsoft.com/fwlink/?linkid=2250148) |
+| Visi Komputer AI-900 | Menganalisis gambar di portal Azure AI Foundry | [Petunjuk Lab](https://go.microsoft.com/fwlink/?linkid=2250145) |
+| Ekstraksi informasi AI-900 | Mengekstrak data dengan Pemahaman Konten di portal Azure AI Foundry | [Petunjuk Lab](https://go.microsoft.com/fwlink/?linkid=2320420) |
+
 
 
