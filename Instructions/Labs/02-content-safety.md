@@ -51,7 +51,7 @@ Mari kita mulai dengan membuat proyek Azure AI Foundry.
 
     ![Cuplikan layar dari demo pendeteksian wajah di portal Azure AI Foundry.](./media/detect-faces-demo.png)
 
-1. Gulir ke bawah ke bagian **Jalankan kode**. Pilih **Lihat Kode**. Gulir ke bawah ke bagian yang dimulai dengan *import os*. Pada contoh kode yang disediakan, Anda akan melihat placeholder tempat Anda dapat menaruh kunci dan titik akhir.
+1. Gulir ke bawah ke bagian **Jalankan kode**. Pilih **Lihat Kode**. Gulir ke bawah ke bagian yang dimulai dengan *impor os*. Pada contoh kode yang disediakan, Anda akan melihat placeholder tempat Anda dapat menaruh kunci dan titik akhir.
 
     ![Cuplikai layar dari layar lihat kode dengan tampilan placeholder kode untuk kunci dan titik akhir.](./media/view-code-example.png) 
 
