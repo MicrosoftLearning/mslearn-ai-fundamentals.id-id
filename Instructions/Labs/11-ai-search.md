@@ -177,8 +177,6 @@ Setelah Anda memiliki dokumen dalam penyimpanan, Anda dapat menggunakan Azure AI
 
 1. Biarkan **Jadwal** diatur ke **Sekali**.
 
-1. Luaskan **Opsi tingkat lanjut**. Pastikan opsi **Kunci Pengodean Base-64** dipilih, karena kunci pengodean dapat membuat indeks lebih efisien.
-
 1. Pilih **Kirim** untuk membuat sumber data, set kemampuan, indeks, dan pengindeks. Pengindeks dijalankan secara otomatis dan menjalankan alur pengindeksan, yang:
     - Ekstrak bidang dan konten metadata dokumen dari sumber data.
     - Jalankan kumpulan keterampilan dari keterampilan kognitif untuk menghasilkan bidang yang lebih diperkaya.

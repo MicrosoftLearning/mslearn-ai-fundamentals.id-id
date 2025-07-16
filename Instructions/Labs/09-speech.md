@@ -11,37 +11,29 @@ Dalam latihan ini, Anda akan menggunakan Azure AI Speech di portal Azure AI Foun
 
 ## Membuat proyek di portal Azure AI Foundry
 
-1. Di tab browser, navigasikan ke [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+1. Di browser web, buka [portal Azure AI Foundry](https://ai.azure.com) di `https://ai.azure.com` dan masuk menggunakan kredensial Azure Anda. Tutup tips atau panel mulai cepat yang dibuka saat pertama kali Anda masuk. 
 
-1. Masuk dengan akun Anda. 
+1. Di browser, navigasikan ke `https://ai.azure.com/managementCenter/allResources`dan pilih **Create**. Lalu pilih opsi untuk membuat *sumber daya hub AI baru*.
 
-1. Pada halaman beranda portal Azure AI Foundry, pilih **Buat proyek**. Di Azure AI Foundry, proyek adalah kontainer yang membantu mengatur pekerjaan Anda.  
+1. Di wizard,*Buat proyek*dan masukkan nama yang valid untuk proyek Anda.
 
-    ![Cuplikan layar beranda Azure AI Foundry dengan membuat proyek yang dipilih.](./media/azure-ai-foundry-home-page.png)
+1. Perluas *opsi Tingkat Lanjut* untuk menentukan pengaturan proyek Anda sebagai berikut:
+    - **Subscription**: Langganan Azure Anda
+    - **Grup sumber daya**: Buat atau pilih grup sumber daya
+    - **Wilayah**: Pilih salah satu wilayah berikut:
+        * AS Timur
+        * Prancis Tengah
+        * Korea Tengah
+        * Eropa Barat
+        * US Barat
 
-1. Pada panel *Buat proyek* , Anda akan melihat nama proyek yang dihasilkan, yang bisa Anda simpan apa adanya. Bergantung pada apakah Anda telah membuat hub sebelumnya, Anda akan melihat daftar sumber daya Azure *baru* yang akan dibuat atau daftar menurun hub yang ada. Jika Anda melihat daftar menurun hub yang ada, pilih *Buat hub baru*, buat nama unik untuk hub Anda, dan pilih *Berikutnya*.  
+    Tunggu sampai proyek dan hub Anda selesai dibuat.
+
+1. Saat proyek dibuat, Anda akan dibawa ke *halaman Gambaran Umum* tentang detail proyek.
  
-    ![Cuplikan layar panel buat proyek dengan nama yang dihasilkan secara otomatis untuk hub dan proyek.](./media/azure-ai-foundry-create-project.png)
+1. Di menu sebelah kiri pada layar, pilih **Playgrounds**.
 
-> **Penting**: Anda akan memerlukan sumber daya layanan Azure AI yang disediakan di lokasi tertentu untuk menyelesaikan lab lainnya.
-
-1. Di panel *Buat proyek * yang sama, pilih** Sesuaikan** dan pilih salah satu **Lokasi** berikut: AS Timur, Prancis Tengah, Korea Tengah, Eropa Barat, atau AS Barat untuk menyelesaikan lab lainnya. Lalu pilih **buat**. 
-
-1. Perhatikan sumber daya yang dibuat: 
-- Layanan Azure AI
-- Hub Azure AI
-- Proyek Azure AI
-- Akun penyimpanan
-- Brankas kunci
-- Grup sumber daya  
- 
-1. Setelah sumber daya dibuat, Anda akan dibawa ke halaman* Gambaran Umum* proyek Anda. Di menu sebelah kiri pada layar, pilih **Layanan AI**.
- 
-    ![Cuplikan layar menu sebelah kiri pada layar proyek dengan Layanan AI dipilih.](./media/azure-ai-foundry-ai-services.png)  
-
-1. Pada halaman *Layanan AI*, pilih petak *Ucapan* untuk mencoba kemampuan Azure AI Speech.
-
-    ![Cuplikan layar petak Ucapan dipilih di halaman Layanan AI.](./media/speech-tile.png)
+1. Pada halaman *Playground*, pilih petak **playground Bahasa** untuk mencoba beberapa kemampuan Azure AI Speech.
 
 ## Jelajahi ucapan ke teks di Azure AI Foundry's Speech Playground
 

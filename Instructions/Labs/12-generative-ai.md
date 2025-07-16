@@ -9,42 +9,35 @@ AI Generatif menjelaskan kategori kemampuan dalam AI yang membuat konten. Orang 
 
 ## Membuat proyek di portal Azure AI Foundry
 
-1. Di tab browser, navigasikan ke [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+1. Di browser web, buka [portal Azure AI Foundry](https://ai.azure.com) di `https://ai.azure.com` dan masuk menggunakan kredensial Azure Anda. Tutup tips atau panel mulai cepat yang dibuka saat pertama kali Anda masuk. 
 
-1. Masuk dengan akun Anda. 
+1. Di browser, navigasikan ke `https://ai.azure.com/managementCenter/allResources`dan pilih **Create**. Lalu pilih opsi untuk membuat *sumber daya Azure AI Foundry baru*.
 
-1. Pada halaman beranda portal Azure AI Foundry, pilih **Buat proyek**. Di Azure AI Foundry, proyek adalah kontainer yang membantu mengatur pekerjaan Anda.  
+1. Di wizard,*Buat proyek*dan masukkan nama yang valid untuk proyek Anda.
 
-    ![Cuplikan layar beranda Azure AI Foundry dengan membuat proyek yang dipilih.](./media/azure-ai-foundry-home-page.png)
+1. Perluas *opsi Tingkat Lanjut* untuk menentukan pengaturan proyek Anda sebagai berikut:
+    - **Subscription**: Langganan Azure Anda
+    - **Grup sumber daya**: Buat atau pilih grup sumber daya
+    - **Wilayah**: Pilih salah satu wilayah berikut:
+        * AS Timur
+        * Prancis Tengah
+        * Korea Tengah
+        * Eropa Barat
+        * US Barat
 
-1. Pada panel *Buat proyek* , Anda akan melihat nama proyek yang dihasilkan, yang bisa Anda simpan apa adanya. Bergantung pada apakah Anda telah membuat hub sebelumnya, Anda akan melihat daftar sumber daya Azure *baru* yang akan dibuat atau daftar menurun hub yang ada. Jika Anda melihat daftar menurun hub yang ada, pilih *Buat hub baru*, buat nama unik untuk hub Anda, dan pilih *Berikutnya*.  
- 
-    ![Cuplikan layar panel buat proyek dengan nama yang dihasilkan secara otomatis untuk hub dan proyek.](./media/azure-ai-foundry-create-project.png)
+    Tunggu sampai proyek dan hub Anda selesai dibuat.
 
-    > **Penting**: Anda akan memerlukan sumber daya layanan Azure AI yang disediakan di lokasi tertentu untuk menyelesaikan lab lainnya.
+1. Saat proyek dibuat, Anda akan dibawa ke *halaman Gambaran Umum* tentang detail proyek.
 
-1. Di panel *Buat proyek * yang sama, pilih** Sesuaikan** dan pilih salah satu **Lokasi** berikut: AS Timur, Prancis Tengah, Korea Tengah, Eropa Barat, atau AS Barat untuk menyelesaikan lab lainnya. Lalu pilih **buat**. 
-
-1. Perhatikan sumber daya yang dibuat: 
-- Layanan Azure AI
-- Hub Azure AI
-- Proyek Azure AI
-- Akun penyimpanan
-- Brankas kunci
-- Grup sumber daya  
- 
-1. Setelah sumber daya dibuat, Anda akan dibawa ke halaman* Gambaran Umum* proyek Anda. Di menu sebelah kiri pada layar, pilih **Playgrounds**.
- 
-    ![Cuplikan layar menu sebelah kiri pada layar proyek dengan Layanan AI dipilih.](./media/azure-ai-foundry-playgrounds.png)  
+1. Di menu sebelah kiri pada layar, pilih **Playgrounds**.
 
 ## Jelajahi AI generatif di playground Azure AI Foundry's chat
 
 1. Di halaman Playground Azure AI Foundry, pilih **Coba playground Obrolan**. Playground Obrolan adalah antarmuka pengguna yang memungkinkan Anda mencoba membangun aplikasi obrolan dengan model AI generatif yang berbeda.  
 
-1. Untuk menggunakan playground Obrolan, Anda perlu mengaitkannya dengan model yang disebarkan. Di playground Obrolan, pilih **Buat penyebaran**. Cari dan pilih** gpt-4**. 
+1. Untuk menggunakan playground Obrolan, Anda perlu mengaitkannya dengan model yang disebarkan. Di Obrolan taman bermain, Anda harus memilih **gpt-4o** . Jika Anda tidak melihat penyebaran apa pun, Anda perlu memilih **+ Buat penyebaran**, cari **gpt-4o**, lalu pilih **Konfirmasi** dan terakhir **Sebarkan**.
 
-1. Di jendela *Sebarkan model* , pertahankan penamaan dan pilihan default lalu pilih **Sebarkan**. Mungkin perlu waktu sejenak bagi model tersebut untuk disebarkan. Anda dapat memeriksa status penyebaran Anda dengan memilih *Model dan titik akhir* di menu sebelah kiri di bawah *Aset saya*.
-1. Di playground obrolan, Anda dapat menggunakan model yang disebarkan saat muncul di menu pilihan *Penyebaran*. Pastikan model yang Anda sebarkan dipilih. Yang penting, Anda perlu memilih **Terapkan perubahan** setelah membuat perubahan apa pun pada *Penyiapan*. 
+1. Di playground obrolan, Anda dapat menggunakan model yang disebarkan saat muncul di menu pilihan *Penyebaran*. Yang penting, Anda perlu memilih **Terapkan perubahan** setelah membuat perubahan apa pun pada *Penyiapan*. 
 
 1. Pertimbangkan cara berikut untuk meningkatkan respons dari asisten AI generatif:
     - Mulailah dengan tujuan spesifik tentang apa yang Anda ingin untuk dilakukan asisten
@@ -102,3 +95,11 @@ AI Generatif menjelaskan kategori kemampuan dalam AI yang membuat konten. Orang 
 1. Tinjau respons, yang harus memberikan daftar bernomor dari pemandangan di Paris.
 
 1. Setelah selesai, Anda dapat menutup jendela browser.
+
+## Penghapusan
+
+Jika Anda tidak berniat untuk melakukan latihan lagi, hapus sumber daya yang tidak lagi dibutuhkan. Hal ini menghindari akumulasi biaya yang tidak perlu.
+
+1. Buka **portal Azure** di [https://portal.azure.com](https://portal.azure.com)dan pilih grup sumber daya yang berisi sumber daya yang Anda buat.
+
+1. Pilih sumber daya dan pilih **Hapus** lalu **Ya** untuk mengonfirmasi. Sumber daya tersebut akan dihapus.
