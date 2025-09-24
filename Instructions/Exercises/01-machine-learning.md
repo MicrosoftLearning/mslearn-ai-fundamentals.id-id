@@ -31,7 +31,7 @@ Untuk menggunakan Azure Machine Learning, Anda perlu menyediakan ruang kerja Azu
 
 #### Luncurkan studio 
 
-1. Dalam sumber daya ruang kerja Azure Machine Learning, Pilih **Luncurkan studio** (atau buka tab browser baru dan navigasikan ke [https://ml.azure.com](https://ml.azure.com?azure-portal=true), dan sign in ke studio Azure Machine Learning dengan menggunakan akun Microsoft Anda). Tutup pesan apa pun yang ditampilkan.
+1. Dalam sumber daya ruang kerja Azure Machine Learning, Pilih **Luncurkan studio** (atau buka tab browser baru dan navigasikan ke [https://ml.azure.com](https://ml.azure.com), dan sign in ke studio Azure Machine Learning dengan menggunakan akun Microsoft Anda). Tutup pesan apa pun yang ditampilkan.
 
 1. Di studio Azure Machine Learning, Anda akan melihat ruang kerja yang baru dibuat. Jika tidak, pilih **Semua ruang kerja** di menu sebelah kiri lalu pilih ruang kerja yang baru saja Anda buat.
 
@@ -49,26 +49,27 @@ Pembelajaran mesin otomatis memungkinkan Anda mencoba beberapa algoritma dan par
 
     - **Nama Pekerjaan** Bidang nama pekerjaan harus sudah diisi sebelumnya dengan nama unik. Simpan apa adanya.
     - **Nama eksperimen baru**: `mslearn-bike-rental`
-    - **Deskripsi**: Pembelajaran mesin otomatis untuk prediksi penyewaan sepeda
+    - **Deskripsi**: `Automated machine learning for bike rental prediction`
     - **Tag**: *tidak ada*
 
    **Tipe tugas & data**:
 
     - **Pilih jenis tugas**: Regresi
-    - **Pilih himpunan data**: Buat himpunan data baru dengan pengaturan berikut:
-        - **Jenis data**:
-            - **Nama**: `bike-rentals`
-            - **Deskripsi**: `Historic bike rental data`
-            - **Jenis**: Tabel (mltable)
-        - **Sumber data**:
-            - Pilih **Dari file lokal**
-        - **Jenis penyimpanan tujuan**:
-            - **Jenis datastore**: Azure Blob Storage
-            - **Nama**: workspaceblobstore
-        - **Pilihan MLtable**:
-            - **Unggah folder**: *Unduh dan unzip folder yang berisi dua file yang perlu Anda unggah* `https://aka.ms/bike-rentals`
-
-        Pilih **Buat**. Setelah himpunan data dibuat, pilih himpunan data **bike-rentals** untuk terus mengirimkan pekerjaan ML Otomatis.
+    - **Pilih data**:
+        - Buat himpunan aset data baru dengan pengaturan berikut:
+            - **Jenis data**:
+                - **Nama**: `bike-rentals`
+                - **Deskripsi**: `Historic bike rental data`
+                - **Jenis**: Tabel (mltable)
+            - **Sumber data**:
+                - Pilih **Dari file lokal**
+            - **Jenis penyimpanan tujuan**:
+                - **Jenis datastore**: Azure Blob Storage
+                - **Nama**: workspaceblobstore
+            - **Pilihan MLtable**:
+                - *Unduh dan buka zip [folder](https://aka.ms/bike-rentals) data sepeda dari `https://aka.ms/bike-rentals`.*
+                - **Unggah folder**: *Unggah folder **data sepeda** yang diekstrak, yang berisi file definisi data dan tabel yang Anda butuhkan untuk himpunan data pelatihan Anda.*
+        - Pilih aset data ** penyewaan sepeda** yang baru dibuat dan lanjutkan menentukan pekerjaan ML Otomatis di halaman berikutnya (**Pengaturan tugas**).
 
     **Pengaturan tugas**:
 
@@ -77,8 +78,8 @@ Pembelajaran mesin otomatis memungkinkan Anda mencoba beberapa algoritma dan par
     - **Kolom target**: penyewaan (bilangan bulat)
     - **Setelan konfigurasi tambahan:**
         - **Metrik utama**: NormalizedRootMeanSquaredError
-        - **Jelaskan model terbaik**: *Tidak dipilih*
-        - **Aktifkan tumpukan ansambel**: *Tidak dipilih*
+        - **Jelaskan model terbaik**: *<u>Tidak</u>dipilih*
+        - **Aktifkan tumpukan ansambel**: *<u>Tidak</u>dipilih*
         - **Gunakan semua model yang didukung**: <u>Tidak</u>dipilih. *Anda akan membatasi pekerjaan untuk mencoba hanya beberapa algoritma tertentu.*
         - **Model yang diizinkan**: *Pilih hanya **RandomForest** dan **LightGBM** — biasanya Anda ingin mencoba sebanyak mungkin, tetapi setiap model yang ditambahkan akan menambah waktu yang dibutuhkan untuk menjalankan pekerjaan.*
     - **Batas**: *Luaskan bagian ini*
@@ -134,16 +135,16 @@ Ketika pekerjaan pembelajaran mesin otomatis telah selesai, Anda dapat meninjau 
 
     > **Catatan** Jika Anda menerima pesan bahwa tidak ada cukup kuota untuk memilih mesin virtual *Standard_DS3_v2*, pilih mesin virtual yang berbeda.
 
-1. Tunggu penyebaran dimulai - ini mungkin memakan waktu beberapa detik. **Status penyebaran** untuk titik akhir**predict-rentals** akan ditunjukkan di bagian utama halaman sebagai *Berjalan*.
+1. Tunggu penyebaran dimulai - ini mungkin memakan waktu beberapa detik. **Status penyebaran** untuk titik akhir akan ditunjukkan di bagian utama halaman sebagai *Lari*.
 1. Tunggu hingga **Status penyebaran** berubah menjadi *Berhasil*. Proses ini dapat memakan waktu 5-10 menit.
 
 ## Menguji layanan yang disebarkan
 
 Sekarang Anda dapat menguji layanan yang disebarkan.
 
-1. Di studio Azure Machine Learning, di menu sebelah kiri, pilih **Titik akhir** dan buka titik akhir real time **predict-rentals**.
+1. Di studio Azure Machine Learning, di menu sebelah kiri, pilih **Titik akhir** dan buka titik akhir real time yang Anda buat.
 
-1. Pada halaman titik akhir real time **predict-rentals** tampilkan tab **Pengujian**.
+1. Pada halaman titik akhir real time tampilkan tab **Pengujian**.
 
 1. Di panel **Input data ke titik akhir pengujian**, ganti templat JSON dengan data input berikut:
 
@@ -183,17 +184,24 @@ Sekarang Anda dapat menguji layanan yang disebarkan.
 
     Panel pengujian mengambil data input dan menggunakan model yang Anda latih untuk menampilkan perkiraan jumlah persewaan.
 
-Mari kita tinjau yang telah Anda lakukan. Anda menggunakan himpunan data tentang data penyewaan sepeda historis untuk melatih model. Model ini memprediksi jumlah penyewaan sepeda yang diharapkan pada hari tertentu, berdasarkan *fitur* musiman dan meteorologi.
+## Tampilkan kode untuk menggunakan layanan
+
+Sekarang setelah Anda memiliki titik akhir layanan prediktif, pengembang dapat membangun aplikasi yang menggunakannya.
+
+1. Pada halaman titik akhir real time tampilkan tab **Konsumsi**.
+1. Tinjau kode sampel untuk menggunakan titik akhir Anda, yang disediakan untuk beberapa bahasa pemrograman.
+
+Mari kita tinjau yang telah Anda lakukan. Anda menggunakan himpunan data tentang data penyewaan sepeda historis untuk melatih model. Model ini memprediksi jumlah penyewaan sepeda yang diharapkan pada hari tertentu, berdasarkan *fitur* musiman dan meteorologi. Terakhir, Anda menguji model dan meninjau kode yang dapat digunakan pengembang untuk membangun aplikasi untuk menggunakannya.
 
 ## Pembersihan
 
 Layanan web yang Anda buat dihost dalam *Azure Container Instance*. Jika tidak berniat untuk bereksperimen dengan ini lebih lanjut, Anda harus menghapus titik akhir untuk menghindari mengumpulkan penggunaan Azure yang tidak perlu.
 
-1. Di [studio Azure Machine Learning](https://ml.azure.com?azure-portal=true), di tab **Titik Akhir**, pilih titik akhir **predict-rentals**. Kemudian pilih **Hapus** dan konfirmasikan bahwa Anda ingin menghapus titik akhir.
+1. Di [studio Azure Machine Learning](https://ml.azure.com), di tab **Titik Akhir**, pilih titik akhir yang Anda sebarkan. Kemudian pilih **Hapus** dan konfirmasikan bahwa Anda ingin menghapus titik akhir.
 
     Menghapus komputasi memastikan langganan Anda tidak akan ditagih untuk sumber daya komputasi. Namun, Anda akan dikenakan biaya kecil untuk penyimpanan data selama ruang kerja Azure Machine Learning ada di langganan Anda. Jika telah selesai menjelajahi Azure Machine Learning, Anda dapat menghapus ruang kerja Azure Machine Learning dan sumber daya terkait.
 
 Untuk menghapus ruang kerja Anda:
 
-1. Di [portal Microsoft Azure](https://portal.azure.com?azure-portal=true), di halaman **Grup sumber daya**, buka grup sumber daya yang Anda tentukan saat membuat ruang kerja Azure Machine Learning Anda.
+1. Di [portal Microsoft Azure](https://portal.azure.com), di halaman **Grup sumber daya**, buka grup sumber daya yang Anda tentukan saat membuat ruang kerja Azure Machine Learning Anda.
 2. Klik **Hapus grup sumber daya**, ketik nama grup sumber daya untuk mengonfirmasi bahwa Anda ingin menghapusnya, dan pilih **Hapus**.
