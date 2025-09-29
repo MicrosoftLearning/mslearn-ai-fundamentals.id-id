@@ -5,58 +5,59 @@ lab:
 
 # Menjelajahi AI generatif di Portal Azure AI Foundry
 
-AI Generatif menjelaskan kategori kemampuan dalam AI yang membuat konten. Orang biasanya berinteraksi dengan AI generatif yang telah dibangun ke dalam aplikasi obrolan. Dalam latihan ini, Anda mencoba AI generatif di portal Azure AI Foundry, platform Microsoft untuk membuat aplikasi cerdas. 
+AI Generatif menjelaskan kategori kemampuan dalam AI yang membuat konten. Orang sering berinteraksi dengan AI generatif yang telah diintegrasikan ke dalam aplikasi obrolan. Dalam latihan ini, Anda mencoba AI generatif di portal Azure AI Foundry, platform Microsoft untuk membuat aplikasi cerdas. 
 
 Latihan ini memakan waktu sekitar **20** menit.
 
 ## Membuat proyek di portal Azure AI Foundry
 
-1. Di browser web, buka [portal Azure AI Foundry](https://ai.azure.com) di `https://ai.azure.com` dan masuk menggunakan kredensial Azure Anda. Tutup tips atau panel mulai cepat yang dibuka saat pertama kali Anda masuk. 
+1. Di browser web, buka [portal Azure AI Foundry](https://ai.azure.com) di `https://ai.azure.com` dan masuk menggunakan kredensial Azure Anda. Tutup semua tips atau panel mulai cepat yang terbuka saat pertama kali Anda masuk, dan jika perlu, gunakan logo **Azure AI Foundry** di kiri atas untuk menavigasi ke beranda, yang tampilannya mirip dengan gambar berikut (tutup panel **Bantuan** jika terbuka):
 
-1. Di browser, navigasikan ke `https://ai.azure.com/managementCenter/allResources` dan pilih **Buat baru**. Lalu pilih opsi untuk membuat **sumber daya Azure AI Foundry**.
+    ![Cuplikan layar beranda portal Azure AI Foundry.](./media/ai-foundry-portal.png)
 
-1. Di wizard,*Buat proyek*dan masukkan nama yang valid untuk proyek Anda.
+1. Di bagian **Jelajahi model dan kemampuan**, cari `gpt-4o`. Kemudian, dalam hasil pencarian, pilih model **gpt-4o** untuk melihat detailnya.
 
-1. Perluas *opsi Tingkat Lanjut* untuk menentukan pengaturan proyek Anda sebagai berikut:
-    - **Subscription**: Langganan Azure Anda
-    - **Grup sumber daya**: Buat atau pilih grup sumber daya
-    - **Wilayah**: Pilih salah satu wilayah berikut:
-        * AS Timur
-        * Prancis Tengah
-        * Korea Tengah
-        * Eropa Barat
-        * US Barat
+    ![Cuplikan layar halaman detail gpt-4o.](./media/gpt-4o-details.png)
 
-    Pilih **Buat**. Tunggu proyek Anda dibuat. Proses ini memerlukan waktu beberapa menit.
+1. Pilih **Gunakan model ini**.
 
-1. Saat proyek dibuat, Anda akan dibawa ke *halaman Gambaran Umum* tentang detail proyek.
+1. Di wizard,**Buat proyek**dan masukkan nama yang valid untuk proyek Anda. Kemudian perluas **Opsi tingkat lanjut** untuk menentukan pengaturan berikut untuk proyek Anda:
+    - **Sumber daya Azure AI Foundry**: *Masukkan nama yang valid untuk sumber daya AI Foundry Anda.*
+    - **Langganan**: *Langganan Azure Anda*
+    - **Grup sumber daya**: *Buat atau pilih grup sumber daya*
+    - **Wilayah**: Pilih salah satu wilayah **AI Foundry yang direkomendasikan**\*
+    
+    \**Penyebaran model dibatasi oleh kuota regional. Jika memilih wilayah di mana kuota yang tersedia tidak mencukupi, Anda mungkin perlu memilih wilayah alternatif untuk sumber daya baru nanti.*
 
-1. Di menu sebelah kiri pada layar, pilih **Playgrounds**. 
+1. Pilih **Buat**. Tunggu proyek Anda dibuat. Proses ini memerlukan waktu beberapa menit.
 
-    >*Catatan*: Perluas menu untuk membaca kontennya dengan mengklik ikon 'perluas' atas.
+    Jika Anda diminta untuk menyebarkan model ke wilayah lain, gunakan pengaturan default untuk melakukannya.
 
 ## Jelajahi AI generatif di playground Azure AI Foundry's chat
 
-1. Di halaman Playground Azure AI Foundry, pilih **Coba playground Obrolan**. Playground Obrolan adalah antarmuka pengguna yang memungkinkan Anda mencoba membangun aplikasi obrolan dengan model AI generatif yang berbeda.  
+1. Setelah proyek dibuat, pilih **Playground** pada panel tugas di sebelah kiri. 
 
-    >*Catatan*: Jika Anda tidak melihat panel *Penyiapan* muncul di layar Playground obrolan, perluas ukuran jendela.  
+    >*Tips*: Jika perlu, perluas menu untuk membaca kontennya dengan mengklik ikon 'luaskan' atas.
 
-1. Untuk menggunakan playground Obrolan, Anda perlu mengaitkannya dengan model yang disebarkan. Di panel *Penyiapan* Playground obrolan, pilih **+ Buat penyebaran**. Jika diminta, pilih *Dari model dasar*, jika tidak, lanjutkan ke langkah berikutnya. 
+1. Di halaman Playground Azure AI Foundry, pilih **Coba playground Obrolan**. Tutup panel tips atau mulai cepat yang dibuka.
 
-1. Cari model **gpt-4o** dari daftar, lalu pilih **Konfirmasi**. Pertahankan nama model default, jenis penyebaran, dan detail penyebaran. Kemudian, plih **Sebarkan**.
+    Playground Obrolan adalah antarmuka pengguna yang memungkinkan Anda mencoba membangun aplikasi obrolan dengan model AI generatif yang berbeda.
 
-1. Di playground obrolan, Anda dapat menggunakan model yang disebarkan saat muncul di menu pilihan *Penyebaran*. Tutup panel tips atau mulai cepat yang dibuka. 
+    ![Cuplikan layar halaman detail gpt-4o.](./media/chat-playground.png)
 
-    >*Catatan*: Anda perlu memilih **Terapkan perubahan** setiap kali membuat perubahan pada *Penyiapan*. 
+    >*Tips*: Jika Anda tidak melihat panel **Penyiapan** di layar playground Obrolan, luaskan ukuran jendela.  
 
-1. Buka panel *Riwayat obrolan*. Anda akan menggunakan kotak kueri untuk memasukkan perintah Anda. 
+1. Untuk menggunakan playground Obrolan, Anda perlu mengaitkannya dengan model yang disebarkan. Di panel **Penyiapan** playground Obrolan, pastikan bahwa model **gpt-4o** yang Anda sebarkan sebelumnya dipilih. 
 
-1. Pertimbangkan cara berikut untuk meningkatkan respons dari asisten AI generatif:
-    - Mulailah dengan tujuan spesifik tentang apa yang Anda ingin untuk dilakukan asisten
-    - Iterasi berdasarkan perintah dan respons sebelumnya untuk menyempurnakan hasil
-    - Berikan sumber untuk  membumikan respons dalam cakupan informasi tertentu
-    - Menambahkan konteks untuk memaksimalkan kesamaan dan relevansi respons
-    - Menetapkan ekspektasi yang jelas untuk respons
+    >*Catatan*: Anda perlu memilih **Terapkan perubahan** kapan saja Anda membuat perubahan di panel **Penyiapan**.
+
+1. Di panel **Penyiapan**, perhatikan instruksi dan konteks default untuk model, yang seharusnya mirip dengan:
+
+    `You are an AI assistant that helps people find information.`
+
+    Instruksi semacam ini biasanya disebut sebagai *perintah sistem*, dan digunakan untuk memberikan panduan dan batasan untuk respons model.
+
+1. Tinjau panel *Riwayat obrolan*, yang berisi beberapa contoh perintah untuk membantu Anda memulai dan kotak kueri untuk memasukkan perintah Anda sendiri. 
 
 1. Mari kita coba menghasilkan respons menggunakan perintah dengan tujuan tertentu. Di kotak obrolan, masukkan prompt berikut ini:
 
@@ -64,26 +65,26 @@ Latihan ini memakan waktu sekitar **20** menit.
     I'm planning a trip to Paris in September. Can you help me?
     ```
 
-1. Tinjau responsnya. **Catatan**: Perlu diingat bahwa respons spesifik yang Anda terima dapat bervariasi karena sifat AI generatif.
- 
+1. Tinjau responsnya. Perlu diingat bahwa respons spesifik yang Anda terima dapat bervariasi karena sifat AI generatif.
+
 1. Mari kita coba prompt yang lain. Masukkan yang berikut:
 
     ```prompt
-    Where's a good location in Paris to stay? 
+    Where's a good location in the city to stay?
     ```
 
-1. Tinjau tanggapan, yang harus menyediakan beberapa tempat menginap di Paris.
+1. Tinjau tanggapan, yang harus menyediakan beberapa tempat menginap di Paris. Perhatikan bahwa sesi obrolan mempertahankan konteks dari perintah sebelumnya, sehingga model tahu bahwa "kota" yang dimaksud adalah Paris.
 
 1. Iterasi berdasarkan perintah dan respons sebelumnya untuk menyempurnakan hasil. Masukkan perintah berikut:
-    
+
     ```prompt
     Can you give me more information about dining options near the first location?
-    ``` 
+    ```
 
 1. Tinjau respons, yang harus menyediakan pilihan bersantap di dekat lokasi dari respons sebelumnya. 
 
 1. Berikan sumber untuk membumikan respons dalam cakupan informasi tertentu Masukkan yang berikut: 
-    
+
     ```prompt
     Based on the information at https://en.wikipedia.org/wiki/History_of_Paris, what were the key events in the city's history?
     ```
@@ -99,19 +100,25 @@ Latihan ini memakan waktu sekitar **20** menit.
 1. Tinjau respons dan penalaran respons.  
 
 1. Sekarang coba tetapkan ekspektasi yang jelas untuk responsnya. Masukkan perintah berikut:
-    
+
     ```prompt
     What are the top 10 sights to see in Paris? Answer with a numbered list in order of popularity.
     ```
 
 1. Tinjau respons, yang harus memberikan daftar bernomor dari pemandangan di Paris.
 
-1. Setelah selesai, Anda dapat menutup jendela browser.
+## Menampilkan kode klien
+
+1. Di bagian atas halaman playground Obrolan, pilih **Tampilkan kode**.
+1. Tinjau sampel kode, yang disediakan untuk beberapa bahasa pemrograman, SDK, dan opsi autentikasi.
+
+    Sampel kode ini dapat membantu pengembang memulai dengan cepat saat membangun aplikasi klien yang mengobrol dengan model yang Anda sebarkan.
+
+1. Tutup jendela kode sampel.
 
 ## Penghapusan
 
 Jika Anda tidak berniat untuk melakukan latihan lagi, hapus sumber daya yang tidak lagi dibutuhkan. Hal ini menghindari akumulasi biaya yang tidak perlu.
 
 1. Buka **portal Azure** di [https://portal.azure.com](https://portal.azure.com)dan pilih grup sumber daya yang berisi sumber daya yang Anda buat.
-
-1. Pilih sumber daya dan pilih **Hapus** lalu **Ya** untuk mengonfirmasi. Sumber daya tersebut akan dihapus.
+1. Pilih **Hapus grup sumber daya**, lalu **masukkan nama grup sumber daya** untuk mengonfirmasi. Grup sumber daya tersebut akan dihapus.
