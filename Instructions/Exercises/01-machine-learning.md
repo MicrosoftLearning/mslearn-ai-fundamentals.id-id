@@ -53,6 +53,8 @@ Pembelajaran mesin otomatis memungkinkan Anda mencoba beberapa algoritma dan par
     - **Tag**: *tidak ada*
 
    **Tipe tugas & data**:
+    
+    >**CATATAN**: Beberapa langganan memiliki izin yang tidak mengizinkan *data sepeda* ditambahkan ke *workspaceblobstore*. Jika mengalami masalah ini, Anda saat ini perlu beralih ke langganan pribadi, atau menyesuaikan izin langganan Anda. 
 
     - **Pilih jenis tugas**: Regresi
     - **Pilih data**:
@@ -69,6 +71,7 @@ Pembelajaran mesin otomatis memungkinkan Anda mencoba beberapa algoritma dan par
             - **Pilihan MLtable**:
                 - *Unduh dan buka zip [folder](https://aka.ms/bike-rentals) data sepeda dari `https://aka.ms/bike-rentals`.*
                 - **Unggah folder**: *Unggah folder **data sepeda** yang diekstrak, yang berisi file definisi data dan tabel yang Anda butuhkan untuk himpunan data pelatihan Anda.*
+                - **Catatan**: *Jika Anda menemukan pesan untuk melewati validasi data untuk melanjutkan, pilih opsi untuk melewati validasi data.*
         - Pilih aset data ** penyewaan sepeda** yang baru dibuat dan lanjutkan menentukan pekerjaan ML Otomatis di halaman berikutnya (**Pengaturan tugas**).
 
     **Pengaturan tugas**:
