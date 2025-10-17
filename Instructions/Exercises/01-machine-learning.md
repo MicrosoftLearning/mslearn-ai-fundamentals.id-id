@@ -54,7 +54,7 @@ Pembelajaran mesin otomatis memungkinkan Anda mencoba beberapa algoritma dan par
 
    **Tipe tugas & data**:
     
-    >**CATATAN**: Beberapa langganan memiliki izin yang tidak mengizinkan *data sepeda* ditambahkan ke *workspaceblobstore*. Jika mengalami masalah ini, Anda saat ini perlu beralih ke langganan pribadi, atau menyesuaikan izin langganan Anda. 
+    >**CATATAN**: Beberapa langganan memiliki izin yang tidak mengizinkan *data sepeda* ditambahkan ke *workspaceblobstore*. Jika mengalami masalah ini, Anda perlu beralih ke langganan lain.
 
     - **Pilih jenis tugas**: Regresi
     - **Pilih data**:
